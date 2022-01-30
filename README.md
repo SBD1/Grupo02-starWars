@@ -1,6 +1,8 @@
 # Star Wars
 
-**Disciplina**: Sistema de Banco de Dados 1<br>**Código da Disciplina**: FGA0137<br>
+**Disciplina**: Sistema de Banco de Dados 1<br>
+**Código da Disciplina**: FGA0137<br>
+**Professor**: Maurício Serrano<br>
 **Número do Grupo**: 02<br>
 
 ![Alt Text](https://media3.giphy.com/media/Ken6Yg5n7bYStW4JYB/giphy.gif?cid=ecf05e4764ji2v8fejdniipmu1v9t92z35tcr55cjjw9ks93&rid=giphy.gif&ct=g)
@@ -17,4 +19,4 @@
 
 ## Sobre
 
-O projeto é um jogo [MUD](https://pt.wikipedia.org/wiki/Multi-user_dungeon) com o tema Star Wars que será desenvolvido na disciplina SIstema de Banco de Dados 1.
+O projeto é um jogo [MUD](https://pt.wikipedia.org/wiki/Multi-user_dungeon) com o tema Star Wars que será desenvolvido na disciplina Sistema de Banco de Dados 1.
