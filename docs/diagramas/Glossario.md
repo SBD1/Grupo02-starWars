@@ -1,0 +1,106 @@
+# Glossário
+
+## 1 - Jogador
+
+É o usuário do jogo, onde pode realizar ações pelo mapa e subir de nível. No início do game, ele pode escolher a ordem (Jedi ou Sith). De acordo com suas ações no game, ele pode mudar de lado da força.
+
+### 1.1 - Atributos
+
+- ID: Elemento identificador do personagem no banco;
+- Nome: Nome que o personagem quer utilizar, string de tamanho 20;
+- Vida: Cálculado pelo sistema. Aumentada a cada nível. (Ex: começa com 10 e vai aumentando 1 em 1 a cada nível);
+- Midichlorians: É a experiência do jogador que evolui a cada ação. Pode aumentar através da realização dos objetivos ou quando se vence um oponente;
+- Nível: Nível do jogador que aumenta a cada ação (definir teto para cada nível);
+- Rank: De acordo com a ordem escolhida pode ser: padawans (para os níveis iniciais e depois ele pode escolher a ordem), cavaleiro Jedi e mestre Jedi ou Sith Lord, Darth Lord Sith.
+- Raça: Pode ser humano, togruta, Twi’lek, Korun, Fallen, Mirialano;
+- Características: Elas influenciam diretamente no dano que o personagem pode causar no oponente, bem como nas habilidades. A cada nível o jogador pode acrescentar em: Inteligencia, Força Física, Agilidade, Resistência.
+- Força: A Força Viva é vista como influenciada pelas emoções dos seres vivos. Possui dois aspectos: Luz e Trevas, que têm a ver com as atitudes morais dos seres. A Luz é caracterizada pela compaixão, bondade, altruísmo, humildade. O lado sombrio é caracterizado por ódio, raiva, maldade e ganância. Na filosofia Jedi, a Força é a luz, ou seja: é serena e equilibrada. O lado sombrio abala este equilíbrio com sentimentos negativos.
+
+## 2 - Ordem
+
+A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser padawan e escolhe entre Jedi e Sith. Importante esclarecer que o personagem pode transitar entre Jedi e Sith de acordo com as ações no jogo que implica no aumento ou diminuição da força. Se a força for positiva considera-se Jedi, se for negativam considera-se Sith. No momento da escolha da ordem, o personagem ganha bonificação para o lado da força que escolheu.
+
+### Filosofia Jedi:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há emoção; há paz. <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há ignorância; há conhecimento. <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há paixão; há serenidade. <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há caos; há harmonia. <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há morte; há a Força.
+
+### Filosofia Sith:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Paz é uma mentira, só existe paixão.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da paixão, ganho força.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da força, ganho poder.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através do poder, ganho a vitória.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da vitória, minhas correntes se rompem.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A Força me libertará."
+
+## 3 - Nave
+
+Especificar quais são os atributos de nave e listar as naves disponíveis;
+
+## 4 - Habilidades
+
+Fetiço ou arma que pode ser usada em um combate contra oponentes, desbloquear portas, enganar adversários e etc.
+
+- ID: identificação da habilidade;
+- Nome: Nome da habilidade;
+- Descrição: Texto de descrição da habilidade;
+- Nível: Descreve qual nível a habilidade é desbloqueada;
+- Impacto: Descreve qual o impacto a habilidade pode causar como dano, enganação, fuga e etc;
+
+### 4.1 - Armas
+
+As habilidades podem incluir armas: Listar as possíveis armas do jogo;
+
+### 4.2 - Poderes da Força
+
+As habilidades podem ser específicas da força, dependendo do nível e da ordem: listar os possíveis poderes da força;
+
+## 5 - Roteiro do episódio e Objetivo do jogador
+
+Cada fase do jogo é definido por um episódio (baseado nos filmes) e em cada episódio o jogador deve cumprir objetivos para ganhar experiência e subir de nível;
+
+## 6 - Itens
+
+São os itens que o jogador pode carregar. Os itens podem aumentar as características ou desbloquear uma habilidade especial da força;
+
+- ID: identificação da habilidade;
+- Nome: Descreve o nome do item;
+- Descrição: Explica o que é o item, como surgiu e quais os bônus que ele concede;
+- Tipo: Classifica o item como comida, pedras preciosas, traje, anel, capa, capacete e botas;
+
+## 7 - Personagem
+
+São personagens predefinidos no jogo onde o jogador pode interagir. Existem os chamados NPCs que são personagens que vão auxiliar o jogador nas decisões, ou seja, há um diálogo e de acordo com as decisões do jogador ele pode ganhar itens, benção, maldição e etc. Exitem também os personagens oponentes, que são personagens no qual o jogador pode combater de alguma maneira usando suas caracterísicas e habilidades.
+
+- ID: identificação da habilidade;
+- Nome: nome do personagem;
+- Expólio: experiência ou item que pode ser obtido pelo jogador a partir de uma probabilidade;
+
+### 7.1 - NPC
+
+- Descrição: descreve de onde vem, quem é e etc.
+- Diálogo: Dialogo com as decisões que influenciam na índole do personagem que, consequentemente, interfere na pontuação da força;
+
+### 7.2 - Oponente
+
+- Raça: Descreve a raça do oponente;
+- Vida: Quantidade de vida para derrotar;
+- Características: Semelhante as características do jogador;
+
+## 8 - Campo astronõmico
+
+O Campo Astronômico é relativo ao mapa do jogo. É composto por regiões que formam uma localização. Com base na localização, o jogador pode se locomover nas regiões e assim se locomover no campo astronômico;
+
+Os campos astronômicos podem ser: Planeta, Lua ou espaço sideral;
+
+### 8.1 - Região
+
+Cada campo astronômico tem regiões que o descrevem. Exemplo: Tatooine tem regiões deserticas e etc. (Conversar com o grupo para decidir se uma região pode ser um atributo de campo astronômico para facilitar).
+
+### 8.2 - Localização
+
+Trata-se da localização do personagem no campo astronômico (pode ser definida por latitude e longitude?). É importante ressaltar que a localização tem um vínculo com os personagens, ou seja, um oponente ou um NPC vai estar associado a uma localização aleatória dentro do campo astronômico,
