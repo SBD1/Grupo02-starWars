@@ -8,17 +8,17 @@
 
 - ID: Elemento identificador do personagem no banco;
 - Nome: Nome que o personagem quer utilizar, string de tamanho 20;
-- Vida: Cálculado pelo sistema. Aumentada a cada nível. (Ex: começa com 10 e vai aumentando 1 em 1 a cada nível);
+- Vida: Calculado pelo sistema. Aumentada a cada nível. (Ex: começa com 10 e vai aumentando 1 em 1 a cada nível);
 - Midichlorians: É a experiência do jogador que evolui a cada ação. Pode aumentar através da realização dos objetivos ou quando se vence um oponente;
 - Nível: Nível do jogador que aumenta a cada ação (definir teto para cada nível);
-- Rank: De acordo com a ordem escolhida pode ser: padawans (para os níveis iniciais e depois ele pode escolher a ordem), cavaleiro Jedi e mestre Jedi ou Sith Lord, Darth Lord Sith.
+- Rank: De acordo com a ordem escolhida pode ser: padawans (para os níveis iniciais e depois ele pode escolher a ordem), cavaleiro Jedi e mestre Jedi ou Sith Lord, Darth Lord Sith. Há também a ordem neutra chamada Gray Jedi.
 - Raça: Pode ser humano, togruta, Twi’lek, Korun, Fallen, Mirialano;
 - Características: Elas influenciam diretamente no dano que o personagem pode causar no oponente, bem como nas habilidades. A cada nível o jogador pode acrescentar em: Inteligencia, Força Física, Agilidade, Resistência.
 - Força: A Força Viva é vista como influenciada pelas emoções dos seres vivos. Possui dois aspectos: Luz e Trevas, que têm a ver com as atitudes morais dos seres. A Luz é caracterizada pela compaixão, bondade, altruísmo, humildade. O lado sombrio é caracterizado por ódio, raiva, maldade e ganância. Na filosofia Jedi, a Força é a luz, ou seja: é serena e equilibrada. O lado sombrio abala este equilíbrio com sentimentos negativos.
 
 ## 2 - Ordem
 
-A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser padawan e escolhe entre Jedi e Sith. Importante esclarecer que o personagem pode transitar entre Jedi e Sith de acordo com as ações no jogo que implica no aumento ou diminuição da força. Se a força for positiva considera-se Jedi, se for negativam considera-se Sith. No momento da escolha da ordem, o personagem ganha bonificação para o lado da força que escolheu.
+A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser padawan e escolhe entre Jedi e Sith. Importante esclarecer que o personagem pode transitar entre Jedi e Sith de acordo com as ações no jogo que implica no aumento da luz ou trevas da força. Se a força tem uma quantidade de luz muito superior que as trevas, então considera-se o jogador como Jedi. Se a força tem uma quantidade de trevas muito maior que a quantidade de luz, então o jogador possui a ordem Sith. Agora, se a quantidade de luz e de trevas forem equilibradas, o jogador é considerado de ordem neutra (Gray Jedi), onde possui habilidades tanto Jedi quanto Sith.
 
 ### Filosofia Jedi:
 
@@ -26,7 +26,16 @@ A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser pada
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há ignorância; há conhecimento. <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há paixão; há serenidade. <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há caos; há harmonia. <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há morte; há a Força.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há morte; há a Força.<br>
+
+### Filosofia Gray Jedi:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Deve haver escuridão e luz.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Farei o que for preciso para manter o equilíbrio, pois o equilíbrio é o que mantém toda a vida.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há bem sem mal, mas não se deve permitir que o mal floresça.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Há paixão, mas paz; serenidade, mas emoção; caos, mas ordem.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Eu sou um manejador da chama; campeão do equilíbrio. Eu sou um guardião da vida.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Eu sou um Jedi Cinzento. <br>
 
 ### Filosofia Sith:
 
@@ -35,7 +44,7 @@ A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser pada
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da força, ganho poder.<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através do poder, ganho a vitória.<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da vitória, minhas correntes se rompem.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A Força me libertará."
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A Força me libertará."<br>
 
 ## 3 - Nave
 
@@ -70,7 +79,7 @@ São os itens que o jogador pode carregar. Os itens podem aumentar as caracterí
 - ID: identificação da habilidade;
 - Nome: Descreve o nome do item;
 - Descrição: Explica o que é o item, como surgiu e quais os bônus que ele concede;
-- Tipo: Classifica o item como comida, pedras preciosas, traje, anel, capa, capacete e botas;
+- Tipo: Classifica o item como comida, pedras preciosas, traje, anel, capa, chapéu e botas;
 
 ## 7 - Personagem
 
