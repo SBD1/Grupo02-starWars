@@ -1,0 +1,54 @@
+site_name: STAR WARS
+site_description: Repositório do Grupo 02 da disciplina Sistema de Banco de Dados 1.
+repo_url: https://github.com/SBD1/Grupo02-starWars
+
+nav:
+  - Página Inicial: index.md
+  - Modelo Entidade-Relacionamento: modulo1/mer.md
+  - Modelo Relacional: modulo2/modelo-relacional.md
+  - Normalização: modulo3/normalizacao.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette: 
+    - scheme: sw
+  language: pt
+  logo: assets/icon.png
+  favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SBD1/Grupo02-starWars
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      options:
+        custom_icons:
+          - overrides/.icons
+        
