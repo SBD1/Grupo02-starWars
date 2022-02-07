@@ -4,9 +4,14 @@ repo_url: https://github.com/SBD1/Grupo02-starWars
 
 nav:
   - Página Inicial: index.md
-  - Modelo Entidade-Relacionamento: modulo1/mer.md
-  - Modelo Relacional: modulo2/modelo-relacional.md
-  - Normalização: modulo3/normalizacao.md
+  - Módulo 1:
+    - Glossário: modulo1/glossario.md
+    - Modelo Entidade-Relacionamento: modulo1/mer.md
+    - Diagrama Entidade-Relacionamento: modulo1/der.md
+    - Atas: 
+      - 30/01/2022: modulo1/atas/30-01-2022.md
+  - Módulo 2: modulo2/modelo-relacional.md
+  - Módulo 3: modulo3/normalizacao.md
 
 extra_css:
   - stylesheets/extra.css
