@@ -125,7 +125,7 @@ São personagens predefinidos no jogo onde o jogador pode interagir. Existem os 
 - **Vida:** Quantidade de vida para derrotar;
 - **Características:** Semelhante as características do jogador;
 
-## 7 - Campo astronõmico
+## 7 - Campo astronômico
 
 O Campo Astronômico é relativo ao mapa do jogo. É composto por regiões que formam uma localização. Com base na localização, o jogador pode se locomover nas regiões e assim se locomover no campo astronômico;
 
