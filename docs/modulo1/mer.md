@@ -12,16 +12,16 @@
 * **Instância de Oponente:** <ins>ID</ins>
 * **Itens:** <ins>ID</ins>, Nome, Descrição e Tipo
     * **Itens Consumíveis:** Carga
-    * **Itens Utilizáveis:**
+    * **Itens Utilizáveis:** Pré-condições
 * **Instância de Itens:** <ins>ID</ins>
 * **Habilidade:** <ins>ID</ins>, Nome, Descrição, Nível, Impacto e Pré-requisito
     * **Habilidade com arma:** Tipo e Munição
     * **Poderes da Força:** Classificação e Aspecto
     * **Habilidade do droid:** Aspecto
-* **Nave:** <ins>ID</ins>, Nome, Descrição, Velocidade Máxima e Tipo de Arma
+* **Nave:** <ins>Número de série</ins>, Nome, Descrição, Velocidade Máxima e Tipo de Arma
 * **Instância de nave:** <ins>ID</ins>
 * **Objetivo:** <ins>ID</ins>, Ordem, Midichlorians, Pont. Força e Classificação
 * **Roteiro do episódio:** <ins>Título</ins>, História e Abertura
-* **Droid:** <ins>ID</ins> e Nome
+* **Droid:** <ins>Número de série</ins>, Nome e Modelo
 
 
