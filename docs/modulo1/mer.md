@@ -23,5 +23,3 @@
 * **Objetivo:** <ins>ID</ins>, Ordem, Midichlorians, Pont. Força e Classificação
 * **Roteiro do episódio:** <ins>Título</ins>, História e Abertura
 * **Droid:** <ins>Número de série</ins>, Nome e Modelo
-
-
