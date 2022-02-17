@@ -22,29 +22,29 @@ A ordem pode ser escolhida depois do nível 10, onde o padawan deixa de ser pada
 
 #### Filosofia Jedi:
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há emoção; há paz. <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há ignorância; há conhecimento. <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há paixão; há serenidade. <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há caos; há harmonia. <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há morte; há a Força.<br>
+> &emsp;&emsp;Não há emoção; há paz. <br>
+&emsp;&emsp;Não há ignorância; há conhecimento. <br>
+&emsp;&emsp;Não há paixão; há serenidade. <br>
+&emsp;&emsp;Não há caos; há harmonia. <br>
+&emsp;&emsp;Não há morte; há a Força. <br>
 
 #### Filosofia Gray Jedi:
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Deve haver escuridão e luz.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Farei o que for preciso para manter o equilíbrio, pois o equilíbrio é o que mantém toda a vida.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Não há bem sem mal, mas não se deve permitir que o mal floresça.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Há paixão, mas paz; serenidade, mas emoção; caos, mas ordem.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Eu sou um manejador da chama; campeão do equilíbrio. Eu sou um guardião da vida.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Eu sou um Jedi Cinzento. <br>
+> &emsp;&emsp;Deve haver escuridão e luz.<br>
+&emsp;&emsp;Farei o que for preciso para manter o equilíbrio, pois o equilíbrio é o que mantém toda a vida.<br>
+&emsp;&emsp;Não há bem sem mal, mas não se deve permitir que o mal floresça.<br>
+&emsp;&emsp;Há paixão, mas paz; serenidade, mas emoção; caos, mas ordem.<br>
+&emsp;&emsp;Eu sou um manejador da chama; campeão do equilíbrio. Eu sou um guardião da vida.<br>
+&emsp;&emsp;Eu sou um Jedi Cinzento. <br>
 
 #### Filosofia Sith:
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Paz é uma mentira, só existe paixão.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da paixão, ganho força.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da força, ganho poder.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através do poder, ganho a vitória.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Através da vitória, minhas correntes se rompem.<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A Força me libertará."<br>
+> &emsp;&emsp;Paz é uma mentira, só existe paixão <br>
+&emsp;&emsp;Através da paixão, ganho força.<br>
+&emsp;&emsp;Através da força, ganho poder.<br>
+&emsp;&emsp;Através do poder, ganho a vitória.<br>
+&emsp;&emsp;Através da vitória, minhas correntes se rompem.<br>
+&emsp;&emsp;A Força me libertará."<br>
 
 ## 2 - Nave
 
