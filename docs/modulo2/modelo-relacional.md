@@ -1,7 +1,13 @@
-# Modelo Relacional
+# 1. Modelo Relacional
 
-## Versão 1
+## 1.1. Versão 1
 
-![Diagrama Entidade-Relacionamento](modulo2/../img/modelo-relacional-V1.svg)
+![Diagrama Entidade-Relacionamento V1](modulo2/../img/modelo-relacional-V1.svg)
 
 [Clique aqui](modulo2/../img/modelo-relacional-V1.svg) para ver o diagrama com mais detalhes.
+
+## 1.2. Versão 2
+
+![Diagrama Entidade-Relacionamento V1](modulo2/../img/modelo-relacional-v2.svg)
+
+[Clique aqui](modulo2/../img/modelo-relacional-v2.svg) para ver o diagrama com mais detalhes.

@@ -10,7 +10,9 @@ nav:
     - Diagrama Entidade-Relacionamento: modulo1/der.md
     - Atas: 
       - 30/01/2022: modulo1/atas/30-01-2022.md
-  - Módulo 2: modulo2/modelo-relacional.md
+  - Módulo 2: 
+    - Domínios: modulo2/dominio.md
+    - Modelo Relacional: modulo2/modelo-relacional.md
   - Módulo 3: modulo3/normalizacao.md
 
 extra_css:
