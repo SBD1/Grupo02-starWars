@@ -13,6 +13,7 @@
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
+| ID | Quantidade inteira que ordena a região | Inteiro - Acima de -1 |
 | Nome | Conjunto de todos os possíveis nomes para a região | String - 60 Caracteres |
 | Clima | Conjunto de todos os climas predominantes da região | String - 60 Caracteres |
 | Governante | Conjunto de todos os nomes possíveis dos Gorvenantes da região |String - 60 Caracteres |
@@ -31,6 +32,7 @@
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
+| ID | Quantidade inteira que ordena o personagem | Inteiro - Acima de -1 |
 | Nome | Conjunto de todos os possíveis nomes para o personagem | String - 30 Caracteres |
 | Raça | Conjunto de todas as possíveis raças que o personagem pode ser | String - 60 Caracteres |
 
@@ -94,7 +96,7 @@
 | :-: | :-- | :-: |
 | Pré-condições | Conjunto de todas as possíveis pré-condições de utilização do item | String - 120 Caracteres |
 
-## **1.7. Instância de Oponente**
+## **1.7. Instância de item**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -172,3 +174,9 @@
 | Número de série | Conjunto dos possíveis números de série | String - 15 Caracteres |
 | Nome | Conjunto de todos os possíveis nomes para o droid | String - 30 Caracteres |
 | Modelo | Conjunto de todos os possíveis modelos do droid | String - 30 Caracteres |
+
+## **1.14. Relacionmaneto Cumpre (Jogador-objetivo)**
+
+| Atributo| Descrição| Tipo de dado e formato |
+| :-: | :-- | :-: |
+| Status | Descreve se o jogador cumpriu ou não o objetivo| Boolean |
