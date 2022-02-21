@@ -14,6 +14,6 @@
 
 ## 1.3. Versão 3
 
-![Modelo Relacional V3](modulo2/../img/modelo-relacional-v2.svg)
+![Modelo Relacional V3](modulo2/../img/modelo-relacional-v3.svg)
 
 [Clique aqui](modulo2/../img/modelo-relacional-v3.svg) para ver a terceira versão do diagrama com mais detalhes.
