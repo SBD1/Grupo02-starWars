@@ -582,8 +582,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-instancia-de-oponente" class="md-nav__link">
-    1.7. Instância de Oponente
+  <a href="#17-instancia-de-item" class="md-nav__link">
+    1.7. Instância de item
   </a>
   
 </li>
@@ -653,6 +653,13 @@
         <li class="md-nav__item">
   <a href="#113-droid" class="md-nav__link">
     1.13. Droid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-relacionmaneto-cumpre-jogador-objetivo" class="md-nav__link">
+    1.14. Relacionmaneto Cumpre (Jogador-objetivo)
   </a>
   
 </li>
@@ -817,8 +824,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-instancia-de-oponente" class="md-nav__link">
-    1.7. Instância de Oponente
+  <a href="#17-instancia-de-item" class="md-nav__link">
+    1.7. Instância de item
   </a>
   
 </li>
@@ -892,6 +899,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#114-relacionmaneto-cumpre-jogador-objetivo" class="md-nav__link">
+    1.14. Relacionmaneto Cumpre (Jogador-objetivo)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -953,6 +967,11 @@
 </thead>
 <tbody>
 <tr>
+<td align="center">ID</td>
+<td align="left">Quantidade inteira que ordena a região</td>
+<td align="center">Inteiro - Acima de -1</td>
+</tr>
+<tr>
 <td align="center">Nome</td>
 <td align="left">Conjunto de todos os possíveis nomes para a região</td>
 <td align="center">String - 60 Caracteres</td>
@@ -1011,6 +1030,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="center">ID</td>
+<td align="left">Quantidade inteira que ordena o personagem</td>
+<td align="center">Inteiro - Acima de -1</td>
+</tr>
 <tr>
 <td align="center">Nome</td>
 <td align="left">Conjunto de todos os possíveis nomes para o personagem</td>
@@ -1237,7 +1261,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="17-instancia-de-oponente"><strong>1.7. Instância de Oponente</strong></h2>
+<h2 id="17-instancia-de-item"><strong>1.7. Instância de item</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1499,6 +1523,23 @@
 <td align="center">Modelo</td>
 <td align="left">Conjunto de todos os possíveis modelos do droid</td>
 <td align="center">String - 30 Caracteres</td>
+</tr>
+</tbody>
+</table>
+<h2 id="114-relacionmaneto-cumpre-jogador-objetivo"><strong>1.14. Relacionmaneto Cumpre (Jogador-objetivo)</strong></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Atributo</th>
+<th align="left">Descrição</th>
+<th align="center">Tipo de dado e formato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Status</td>
+<td align="left">Descreve se o jogador cumpriu ou não o objetivo</td>
+<td align="center">Boolean</td>
 </tr>
 </tbody>
 </table>
