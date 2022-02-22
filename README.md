@@ -13,7 +13,7 @@
 | ---------- | --------------------------------- | ---------------------------------------------------------- |
 | 17/0140571 | Douglas Farias de Castro          | [@douglasffcastro](https://github.com/douglasffcastro)     |
 | 19/0028122 | Gabriel Sabanai Trindade          | [@Sabanai104](https://github.com/Sabanai104)               |
-| 19/0042238 | João Gabriel de Campos de Matos   | [@jongamatos](https://github.com/jongamatos)               |
+| 18/0042238 | João Gabriel de Campos de Matos   | [@jongamatos](https://github.com/jongamatos)               |
 | 20/2028202 | Klyssmann H. F. de Oliveira       | [@klyssmannoliveira](https://github.com/klyssmannoliveira) |
 | 19/0033681 | Luiz Henrique Fernandes Zamprogno | [@luiz-herique](https://github.com/luiz-herique)           |
 
