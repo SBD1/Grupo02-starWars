@@ -1,11 +1,11 @@
-# 1. Diagrama Entidade-Relacionamento
+# **1. Diagrama Entidade-Relacionamento**
 
-## 1.1. Versão 4
+## **1.1. Versão 4**
 ![Diagrama Entidade-Relacionamento](modulo1/../img/der-v4.svg)
 
 <a href="https://sbd1.github.io/Grupo02-starWars/modulo1/img/der-v4.svg" target="_blank">Clique aqui</a> para ver o diagrama com mais detalhes.
 
-## 1.1. Outras Versões
+## **1.1. Outras Versões**
 
 <details>
   <summary>Versão 1</summary>
