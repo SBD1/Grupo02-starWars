@@ -4,7 +4,7 @@
 
 ## **1.1 Introdução**
 
-<p style='text-align: justify;'>Domínio é o tipo de dados que descreve os tipos de valores que podem aparecer em cada coluna do SGBD, especificando os valores que um atributo pode possuir, a definição adequada do domínio é essencial para evitar inconsistência nos dados armazenados.
+<p style='text-align: justify;'>Domínio é o tipo de dados que descreve os tipos de valores que podem aparecer em cada coluna do SGBD, especificando os valores que um atributo pode possuir, a definição adequada do domínio é essencial para evitar inconsistência nos dados armazenados.</p>
 
 ## **1.2. Corpo Astronômico** 
 | Atributo | Descrição | Tipo de dado e formato |

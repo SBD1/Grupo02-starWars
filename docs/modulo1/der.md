@@ -2,7 +2,7 @@
 
 ## **1.1. Introdução**
 
-<p style='text-align: justify;'>O Modelo Entidade Relacionamento (MER) é um modelo conceitual utilizado na Engenharia de Software, o mesmo visa descrever os objetos envolvidos em um domínio de negócios, com suas características e como elas se relacionam entre si. Em suma, o modelo representa de forma abstrata os elementos e estruturas que formarão o banco de dados do software. 
+<p style='text-align: justify;'>O Modelo Entidade Relacionamento (MER) é um modelo conceitual utilizado na Engenharia de Software, o mesmo visa descrever os objetos envolvidos em um domínio de negócios, com suas características e como elas se relacionam entre si. Em suma, o modelo representa de forma abstrata os elementos e estruturas que formarão o banco de dados do software. </p>
 
 ## **1.2. Versão 4**
 ![Diagrama Entidade-Relacionamento](modulo1/../img/der-v4.svg)
