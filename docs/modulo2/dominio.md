@@ -1,6 +1,12 @@
 # **1. Especificação do domínio**
 
-## **1.1. Corpo Astronômico** 
+
+
+## **1.1 Introdução**
+
+<p style='text-align: justify;'>Domínio é o tipo de dados que descreve os tipos de valores que podem aparecer em cada coluna do SGBD, especificando os valores que um atributo pode possuir, a definição adequada do domínio é essencial para evitar inconsistência nos dados armazenados.
+
+## **1.2. Corpo Astronômico** 
 | Atributo | Descrição | Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Nome | Conjunto de todos os possíveis nomes para o corpo astronômico | String - 60 Caracteres |
@@ -9,7 +15,7 @@
 | Atmosfera | Descreve se a atmosfera é respirável para humanos ou não | Boolean |
 
 
-## **1.2. Região**
+## **1.3. Região**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -21,14 +27,14 @@
 | Nível | Número do nível da região | Inteiro entre 1 a 100|
 
 
-## **1.3. Localização** 
+## **1.4. Localização** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Latitude | Conjunto de todos os números possíveis do eixo Y | Inteiro |
 | Longitude | Conjunto de todos os números possíveis do eixo X | Inteiro |
 
-## **1.4. Personagem**
+## **1.5. Personagem**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -36,13 +42,13 @@
 | Nome | Conjunto de todos os possíveis nomes para o personagem | String - 30 Caracteres |
 | Raça | Conjunto de todas as possíveis raças que o personagem pode ser | String - 60 Caracteres |
 
-### **1.4.1. NPC** 
+### **1.5.1. NPC** 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Descrição | Conjunto de todas as descrições dos NPCs | String - 120 Caracteres |
 | Diálogo | Conjunto de todos os diálogos possíveis com os NPCs | String - 120 Caracteres |
 
-### **1.4.2. Oponente** 
+### **1.5.2. Oponente** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -55,7 +61,7 @@
 | Midichlorians | Quantidade inteira de experiência que o jogador ganha ao derrotar o oponente | Inteiro - Entre 0 e 1000 |
 | Probabilidade | Quantidade em ponto flutuante de obtenção de um item do oponente | Double - 2 Casas decimais |
 
-### **1.4.3. Jogador** 
+### **1.5.3. Jogador** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -69,13 +75,13 @@
 | Resitência | Quantidade inteira de resitência do oponente | Inteiro - Acima de 0 |
 | Força  | Quantidade inteira de força do oponente | Inteiro - Entre -50 até 50 |
 
-## **1.5. Instância de Oponente**
+## **1.6. Instância de Oponente**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | ID | Quantidade inteira que ordena o oponente | Inteiro - Acima de -1 |
 
-## **1.6. Itens**
+## **1.7. Itens**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -84,25 +90,25 @@
 | Descrição | Conjunto de todas as possíveis descrições do item | String - 120 Caracteres |
 | Tipo | Conjunto de todas os possíveis tipos de itens |  String - 30 Caracteres |
 
-### **1.6.1. Itens Consumíveis** 
+### **1.7.1. Itens Consumíveis** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Carga | Quantidade inteira de itens consumíveis | Inteiro - Entre 0 e 10 |
 
-### **1.6.2. Itens Utilizáveis** 
+### **1.7.2. Itens Utilizáveis** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Pré-condições | Conjunto de todas as possíveis pré-condições de utilização do item | String - 120 Caracteres |
 
-## **1.7. Instância de item**
+## **1.8. Instância de item**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | ID | Quantidade inteira que ordena os itens | Inteiro - Acima de -1 |
 
-## **1.8. Habilidade**
+## **1.9. Habilidade**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -113,27 +119,27 @@
 | Impacto | Quantidade inteira do impacto da habilidade | Inteiro - Acima de 0 |
 | Pré-requisito | Conjunto de todos os possíveis pré-requisitos de utilização da habilidade | String - 120 Caracteres |
 
-### **1.8.1. Habilidade com arma**
+### **1.9.1. Habilidade com arma**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Tipo | Conjunto dos possíveis tipos que a habilidade com a arma pode ser | String - 30 Caracteres |
 | Munição | Quantidade inteira de munição da arma | Inteiro - Entre 0 a 100 |
 
-### **1.8.2. Poderes da Força**
+### **1.9.2. Poderes da Força**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Classificação | Indica se a habilidade é especial ou não | Boolean |
 | Aspecto | Conjunto dos possíveis aspectos do poder da força | String - 30 Caracteres |
 
-### **1.8.3. Habilidade do droid**
+### **1.9.3. Habilidade do droid**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | Aspecto | Conjunto dos possíveis aspectos do poder do droid | String - 30 Caracteres |
 
-## **1.9. Nave**
+## **1.10. Nave**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -143,13 +149,13 @@
 | Velocidade Máxima | Conjunto de números inteiros da velocidade máxima medida em Warp | Inteiro entre 0 e 9 |
 | Tipo de Arma | Conjunto das possíveis armas que a nave pode ter | String - 30 Caracteres |
 
-## **1.10. Instância de nave** 
+## **1.11. Instância de nave** 
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
 | ID | Quantidade inteira que ordena as naves | Inteiro - Acima de -1 |
 
-## **1.11. Objetivo**
+## **1.12. Objetivo**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -159,7 +165,7 @@
 | Pont. Força | Conjunto de quantidades inteiras de força que o jogador ganha ao cumprir o objetivo | Inteiro - Entre -10 a 10 |
 | Classificação | Indica se o objetivo é primário ou não | Boolean |
 
-## **1.12. Roteiro do episódio**
+## **1.13. Roteiro do episódio**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -167,7 +173,7 @@
 | História | Conjunto de todas as possíveis histórias do episódio | String - 500 caracteres |
 | Abertura | Conjunto de todas as possíveis aberturas do episódio | String - 500 caracteres |
 
-## **1.13. Droid**
+## **1.14. Droid**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
@@ -175,7 +181,7 @@
 | Nome | Conjunto de todos os possíveis nomes para o droid | String - 30 Caracteres |
 | Modelo | Conjunto de todos os possíveis modelos do droid | String - 30 Caracteres |
 
-## **1.14. Relacionmaneto Cumpre (Jogador-objetivo)**
+## **1.15. Relacionmaneto Cumpre (Jogador-objetivo)**
 
 | Atributo| Descrição| Tipo de dado e formato |
 | :-: | :-- | :-: |
