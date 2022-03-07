@@ -13,7 +13,8 @@ nav:
   - Módulo 2: 
     - Domínios: modulo2/dominio.md
     - Modelo Relacional: modulo2/modelo-relacional.md
-  - Módulo 3: modulo3/normalizacao.md
+  - Módulo 3: 
+    - Normalização: modulo3/normalizacao.md
 
 extra_css:
   - stylesheets/extra.css
