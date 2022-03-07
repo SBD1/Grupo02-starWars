@@ -18,9 +18,9 @@
 &emsp;&emsp;&emsp;&emsp; • O atributo multivalorado "Pré-condições" foi retirado da relação Itens Utilizáveis;
 &emsp;&emsp;&emsp;&emsp; • O modelo relacional abaixo atende à primeira, segunda, terceira, quarta e Boyce-Codd Forma Normal.
 
-![Normalização v1](modulo3/../img/normal-v1.svg)
+![Normalização v1](modulo3/../img/normal-v1.png)
 
-<a href="https://sbd1.github.io/Grupo02-starWars/modulo3/img/normal-v1.svg" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.
+<a href="https://sbd1.github.io/Grupo02-starWars/modulo3/img/normal-v1.png" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.
 
 ## **1.3. Outras Versões**
 
