@@ -15,7 +15,8 @@
 
 &emsp;&emsp;&emsp;Normalizações realizadas:
 
-&emsp;&emsp;&emsp;&emsp; •
+&emsp;&emsp;&emsp;&emsp; • O atributo multivalorado "Pré-condições" foi retirado da relação Itens Utilizáveis;
+&emsp;&emsp;&emsp;&emsp; • O modelo relacional abaixo atende à primeira, segunda, terceira, quarta e Boyce-Codd Forma Normal.
 
 ![Normalização v1](modulo3/../img/normal-v1.svg)
 
