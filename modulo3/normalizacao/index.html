@@ -559,8 +559,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-versao-01" class="md-nav__link">
-    1.1. Versão 0.1
+  <a href="#11-formas-normais" class="md-nav__link">
+    1.1. Formas Normais
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Formas Normais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primeira-forma-normal" class="md-nav__link">
+    Primeira Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-forma-normal" class="md-nav__link">
+    Segunda Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terceira-forma-normal" class="md-nav__link">
+    Terceira Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forma-normal-de-boyce-codd" class="md-nav__link">
+    Forma Normal de Boyce-Codd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quarta-forma-normal" class="md-nav__link">
+    Quarta Forma Normal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-versao-1" class="md-nav__link">
+    1.6. Versão 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-outras-versoes" class="md-nav__link">
+    1.7. Outras Versões
   </a>
   
 </li>
@@ -607,8 +662,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-versao-01" class="md-nav__link">
-    1.1. Versão 0.1
+  <a href="#11-formas-normais" class="md-nav__link">
+    1.1. Formas Normais
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Formas Normais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primeira-forma-normal" class="md-nav__link">
+    Primeira Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-forma-normal" class="md-nav__link">
+    Segunda Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terceira-forma-normal" class="md-nav__link">
+    Terceira Forma Normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forma-normal-de-boyce-codd" class="md-nav__link">
+    Forma Normal de Boyce-Codd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quarta-forma-normal" class="md-nav__link">
+    Quarta Forma Normal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-versao-1" class="md-nav__link">
+    1.6. Versão 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-outras-versoes" class="md-nav__link">
+    1.7. Outras Versões
   </a>
   
 </li>
@@ -630,12 +740,43 @@
 </a>
 
 
-<h1 id="1-normalizacao">1. <strong>Normalização</strong></h1>
-<h2 id="11-versao-01"><strong>1.1. Versão 0.1</strong></h2>
-<p>&emsp;&emsp;&emsp;&emsp;Modelo relacional na primeira, segunda e terceira forma normal.</p>
-<p><img alt="Normalização 0.1" src="../img/normal-v0.1.svg" /></p>
-<p><a href="https://sbd1.github.io/Grupo02-starWars/modulo2/img/normal-v0.1.svg" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.</p>
-<!-- ## **1.2. Outras Versões** -->
+<h1 id="1-normalizacao"><strong>1. Normalização</strong></h1>
+<p>&emsp;&emsp;&emsp; A normalização é um processo formal e passo a passo que examina os atributos de uma entidade, com o objetivo de evitar anomalias observadas na inclusão, exclusão e alteração de registros.</p>
+<p>&emsp;&emsp;&emsp; A teoria de normalização provê:</p>
+<p>&emsp;&emsp;&emsp;&emsp;• uma maneira formal de melhoria de projeto;</p>
+<p>&emsp;&emsp;&emsp;&emsp;• desenvolve a intuição de projetos de melhor qualidade.</p>
+<h2 id="11-formas-normais"><strong>1.1. Formas Normais</strong></h2>
+<p>&emsp;&emsp;&emsp;As formas normais são sequenciais, ou seja, se um banco se encontra na terceira forma normal, isso também significa que o mesmo está na segunda e também na primeira. Por isso devemos sempre começar a normalização pela primeira forma normal, para que não hajam problemas mais a frente na nossa normalização.</p>
+<h3 id="primeira-forma-normal"><strong>Primeira Forma Normal</strong></h3>
+<p>&emsp;&emsp;&emsp; Todos os atributos são monovalorados e atômicos (não há relações aninhadas).</p>
+<h3 id="segunda-forma-normal"><strong>Segunda Forma Normal</strong></h3>
+<p>&emsp;&emsp;&emsp; Relação está na segunda Forma Normal quando:</p>
+<p>&emsp;&emsp;&emsp;&emsp;• Está na primeira Forma Normal,</p>
+<p>&emsp;&emsp;&emsp;&emsp;• Atributos comuns não dependem parcialmente de qualquer chave.</p>
+<h3 id="terceira-forma-normal"><strong>Terceira Forma Normal</strong></h3>
+<p>&emsp;&emsp;&emsp; Uma relação está na terceira Forma Normal quando:
+&emsp;&emsp;&emsp;&emsp;• Está na segunda Forma Normal;
+&emsp;&emsp;&emsp;&emsp;• Atributos comuns não dependem transitivamente de qualquer superchave.</p>
+<h3 id="forma-normal-de-boyce-codd"><strong>Forma Normal de Boyce-Codd</strong></h3>
+<p>&emsp;&emsp;&emsp;É uma versão mais restritiva da terceira Forma Normal, e na maioria dos casos, quando a relação está na terceira Forma Normal, ela satisfaz à Forma Normal de Boyce-Codd.</p>
+<p>&emsp;&emsp;&emsp; Uma relação está na Forma Normal de Boyce-Codd quando:
+&emsp;&emsp;&emsp;&emsp; • Para toda dependência funcional X -&gt; A, X é uma
+chave candidata.</p>
+<h3 id="quarta-forma-normal"><strong>Quarta Forma Normal</strong></h3>
+<p>&emsp;&emsp;&emsp;A quarta forma normal assegura que não existam entidades com atributos que não fazem parte da chave primária, atributos não chave, e que possem valores múltiplos.</p>
+<h2 id="16-versao-1"><strong>1.6. Versão 1</strong></h2>
+<p>&emsp;&emsp;&emsp;Normalizações realizadas:
+&emsp;&emsp;&emsp;&emsp; •</p>
+<p><img alt="Normalização v1" src="../img/normal-v1.svg" /></p>
+<p><a href="https://sbd1.github.io/Grupo02-starWars/modulo3/img/normal-v1.svg" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.</p>
+<h2 id="17-outras-versoes"><strong>1.7. Outras Versões</strong></h2>
+<details>
+  <summary>Versão 0.1</summary> 
+
+  <img src="https://sbd1.github.io/Grupo02-starWars/modulo3/img/normal-v0.1.svg" alt="Modelo Relacional v0.2">
+
+  <a href="https://sbd1.github.io/Grupo02-starWars/modulo3/img/normal-v0.1.svg" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.
+</details>
 
               
             </article>
