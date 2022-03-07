@@ -23,13 +23,16 @@
 
 ### **Terceira Forma Normal**
 &emsp;&emsp;&emsp; Uma relação está na terceira Forma Normal quando:
+
 &emsp;&emsp;&emsp;&emsp;• Está na segunda Forma Normal;
+
 &emsp;&emsp;&emsp;&emsp;• Atributos comuns não dependem transitivamente de qualquer superchave.
 
 ### **Forma Normal de Boyce-Codd**
 &emsp;&emsp;&emsp;É uma versão mais restritiva da terceira Forma Normal, e na maioria dos casos, quando a relação está na terceira Forma Normal, ela satisfaz à Forma Normal de Boyce-Codd.
 
 &emsp;&emsp;&emsp; Uma relação está na Forma Normal de Boyce-Codd quando:
+
 &emsp;&emsp;&emsp;&emsp; • Para toda dependência funcional X -> A, X é uma
 chave candidata.
 ### **Quarta Forma Normal**
@@ -38,6 +41,7 @@ chave candidata.
 ## **1.6. Versão 1**
 
 &emsp;&emsp;&emsp;Normalizações realizadas:
+
 &emsp;&emsp;&emsp;&emsp; •
 
 ![Normalização v1](modulo3/../img/normal-v1.svg)
