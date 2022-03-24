@@ -79,6 +79,17 @@ CREATE TABLE oponente (
    espectro_forca  INTEGER NOT NULL
 );
 
+CREATE TABLE nave(
+ NroSerie SERIAL PRIMARY KEY,
+ nome VARCHAR(100) NOT NULL,
+ descricao VARCHAR(140) NOT NULL,
+ velocidade_maxima INTEGER NOT NULL,
+ arma VARCHAR(100) NOT NULL,
+
+ CONSTRAINT campo_un UNIQUE(nome),
+);
+
+
 INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
 
 INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
