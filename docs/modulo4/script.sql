@@ -19,7 +19,9 @@ CREATE TABLE regiao(
  nivel SMALLINT NOT NULL,
 
  CONSTRAINT campo_un UNIQUE(nome),
+ CONSTRAINT regiao_nivel_ck CHECK( nivel >= 1),
  CONSTRAINT regiao_corpo_fk FOREIGN KEY (nome_corpo_astronomico) REFERENCES campo_astronomico (nome) ON DELETE CASCADE
+
 
 );
 
