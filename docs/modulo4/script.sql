@@ -1,8 +1,3 @@
-sudo -u postgres psql # Para acessar o banco
-createdb starWars
-\l # listar os bancos de dados;
-\c starWars; # Entrar no data base;
-
 CREATE TABLE campo_astronomico(
  id SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
@@ -53,3 +48,37 @@ CREATE TABLE habilidade_forca(
 
   CONSTRAINT habilidade_habForca_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
 );
+
+CREATE TABLE jogador (
+   id	 	         SERIAL PRIMARY KEY,
+   nome		      VARCHAR(30) NOT NULL UNIQUE,
+   raca 	       	VARCHAR(60) NOT NULL,
+   midichlorians  SMALLINT NOT NULL, 
+   vida		      INTEGER NOT NULL,
+   nivel	       	INTEGER NOT NULL,
+   ordem	       	INTEGER NOT NULL,
+   rank		      VARCHAR(30) NOT NULL,
+   inteligencia	INTEGER NOT NULL,
+   forca_fisica	INTEGER NOT NULL,
+   agilidade	   INTEGER NOT NULL,
+   resistencia	   INTEGER NOT NULL,
+   espectro_forca INTEGER NOT NULL
+);
+
+CREATE TABLE oponente (
+   id		          SERIAL PRIMARY KEY,
+   nome		       VARCHAR(30) NOT NULL UNIQUE,
+   raca 	          VARCHAR(60) NOT NULL,
+   vida		       INTEGER NOT NULL,
+   midichlorians   SMALLINT NOT NULL, 
+   probabilidade   REAL NOT NULL,
+   inteligencia	 INTEGER NOT NULL,
+   forca_fisica	 INTEGER NOT NULL,
+   agilidade	    INTEGER NOT NULL,
+   resistencia	    INTEGER NOT NULL,
+   espectro_forca  INTEGER NOT NULL
+);
+
+INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
+
+INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
