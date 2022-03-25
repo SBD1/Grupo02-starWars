@@ -82,3 +82,22 @@ CREATE TABLE oponente (
 INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
 
 INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
+
+CREATE TABLE droid(
+  nro_serie SERIAL PRIMARY KEY,
+  habilidade SERIAL,
+  nome VARCHAR(100) NOT NULL,
+  modelo VARCHAR(30) NOT NULL,
+
+  CONSTRAINT habDroid_droid_fk FOREIGN KEY (droid) REFERENCES droid (nro_serie) ON DELETE CASCADE
+  
+);
+
+CREATE TABLE intancia_de_droid(
+  id SERIAL PRIMARY KEY,
+  nro_serie SERIAL,
+  jogador SERIAL,
+
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (habilidade_droid) REFERENCES habilidade (id) ON DELETE CASCADE
+  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
+);
