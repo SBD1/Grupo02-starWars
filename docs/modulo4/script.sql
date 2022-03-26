@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS starWars;
+
 CREATE TABLE campo_astronomico(
  id SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
@@ -79,9 +81,37 @@ CREATE TABLE oponente (
    espectro_forca  INTEGER NOT NULL
 );
 
-INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
+CREATE TABLE item (
+   id			SERIAL PRIMARY KEY,
+   nome			VARCHAR(30) NOT NULL UNIQUE,
+   descricao		VARCHAR(120) NOT NULL,
+   tipo			VARCHAR(30) NOT NULL
+);
 
-INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
+CREATE TABLE item_utilizavel (
+   id			SERIAL PRIMARY KEY,
+   habilidade		SERIAL NOT NULL,
+   item			SERIAL NOT NULL,
+   nivel		INTEGER NOT NULL,
+   
+   CONSTRAINT habilidade_habForca_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE,
+   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
+);
+
+CREATE TABLE item_consumivel (
+   id			SERIAL PRIMARY KEY,
+   item			SERIAL NOT NULL,
+   carga		INTEGER NOT NULL,
+   
+   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
+);
+
+CREATE TABLE instancia_item (
+   id			SERIAL PRIMARY KEY,
+   item			SERIAL NOT NULL,
+   
+   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
+);
 
 CREATE TABLE droid(
   nro_serie SERIAL PRIMARY KEY,
@@ -89,7 +119,7 @@ CREATE TABLE droid(
   nome VARCHAR(100) NOT NULL,
   modelo VARCHAR(30) NOT NULL,
 
-  CONSTRAINT habDroid_droid_fk FOREIGN KEY (droid) REFERENCES droid (nro_serie) ON DELETE CASCADE
+  CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
   
 );
 
@@ -98,6 +128,27 @@ CREATE TABLE intancia_de_droid(
   nro_serie SERIAL,
   jogador SERIAL,
 
-  CONSTRAINT instDroid_droid_fk FOREIGN KEY (habilidade_droid) REFERENCES habilidade (id) ON DELETE CASCADE
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE
   CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
 );
+
+
+
+-- Inserção de dados --
+
+INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
+
+INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
+
+INSERT INTO habilidade(nome, descricao, nivel, impacto, preRequisito) VALUES ('Atirar', 'Causa 30 de dano ao oponente', 5, 30, 'Sem pre-requisitos');
+
+INSERT INTO habilidade_arma(habilidade, tipo, municao) VALUES (1, 'Pistola', 50);
+
+INSERT INTO item(nome, descricao, tipo) VALUES ('Pistola Verde', 'Atira 2 vezes por milissegundo', 'Pistola');
+
+INSERT INTO item_utilizavel(habilidade, item, nivel) VALUES (1, 1, 5);
+
+INSERT INTO item_consumivel(item, carga) VALUES (1, 5);
+
+INSERT INTO instancia_item (item) VALUES (1);	
+
