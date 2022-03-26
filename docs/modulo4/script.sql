@@ -120,7 +120,6 @@ CREATE TABLE droid(
   modelo VARCHAR(30) NOT NULL,
 
   CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
-  
 );
 
 CREATE TABLE intancia_de_droid(
