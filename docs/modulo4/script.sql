@@ -52,18 +52,18 @@ CREATE TABLE habilidade_forca(
 );
 
 CREATE TABLE jogador (
-   id	 	         SERIAL PRIMARY KEY,
-   nome		      VARCHAR(30) NOT NULL UNIQUE,
-   raca 	       	VARCHAR(60) NOT NULL,
-   midichlorians  SMALLINT NOT NULL, 
-   vida		      INTEGER NOT NULL,
-   nivel	       	INTEGER NOT NULL,
-   ordem	       	INTEGER NOT NULL,
-   rank		      VARCHAR(30) NOT NULL,
-   inteligencia	INTEGER NOT NULL,
-   forca_fisica	INTEGER NOT NULL,
-   agilidade	   INTEGER NOT NULL,
-   resistencia	   INTEGER NOT NULL,
+   id SERIAL PRIMARY KEY,
+   nome VARCHAR(30) NOT NULL UNIQUE,
+   raca VARCHAR(60) NOT NULL,
+   midichlorians SMALLINT NOT NULL, 
+   vida INTEGER NOT NULL,
+   nivel INTEGER NOT NULL,
+   ordem INTEGER NOT NULL,
+   rank VARCHAR(60) NOT NULL,
+   inteligencia INTEGER NOT NULL,
+   forca_fisica INTEGER NOT NULL,
+   agilidade INTEGER NOT NULL,
+   resistencia INTEGER NOT NULL,
    espectro_forca INTEGER NOT NULL
 );
 
@@ -82,33 +82,33 @@ CREATE TABLE oponente (
 );
 
 CREATE TABLE item (
-   id			SERIAL PRIMARY KEY,
-   nome			VARCHAR(30) NOT NULL UNIQUE,
-   descricao		VARCHAR(120) NOT NULL,
-   tipo			VARCHAR(30) NOT NULL
+   id	 SERIAL PRIMARY KEY,
+   nome VARCHAR(30) NOT NULL UNIQUE,
+   descricao VARCHAR(120) NOT NULL,
+   tipo VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE item_utilizavel (
-   id			SERIAL PRIMARY KEY,
-   habilidade		SERIAL NOT NULL,
-   item			SERIAL NOT NULL,
-   nivel		INTEGER NOT NULL,
+   id SERIAL PRIMARY KEY,
+   habilidade SERIAL NOT NULL,
+   item SERIAL NOT NULL,
+   nivel INTEGER NOT NULL,
    
    CONSTRAINT habilidade_habForca_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE,
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
 
 CREATE TABLE item_consumivel (
-   id			SERIAL PRIMARY KEY,
-   item			SERIAL NOT NULL,
-   carga		INTEGER NOT NULL,
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
+   carga	 INTEGER NOT NULL,
    
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
 
 CREATE TABLE instancia_item (
-   id			SERIAL PRIMARY KEY,
-   item			SERIAL NOT NULL,
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
    
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
@@ -128,7 +128,7 @@ CREATE TABLE intancia_de_droid(
   nro_serie SERIAL,
   jogador SERIAL,
 
-  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE,
   CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
 );
 
