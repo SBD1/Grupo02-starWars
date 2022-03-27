@@ -68,21 +68,21 @@ CREATE TABLE jogador (
 );
 
 CREATE TABLE oponente (
-   id		          SERIAL PRIMARY KEY,
-   nome		       VARCHAR(30) NOT NULL UNIQUE,
-   raca 	          VARCHAR(60) NOT NULL,
-   vida		       INTEGER NOT NULL,
-   midichlorians   SMALLINT NOT NULL, 
-   probabilidade   REAL NOT NULL,
-   inteligencia	 INTEGER NOT NULL,
-   forca_fisica	 INTEGER NOT NULL,
-   agilidade	    INTEGER NOT NULL,
-   resistencia	    INTEGER NOT NULL,
-   espectro_forca  INTEGER NOT NULL
+   id SERIAL PRIMARY KEY,
+   nome VARCHAR(30) NOT NULL UNIQUE,
+   raca VARCHAR(60) NOT NULL,
+   vida INTEGER NOT NULL,
+   midichlorians SMALLINT NOT NULL, 
+   probabilidade REAL NOT NULL,
+   inteligencia INTEGER NOT NULL,
+   forca_fisica INTEGER NOT NULL,
+   agilidade INTEGER NOT NULL,
+   resistencia INTEGER NOT NULL,
+   espectro_forca INTEGER NOT NULL
 );
 
 CREATE TABLE item (
-   id	 SERIAL PRIMARY KEY,
+   id SERIAL PRIMARY KEY,
    nome VARCHAR(30) NOT NULL UNIQUE,
    descricao VARCHAR(120) NOT NULL,
    tipo VARCHAR(30) NOT NULL
@@ -131,6 +131,28 @@ CREATE TABLE intancia_de_droid(
   CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
 );
 
+-- TESTAR --
+
+CREATE TABLE intancia_de_oponente(
+  id SERIAL PRIMARY KEY,
+  instancia_item SERIAL,
+  oponente SERIAL,
+
+  CONSTRAINT instItem_instOpon_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (nro_serie) ON DELETE CASCADE,
+  CONSTRAINT oponente_instOpon_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE CASCADE
+);
+
+CREATE TABLE npc(
+  id SERIAL PRIMARY KEY,
+  instancia_item SERIAL,
+  nome VARCHAR(30) NOT NULL,
+  raca VARCHAR(60) NOT NULL,
+  descricao VARCHAR(100) NOT NULL,
+  dialogo VARCHAR(1000) NOT NULL,
+
+  CONSTRAINT instItem_npc_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (nro_serie) ON DELETE CASCADE,
+  
+);
 
 
 -- Inserção de dados --
