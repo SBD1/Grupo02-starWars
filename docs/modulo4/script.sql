@@ -11,6 +11,30 @@ CREATE TABLE campo_astronomico(
  CONSTRAINT campo_atmosfera_ck CHECK(atmosfera IN ('Respirável','Não Respirável'))
 );
 
+CREATE TABLE regiao(
+ id SERIAL PRIMARY KEY,
+ nome_corpo_astronomico VARCHAR(100) NOT NULL
+ nome VARCHAR(100) NOT NULL,
+ clima VARCHAR(140) NOT NULL,
+ governante VARCHAR(140) NOT NULL,
+ dominio VARCHAR(140) NOT NULL,
+ nivel SMALLINT NOT NULL,
+
+ CONSTRAINT campo_un UNIQUE(nome),
+ CONSTRAINT regiao_nivel_ck CHECK( nivel >= 1),
+ CONSTRAINT regiao_corpo_fk FOREIGN KEY (nome_corpo_astronomico) REFERENCES campo_astronomico (nome) ON DELETE CASCADE
+);
+
+CREATE TABLE nave(
+ NroSerie SERIAL PRIMARY KEY,
+ nome VARCHAR(100) NOT NULL,
+ descricao VARCHAR(140) NOT NULL,
+ velocidade_maxima INTEGER NOT NULL,
+ arma VARCHAR(100) NOT NULL,
+
+ CONSTRAINT campo_un UNIQUE(nome),
+);
+
 CREATE TABLE habilidade(
  id SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
