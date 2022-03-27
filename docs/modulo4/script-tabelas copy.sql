@@ -15,49 +15,25 @@ CREATE TABLE campo_astronomico(
 
 CREATE TABLE regiao(
  id SERIAL PRIMARY KEY,
- nome_corpo_astronomico VARCHAR(100) NOT NULL
- nome VARCHAR(100) NOT NULL,
+ campo_astronomico SERIAL NOT NULL,
+ nome VARCHAR(100) NOT NULL UNIQUE,
  clima VARCHAR(140) NOT NULL,
  governante VARCHAR(140) NOT NULL,
  dominio VARCHAR(140) NOT NULL,
  nivel SMALLINT NOT NULL,
 
- CONSTRAINT campo_un UNIQUE(nome),
  CONSTRAINT regiao_nivel_ck CHECK( nivel >= 1),
- CONSTRAINT regiao_corpo_fk FOREIGN KEY (nome_corpo_astronomico) REFERENCES campo_astronomico (nome) ON DELETE CASCADE
+ CONSTRAINT regiao_campo_fk FOREIGN KEY (campo_astronomico) REFERENCES campo_astronomico (id) ON DELETE CASCADE
 );
 
 
 -- NAVE
 CREATE TABLE nave(
- NroSerie SERIAL PRIMARY KEY,
- nome VARCHAR(100) NOT NULL,
+ nro_serie SERIAL PRIMARY KEY,
+ nome VARCHAR(100) NOT NULL UNIQUE,
  descricao VARCHAR(140) NOT NULL,
  velocidade_maxima INTEGER NOT NULL,
- arma VARCHAR(100) NOT NULL,
-
- CONSTRAINT campo_un UNIQUE(nome),
-);
-
-
--- DROID
-CREATE TABLE droid(
-  nro_serie SERIAL PRIMARY KEY,
-  habilidade SERIAL,
-  nome VARCHAR(100) NOT NULL,
-  modelo VARCHAR(30) NOT NULL,
-
-  CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
-  
-);
-
-CREATE TABLE intancia_de_droid(
-  id SERIAL PRIMARY KEY,
-  nro_serie SERIAL,
-  jogador SERIAL,
-
-  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE,
-  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
+ arma VARCHAR(100) NOT NULL
 );
 
 
@@ -135,6 +111,28 @@ CREATE TABLE oponente (
 );
 
 
+-- DROID
+CREATE TABLE droid(
+  nro_serie SERIAL PRIMARY KEY,
+  habilidade SERIAL,
+  nome VARCHAR(100) NOT NULL,
+  modelo VARCHAR(30) NOT NULL,
+
+  CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
+  
+);
+
+CREATE TABLE intancia_de_droid(
+  id SERIAL PRIMARY KEY,
+  nro_serie SERIAL,
+  jogador SERIAL,
+
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE,
+  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
+);
+
+
+
 --ITEM
 CREATE TABLE item (
    id	 SERIAL PRIMARY KEY,
@@ -166,4 +164,23 @@ CREATE TABLE instancia_item (
    item SERIAL NOT NULL,
    
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
+);
+
+-- FASES
+CREATE TABLE roteiro (
+   titulo		    VARCHAR(60) PRIMARY KEY,
+   historia 	    VARCHAR(500) NOT NULL,
+   abertura		    VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE objetivo (
+   id             SERIAL PRIMARY KEY,
+   roteiro        VARCHAR NOT NULL,
+   ordem 	      VARCHAR(60) NOT NULL,
+   midichlorians	VARCHAR(1000) NOT NULL,
+   pontos_forca   SMALLINT NOT NULL,
+   classificacao  BOOLEAN NOT NULL,
+
+   CONSTRAINT roteiro_fk FOREIGN KEY (roteiro) REFERENCES roteiro (titulo) ON DELETE CASCADE
 );
