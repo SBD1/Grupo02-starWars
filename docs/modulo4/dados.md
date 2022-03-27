@@ -13,7 +13,7 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 | 5 | Endor | Territórios da Orla Exterior | Moddell | Respirável |
 | 6 | Naboo | Orla Média | Chommell | Respirável |
 
-<a href="https://sbd1.github.io/Grupo02-starWars/assets/Canon_galaxy_map.jpg" target="_blank">Clique aqui</a> para ver o mapa da galáxia ampliado.
+<a href="https://sbd1.github.io/Grupo02-starWars/docs/assets/Canon_galaxy_map.jpg" target="_blank">Clique aqui</a> para ver o mapa da galáxia ampliado.
 
 ## 2. Região
 
@@ -25,4 +25,4 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 | 4 | Mar das Dunas | Desértico | Incursores Tusken | Tribo do povo da areia | 5 | Totooine |
 | 5 | Cânion do Mendigo | Desértico | Sem governante | Eremitas | 7 | Totooine |
 
-<a href="https://sbd1.github.io/Grupo02-starWars/assets/tatooine.jpg" target="_blank">Clique aqui</a> para ver o mapa de Tatooine ampliado.
+<a href="https://sbd1.github.io/Grupo02-starWars/docs/assets/tatooine.jpg" target="_blank">Clique aqui</a> para ver o mapa de Tatooine ampliado.
