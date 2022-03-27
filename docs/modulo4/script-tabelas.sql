@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS starWars;
 
 
 -- MAPA
-CREATE TABLE campo_astronomico(
+CREATE TABLE IF NOT EXISTS campo_astronomico(
  id SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
  setor VARCHAR(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE campo_astronomico(
  CONSTRAINT campo_atmosfera_ck CHECK(atmosfera IN ('Respirável','Não Respirável'))
 );
 
-CREATE TABLE regiao(
+CREATE TABLE IF NOT EXISTS regiao(
  id SERIAL PRIMARY KEY,
  campo_astronomico SERIAL NOT NULL,
  nome VARCHAR(100) NOT NULL UNIQUE,
@@ -28,7 +28,7 @@ CREATE TABLE regiao(
 
 
 -- NAVE
-CREATE TABLE nave(
+CREATE TABLE IF NOT EXISTS nave(
  nro_serie SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL UNIQUE,
  descricao VARCHAR(140) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE nave(
 
 
 -- HABILIDADE
-CREATE TABLE habilidade(
+CREATE TABLE IF NOT EXISTS habilidade(
  id SERIAL PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
  descricao VARCHAR(100) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE habilidade(
  CONSTRAINT habilidade_impacto_ck CHECK( impacto >= 0 )
 );
 
-CREATE TABLE habilidade_arma(
+CREATE TABLE IF NOT EXISTS habilidade_arma(
   id SERIAL PRIMARY KEY,
   habilidade SERIAL,
   tipo VARCHAR(100) NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE habilidade_arma(
   CONSTRAINT habilidade_habArma_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
 );
 
-CREATE TABLE habilidade_droid(
+CREATE TABLE IF NOT EXISTS habilidade_droid(
   id SERIAL PRIMARY KEY,
   habilidade SERIAL,
   aspecto VARCHAR(100) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE habilidade_droid(
   CONSTRAINT habilidade_habDroid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
 );
 
-CREATE TABLE habilidade_forca(
+CREATE TABLE IF NOT EXISTS habilidade_forca(
   id SERIAL PRIMARY KEY,
   habilidade SERIAL,
   classificacao VARCHAR(100) NOT NULL,
@@ -78,38 +78,15 @@ CREATE TABLE habilidade_forca(
   CONSTRAINT habilidade_habForca_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
 );
 
-
--- DROID
-CREATE TABLE droid(
-  nro_serie SERIAL PRIMARY KEY,
-  habilidade SERIAL,
-  nome VARCHAR(100) NOT NULL,
-  modelo VARCHAR(30) NOT NULL,
-
-  CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
-  
-);
-
-CREATE TABLE intancia_de_droid(
-  id SERIAL PRIMARY KEY,
-  nro_serie SERIAL,
-  jogador SERIAL,
-
-  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE,
-  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
-);
-
-
-
 --ITEM
-CREATE TABLE item (
+CREATE TABLE IF NOT EXISTS item (
    id	 SERIAL PRIMARY KEY,
    nome VARCHAR(30) NOT NULL UNIQUE,
    descricao VARCHAR(120) NOT NULL,
    tipo VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE item_utilizavel (
+CREATE TABLE IF NOT EXISTS item_utilizavel (
    id SERIAL PRIMARY KEY,
    habilidade SERIAL NOT NULL,
    item SERIAL NOT NULL,
@@ -119,7 +96,7 @@ CREATE TABLE item_utilizavel (
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
 
-CREATE TABLE item_consumivel (
+CREATE TABLE IF NOT EXISTS item_consumivel (
    id SERIAL PRIMARY KEY,
    item SERIAL NOT NULL,
    carga	 INTEGER NOT NULL,
@@ -127,16 +104,15 @@ CREATE TABLE item_consumivel (
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
 
-CREATE TABLE instancia_item (
+CREATE TABLE IF NOT EXISTS instancia_item (
    id SERIAL PRIMARY KEY,
    item SERIAL NOT NULL,
    
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE CASCADE
 );
 
-
 -- PERSONAGEM
-CREATE TABLE jogador (
+CREATE TABLE IF NOT EXISTS jogador (
    id SERIAL PRIMARY KEY,
    nome VARCHAR(30) NOT NULL UNIQUE,
    raca VARCHAR(60) NOT NULL,
@@ -152,7 +128,7 @@ CREATE TABLE jogador (
    espectro_forca INTEGER NOT NULL
 );
 
-CREATE TABLE oponente (
+CREATE TABLE IF NOT EXISTS oponente (
    id		          SERIAL PRIMARY KEY,
    nome		       VARCHAR(30) NOT NULL UNIQUE,
    raca 	          VARCHAR(60) NOT NULL,
@@ -167,7 +143,7 @@ CREATE TABLE oponente (
 );
 
 
-CREATE TABLE npc(
+CREATE TABLE IF NOT EXISTS npc(
   id SERIAL PRIMARY KEY,
   instancia_item SERIAL,
   nome VARCHAR(30) NOT NULL,
@@ -175,9 +151,32 @@ CREATE TABLE npc(
   descricao VARCHAR(100) NOT NULL,
   dialogo VARCHAR(1000) NOT NULL,
 
-  CONSTRAINT instItem_npc_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (nro_serie) ON DELETE CASCADE,
+  CONSTRAINT instItem_npc_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE CASCADE
   
 );
+
+
+-- DROID
+CREATE TABLE IF NOT EXISTS droid(
+  nro_serie SERIAL PRIMARY KEY,
+  habilidade SERIAL,
+  nome VARCHAR(100) NOT NULL,
+  modelo VARCHAR(30) NOT NULL,
+
+  CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE CASCADE
+  
+);
+
+CREATE TABLE IF NOT EXISTS intancia_de_droid(
+  id SERIAL PRIMARY KEY,
+  nro_serie SERIAL,
+  jogador SERIAL,
+
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE CASCADE,
+  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE CASCADE
+);
+
+
 
 
 -- TESTAR
@@ -186,7 +185,7 @@ CREATE TABLE intancia_de_oponente(
   instancia_item SERIAL,
   oponente SERIAL,
 
-  CONSTRAINT instItem_instOpon_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (nro_serie) ON DELETE CASCADE,
+  CONSTRAINT instItem_instOpon_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE CASCADE,
   CONSTRAINT oponente_instOpon_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE CASCADE
 );
 
@@ -203,7 +202,7 @@ CREATE TABLE objetivo (
    id             SERIAL PRIMARY KEY,
    roteiro        VARCHAR NOT NULL,
    ordem 	      VARCHAR(60) NOT NULL,
-   midichlorians	VARCHAR(1000) NOT NULL,
+   midichlorians VARCHAR(1000) NOT NULL,
    pontos_forca   SMALLINT NOT NULL,
    classificacao  BOOLEAN NOT NULL,
 
