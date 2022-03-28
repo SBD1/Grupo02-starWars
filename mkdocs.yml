@@ -19,6 +19,7 @@ nav:
     - Novas versões:
       - Diagrama Entidade-Relacionamento: modulo1/der.md
       - Modelo relacional: modulo4/modelo-relacional/modelo-relacional-atualizado.md
+      - Dados jogo:  modulo4/modelo-relacional/dados.md
 
 extra_css:
   - stylesheets/extra.css
