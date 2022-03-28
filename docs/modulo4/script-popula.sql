@@ -31,3 +31,26 @@ INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) 
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (1, 'Mos Eisley', 'Desértico', 'Hutts', 'Cartel Hutt', 1);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (1, 'Mar das Dunas', 'Desértico', 'Incursores Tusken', 'Tribo do povo da areia', 5);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (1, 'Cânion do Mendigo', 'Desértico', 'Sem governante', 'Eremitas', 7);
+
+-- Habilidade
+
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Tiro simples com blaster', 'Tiro simples com uma pistola blaster causando impacto a distância no adversários. Utilizado uma vez por turno.', 5, 10, 'Possuir uma pistola blaster');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Golpe de sabre de luz', 'Aplica um golpe corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 2, 20, 'Possuir um sabre de luz');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Sequência de golpes de sabre de luz', 'Aplica uma sequência de golpes corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 15, 40, 'Possuir um sabre de luz');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Levitar objetos', 'Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno.', 15, 0, 'Ter a ordem Jedi, Gray Jedi ou Sith');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Velocidade da força', 'Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno.', 25, 10, 'Ter a ordem Jedi, Gray Jedi ou Sith');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Abrir portas com droid', 'Utiliza-se de um droid para abrir uma porta.', 5, 0, 'Possuir um droid com o modelos astromech');
+
+-- Habilidade com arma
+
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (1, 'Blaster Simples', 30);
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (2, 'Sabre de Luz', 1);
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (3, 'Sabre de Luz', 1);
+
+-- Poderes da força
+
+INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (4, 'Simples', 'Controle');
+INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (5, 'Simples', 'Alteração');
+
+-- Habilidade droid
+INSERT INTO habilidade_droid (habilidade, aspecto) VALUES (6, 'Mobilidade');
