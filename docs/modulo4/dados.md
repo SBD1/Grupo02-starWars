@@ -1,8 +1,13 @@
 # População - Banco de Dados - Star Wars
 
-Abaixo estão resumidamente os dados para a população do banco de dados.
+## 1. Introdução
 
-## 1. Campo astronômico
+Este documento destina-se a apresentar resumidamente de maneira visual os dados para a população do banco de dados.
+
+
+## 2. Artefato 
+
+### 2.1. Campo astronômico
 
 | ID | Nome | Região | Setor | Atmosfera |
 | :-:| :-:  | :-:    | :-:   | :-:       |
@@ -15,7 +20,7 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 
 <a href="https://github.com/SBD1/Grupo02-starWars/blob/main/docs/assets/Canon_galaxy_map.jpg" target="_blank">Clique aqui</a> para ver o mapa da galáxia ampliado.
 
-## 2. Região
+### 2.2. Região
 
 | ID | Nome | Clima | Governante | Domínio | Nível | Campos Astonomico |
 | :-:| :-:  | :-:    | :-:   | :-: | :-: | :-: |
@@ -27,7 +32,7 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 
 <a href="https://github.com/SBD1/Grupo02-starWars/blob/main/docs/assets/tatooine.jpg" target="_blank">Clique aqui</a> para ver o mapa de Tatooine ampliado.
 
-## 2. Habilidade
+## 2.3. Habilidade
 
 | ID | Nome | Descrição | Nível | Impacto | Pré-requisito |
 | :-:| :-:  | :-:    | :-:   | :-: | :-: |
@@ -38,7 +43,7 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 | 5 | Velocidade da força | Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno. | 25 | 10 | Ter a ordem Jedi, Gray Jedi ou Sith |
 | 6 | Abrir portas com droid | Utiliza-se de um droid para abrir uma porta. | 5 | 0 | Possuir um droid com o modelos astromech |
 
-### 2.1 Habilidade com arma
+#### 2.3.1. Habilidade com arma
 
 | ID | Habilidade | Tipo | Munição |
 | :-: | :-: | :-: | :-: |
@@ -47,14 +52,14 @@ Abaixo estão resumidamente os dados para a população do banco de dados.
 | 3 | 3 | Sabre de Luz | 1 |
 
 
-### 2.2 Poderes da Força
+#### 2.3.2 Poderes da Força
 
 | ID | Habilidade | Classificação | Aspecto |
 | :-: | :-: | :-: | :-: |
 | 1 | 4 | Simples | Contole |
 | 2 | 5 | Simples | Alteração |
 
-### 2.3 Habilidade droid
+#### 2.3.3 Habilidade droid
 
 | ID | Habilidade |  Aspecto |
 | :-: | :-: | :-: | 

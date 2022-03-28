@@ -1,6 +1,6 @@
-# **1. Modelo Relacional**
+# **Modelo Relacional**
 
-## **1.1. Introdução**
+## **1. Introdução**
 
 <p style='text-align: justify;'>O Modelo Relacional (MREL) é um ferramenta utilizada na Engenharia de Software para apoiar a implementação das aplicações, apresentando um projeto lógico de como as entidades e relacionamentos serão mapeadas no SGBD transformando as informações do modelo conceitual em um mapeamento lógico a ser implementado.</p>
 

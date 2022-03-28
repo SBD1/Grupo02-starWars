@@ -1,6 +1,6 @@
-# **1. Modelo Entidade-relacionamento**
+# **Modelo Entidade-relacionamento**
 
-## **1.1 Entidades e Atributos**
+## **1.0. Entidades e Atributos**
 
 * **Corpo Astronômico:** <ins>Nome</ins>, Região, Setor, Atmosfera e Domínio geral
 * **Região:** <ins>ID</ins>, Nome, Clima, Governante, Domínio e Nível
