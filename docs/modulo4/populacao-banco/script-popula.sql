@@ -1,9 +1,6 @@
-INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclóvis o ciclope', 'algum', 5, 100, 100, 100, 'algum', 100, 100, 100, 100, 100);
 
 INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
-
-
-INSERT INTO instancia_item (item) VALUES (1);	
+	
 
 
 -- Campos astronomicos
@@ -41,29 +38,43 @@ INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Velocidade da força', 'Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno.', 25, 10, 'Ter a ordem Jedi, Gray Jedi ou Sith');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Abrir portas com droid', 'Utiliza-se de um droid para abrir uma porta.', 5, 0, 'Possuir um droid com o modelos astromech');
 
+
 -- Habilidade com arma
 
 INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (1, 'Blaster Simples ', 30);
 INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (2, 'Sabre de Luz Simbles', 1);
 INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (3, 'Sabre de Luz Simbles', 1);
 
+
 -- Poderes da força
 
 INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (4, 'Simples', 'Controle');
 INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (5, 'Simples', 'Alteração');
 
+
 -- Habilidade droid
 
 INSERT INTO habilidade_droid (habilidade, aspecto) VALUES (6, 'Mobilidade');
+
 
 -- Itens utilizaveis
 
 INSERT INTO item_utilizavel(habilidade, item, nivel) VALUES (1, 1, 5);
 
+
 -- Itens consumiveis
 
 INSERT INTO item_consumivel(item, carga) VALUES (4, 10);
 
+
+-- Instancia de Item
+
+INSERT INTO instancia_item (item) VALUES (1);
+
+
+-- Jogador
+
+INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Grogo', 'senciente', 1000, 100, 10, 100, 'Padawan', 5, 5, 5, 5, 10);
 
 
 
