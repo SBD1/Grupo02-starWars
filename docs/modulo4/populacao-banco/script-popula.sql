@@ -1,8 +1,3 @@
-
-INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
-	
-
-
 -- Campos astronomicos
 
 INSERT INTO campo_astronomico (nome, setor, regiaoAstronomica, atmosfera) VALUES ('Tatooine', 'Territórios da Orla Exterior', 'Arkanis', 'Respirável');
@@ -74,7 +69,10 @@ INSERT INTO instancia_item (item) VALUES (1);
 
 -- Jogador
 
-INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Grogo', 'senciente', 1000, 100, 10, 100, 'Padawan', 5, 5, 5, 5, 10);
+INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Grogo', 'senciente', 1000, 100, 10, 100, 'Padawan', 5, 5, 5, 5, 15);
 
 
+-- Oponente
+
+INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Nômade Tusken', 'tusken', 20, 0, 0.25, 02, 10, 5, 0, 0);
 
