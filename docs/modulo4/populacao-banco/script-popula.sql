@@ -2,12 +2,6 @@ INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, intelig
 
 INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ciclope o Ciclóvis', 'algum', 100, 100, 0.25, 100, 100, 100, 100, 100);
 
-INSERT INTO habilidade(nome, descricao, nivel, impacto, preRequisito) VALUES ('Atirar', 'Causa 30 de dano ao oponente', 5, 30, 'Sem pre-requisitos');
-
-INSERT INTO habilidade_arma(habilidade, tipo, municao) VALUES (1, 'Pistola', 50);
-
-INSERT INTO item(nome, descricao, tipo) VALUES ('Pistola Verde', 'Atira 2 vezes por milissegundo', 'Pistola');
-
 INSERT INTO item_utilizavel(habilidade, item, nivel) VALUES (1, 1, 5);
 
 INSERT INTO item_consumivel(item, carga) VALUES (1, 5);
@@ -32,6 +26,12 @@ INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) 
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (1, 'Mar das Dunas', 'Desértico', 'Incursores Tusken', 'Tribo do povo da areia', 5);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (1, 'Cânion do Mendigo', 'Desértico', 'Sem governante', 'Eremitas', 7);
 
+-- Item
+
+INSERT INTO item(nome, descricao, tipo) VALUES ('Pistola Blaster', 'Pistola Blaster simples, arma com disporos unicos com manuseio apenas uma mão', 'Arma');
+INSERT INTO item(nome, descricao, tipo) VALUES ('Rifle de repetição Blaster', 'Rifle de repetição Blaster, arma de repetição com manuseio de duas mãos', 'Arma');
+INSERT INTO item(nome, descricao, tipo) VALUES ('Sabre de Luz', 'Sabre de luz, arma tradicional de usuários da força', 'Arma');
+
 -- Habilidade
 
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Tiro simples com blaster', 'Tiro simples com uma pistola blaster causando impacto a distância no adversários. Utilizado uma vez por turno.', 5, 10, 'Possuir uma pistola blaster');
@@ -43,9 +43,9 @@ INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('
 
 -- Habilidade com arma
 
-INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (1, 'Blaster Simples', 30);
-INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (2, 'Sabre de Luz', 1);
-INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (3, 'Sabre de Luz', 1);
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (1, 'Blaster Simples ', 30);
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (2, 'Sabre de Luz Simbles', 1);
+INSERT INTO habilidade_arma (habilidade, tipo, municao) VALUES (3, 'Sabre de Luz Simbles', 1);
 
 -- Poderes da força
 
@@ -54,3 +54,8 @@ INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (5, 'Si
 
 -- Habilidade droid
 INSERT INTO habilidade_droid (habilidade, aspecto) VALUES (6, 'Mobilidade');
+
+
+
+
+
