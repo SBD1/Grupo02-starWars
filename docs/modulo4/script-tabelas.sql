@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS starWars;
+CREATE DATABASE starWars;
 
 
 -- MAPA
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS oponente (
    espectro_forca  INTEGER NOT NULL
 );
 
-CREATE TABLE intancia_oponente(
+CREATE TABLE instancia_oponente(
   id SERIAL PRIMARY KEY,
   instancia_item SERIAL,
   oponente SERIAL,
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS droid(
   
 );
 
-CREATE TABLE IF NOT EXISTS intancia_de_droid(
+CREATE TABLE IF NOT EXISTS instancia_de_droid(
   id SERIAL PRIMARY KEY,
   nro_serie SERIAL,
   jogador SERIAL,
@@ -247,14 +247,15 @@ CREATE TABLE IF NOT EXISTS cumpre(
 
 
   CONSTRAINT objetivo_cumpre_fk FOREIGN KEY (objetivo) REFERENCES objetivo (id) ON DELETE SET NULL,
-  CONSTRAINT cumpre_status_ck CHECK(status_objetivos IN ('Sim','Não')),
+  CONSTRAINT cumpre_status_ck CHECK(status_objetivo IN ('Sim','Não')),
   CONSTRAINT jogador_cumpre_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
 );
 
 
 CREATE TABLE IF NOT EXISTS localizacao(
-  latitude SMALLINT PRIMARY KEY,
-  longitude SMALLINT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
+  latitude SMALLINT,
+  longitude SMALLINT,
   regiao SERIAL,
   instancia_item SERIAL,
   instancia_oponente SERIAL,
@@ -262,6 +263,6 @@ CREATE TABLE IF NOT EXISTS localizacao(
 
   CONSTRAINT regiao_localizacao_fk FOREIGN KEY (regiao) REFERENCES regiao (id) ON DELETE SET NULL,
   CONSTRAINT instItem_localizacao_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL,
-  CONSTRAINT instOponente_localizacao_fk FOREIGN KEY (instancia_oponente) REFERENCES (instancia_oponente) ON DELETE SET NULL,
+  CONSTRAINT instOponente_localizacao_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL,
   CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL
 );
