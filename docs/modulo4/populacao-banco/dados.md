@@ -64,3 +64,12 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | ID | Habilidade |  Aspecto |
 | :-: | :-: | :-: | 
 | 1 | 6 | Mobilidade | 
+
+## 2.4. Naves
+
+| Nro_Serie | Nome | Descrição | Velocidade máxima | Tipo de arma |
+| :-: | :-: | :-: | :-: | :-: |
+| YT-1300 | Millennium Falcon | Cargueiro | 1.050 | Duas turreas quad laser |
+| MC85 | Raddus | Nave de batalha | 400 | Canhão laser antipessoal |
+| AC-3640 | A Arca | Cargueiro | 150 | Não possui |
+| CR-400 | Cruzador leve Hutt | Cruzador leve | 560 | Lançadores de mísseis de concussão |

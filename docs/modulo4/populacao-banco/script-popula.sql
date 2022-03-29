@@ -76,3 +76,10 @@ INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, intelig
 
 INSERT INTO oponente(nome, raca, vida, midichlorians, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Nômade Tusken', 'tusken', 20, 0, 0.25, 02, 10, 5, 0, 0);
 
+-- Nave
+
+INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('YT-1300', 'Millennium Falcon', 'Cargueiro', 1050, 'Duas turreas quad laser');
+INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('MC85', 'Raddus', 'Nave de batalha', 400, 'Canhão laser antipessoal');
+INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('AC-3640', 'A Arca', 'Cargueiro', 150, 'Não possui');
+INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('CR-400', 'Cruzador leve Hutt', 'Cruzador leve', 560, 'Lançadores de mísseis de concussão');
+
