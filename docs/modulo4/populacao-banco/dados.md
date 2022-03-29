@@ -42,6 +42,8 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | 4 | Levitar objetos | Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno. | 15 | 0 | Ter a ordem Jedi, Gray Jedi ou Sith |
 | 5 | Velocidade da força | Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno. | 25 | 10 | Ter a ordem Jedi, Gray Jedi ou Sith |
 | 6 | Abrir portas com droid | Utiliza-se de um droid para abrir uma porta. | 5 | 0 | Possuir um droid com o modelos astromech |
+| 7 | Tradução universal | Utiliza-se de um droid para se comunicar em outras linguas. | 5 | 0 | Possuir um droid com o modelos Protocolo |
+
 
 #### 2.3.1. Habilidade com arma
 
@@ -63,7 +65,8 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 
 | ID | Habilidade |  Aspecto |
 | :-: | :-: | :-: | 
-| 1 | 6 | Mobilidade | 
+| 1 | 6 | Mobilidade |
+| 2 | 7 | Comunicação | 
 
 ### 2.5. Itens utilizaveis
 
@@ -76,12 +79,6 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | ID | Item |  Carga |
 | :-: | :-: | :-: | 
 | 4 | 10 | Mobilidade | 
-
-### 2.7. Instancia de Item
-
-| ID | Item |
-| :-: | :-: |
-| 1 | 1 | 
 
 ### 2.8. Jogador
 
@@ -109,3 +106,12 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | Título | História | Abertura | 
 | :-: | :-: | :-: |
 | Episódio I - Parte I - Surgimento dos clones | Um jovem padawan inicia sua trajetória treinando para se tornar Jedi e ajudar o seu povo na guerra. Sua trajetória terá muitos desafios que colocará em dúvida a sua integridade moral. Qual caminho ele seguirá? | Uma inquietação toma conta do Senado Galáctico. Milhares de sistemas solares declararam suas intenções em deixar a República. Esse movimento separatista, sob a liderança do misterioso Conde Dookan, tem criado dificuldades para o limitado número de Cavaleiros Jedi manter a paz e a ordem na galáxia. Senadora Amidala, a antiga rainha de Naboo, está retornando ao Senado Galáctico para a votação da proposta crítica de criação de um Exército da República, para auxiliar os sobrecarregados Jedi... | 
+
+### 2.12. Droid
+
+| NroSerie | Habilidade | Nome | Modelo |
+| :-: | :-: | :-: | :-: | 
+| D1 | 1 | R2D2 | Astromach |
+| D2 | 2 | C3PO | Protocolo |
+
+### 2.13. Droid

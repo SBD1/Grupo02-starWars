@@ -32,6 +32,7 @@ INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Levitar objetos', 'Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno.', 15, 0, 'Ter a ordem Jedi, Gray Jedi ou Sith');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Velocidade da força', 'Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno.', 25, 10, 'Ter a ordem Jedi, Gray Jedi ou Sith');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Abrir portas com droid', 'Utiliza-se de um droid para abrir uma porta.', 5, 0, 'Possuir um droid com o modelos astromech');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito) VALUES ('Tradução universal', 'Utiliza-se de um droid para se comunicar em outras linguas.', 5, 0, 'Possuir um droid com o modelos Protocolo');
 
 
 -- Habilidade com arma
@@ -50,6 +51,7 @@ INSERT INTO habilidade_forca (habilidade, classificacao, aspecto) VALUES (5, 'Si
 -- Habilidade droid
 
 INSERT INTO habilidade_droid (habilidade, aspecto) VALUES (6, 'Mobilidade');
+INSERT INTO habilidade_droid (habilidade, aspecto) VALUES (7, 'Comunicacao');
 
 
 -- Itens utilizaveis
@@ -60,11 +62,6 @@ INSERT INTO item_utilizavel(habilidade, item, nivel) VALUES (1, 1, 5);
 -- Itens consumiveis
 
 INSERT INTO item_consumivel(item, carga) VALUES (4, 10);
-
-
--- Instancia de Item
-
-INSERT INTO instancia_item (item) VALUES (1);
 
 
 -- Jogador
@@ -86,3 +83,12 @@ INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('C
 -- Roteiro
 
 INSERT INTO roteiro(titulo, historia, abertura) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Um jovem padawan inicia sua trajetória treinando para se tornar Jedi e ajudar o seu povo na guerra. Sua trajetória terá muitos desafios que colocará em dúvida a sua integridade moral. Qual caminho ele seguirá?', 'Uma inquietação toma conta do Senado Galáctico. Milhares de sistemas solares declararam suas intenções em deixar a República. Esse movimento separatista, sob a liderança do misterioso Conde Dookan, tem criado dificuldades para o limitado número de Cavaleiros Jedi manter a paz e a ordem na galáxia. Senadora Amidala, a antiga rainha de Naboo, está retornando ao Senado Galáctico para a votação da proposta crítica de criação de um Exército da República, para auxiliar os sobrecarregados Jedi...');
+
+-- Droid
+
+INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D1', 1, 'R2D2', 'Astromech');
+INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D2', 2, 'C3PO', 'Protocolo');
+
+-- NPC
+
+INSERT INTO npc ( instancia_item, nome, raca, descricao, dialogo) VALUES (NULL, '', 'Qui-Gon Jinn', 'Humano', 'HumanMestre Jedi do temploo', 'Que a força esteja com você' );
