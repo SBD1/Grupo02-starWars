@@ -114,4 +114,25 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | D1 | 1 | R2D2 | Astromach |
 | D2 | 2 | C3PO | Protocolo |
 
-### 2.13. Droid
+### 2.13. NPC
+
+| Id | Instancia_item  | Nome | Raça |  Descrição | Dialogo |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| 1 | NULL | Qui-Gon Jinn | Humano | Mestre Jedi do templo | Que a força esteja com você |
+
+
+### 2.14. Objetivo
+
+| Id | Roteiro  | Ordem | Midichlorians |  PontosForca | Classificacao |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| 1 | 1 | Jedi | 200 | 10 | Primario |
+
+### 2.15. Localização
+
+| Id | latitude | longitude | regiao |  instancia_item | instancia_oponente | instancia_de_nave |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 1 | 0 | 0 | 1 | NULL | NULL | NULL |
+
+
+
+
