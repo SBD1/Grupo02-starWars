@@ -22,7 +22,6 @@ def query(cursor, query):
     rows = cursor.fetchall()
     return rows  
   except Exception as err:
-      print(err, file=sys.stderr)
       return None
 
 def close(connection, cursor):
