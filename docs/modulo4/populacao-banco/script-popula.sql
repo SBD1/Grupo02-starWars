@@ -89,6 +89,20 @@ INSERT INTO roteiro(titulo, historia, abertura) VALUES ('Episódio I - Parte I -
 INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D1', 1, 'R2D2', 'Astromech');
 INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D2', 2, 'C3PO', 'Protocolo');
 
+-- Instâncias
+
+INSERT INTO instancia_item(item) VALUES (1);
+INSERT INTO instancia_oponente(instancia_item, oponente) VALUES (1,1);
+INSERT INTO instancia_de_nave(nro_serie, jogador) VALUES ('YT-1300', 1);
+
 -- NPC
 
-INSERT INTO npc ( instancia_item, nome, raca, descricao, dialogo) VALUES (NULL, '', 'Qui-Gon Jinn', 'Humano', 'HumanMestre Jedi do temploo', 'Que a força esteja com você' );
+INSERT INTO npc (instancia_item, nome, raca, descricao, dialogo) VALUES (1, 'Qui-Gon Jinn', 'Humano', 'HumanMestre Jedi do templo', 'Que a força esteja com você' );
+
+-- Localização
+
+INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_oponente, instancia_de_nave) VALUES (0,0,1,1,1,1);
+
+-- Objetivo
+
+INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 10, True);
