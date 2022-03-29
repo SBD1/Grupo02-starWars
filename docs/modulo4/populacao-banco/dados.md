@@ -65,7 +65,37 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | :-: | :-: | :-: | 
 | 1 | 6 | Mobilidade | 
 
-## 2.4. Naves
+### 2.5. Itens utilizaveis
+
+| ID | Habilidade | Item | nivel |
+| :-: | :-: | :-: | :-: | 
+| 1 | 1 | 1 | 5 |
+
+### 2.6. Itens consumiveis
+
+| ID | Item |  Carga |
+| :-: | :-: | :-: | 
+| 4 | 10 | Mobilidade | 
+
+### 2.7. Instancia de Item
+
+| ID | Item |
+| :-: | :-: |
+| 1 | 1 | 
+
+### 2.8. Jogador
+
+| ID | Nome | Raça | Vida | Midichlorians | Probabilidade | Inteligencia | Forca_fisica | agilidade | resistencia | espectro_forca |
+| :-: | :-: | :-: | :-:  | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Grogo | senciente | 1000 | 100 | 10 | 10 | 100 | Padawan | 5 | 5 | 5 | 5 | 15 | 
+
+### 2.9. Oponente
+
+| Nome | Raça | Vida | Midichlorians | Probabilidade | Inteligencia | Forca_fisica | Agilidade | Resistencia | Aspectro_forca |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Nômade Tusken | tusken | 20 | 0 | 0.25 | 02 | 10 | 5 | 0 | 0 | 
+
+### 2.10. Naves
 
 | Nro_Serie | Nome | Descrição | Velocidade máxima | Tipo de arma |
 | :-: | :-: | :-: | :-: | :-: |
@@ -74,8 +104,7 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | AC-3640 | A Arca | Cargueiro | 150 | Não possui |
 | CR-400 | Cruzador leve Hutt | Cruzador leve | 560 | Lançadores de mísseis de concussão |
 
-
-## 2.5. Roteiro
+### 2.11. Roteiro
 
 | Título | História | Abertura | 
 | :-: | :-: | :-: |
