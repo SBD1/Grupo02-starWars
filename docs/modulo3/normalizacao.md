@@ -11,9 +11,10 @@
 - Desenvolve a intuição de projetos de melhor qualidade.
 
 ### **1.1. Formas Normais**
+
 &emsp;&emsp;&emsp;As formas normais são sequenciais, ou seja, se um banco se encontra na terceira forma normal, isso também significa que o mesmo está na segunda e também na primeira. Por isso devemos sempre começar a normalização pela primeira forma normal, para que não hajam problemas mais a frente na nossa normalização.
 
-## **2. Artefato**
+## **2. Resultados**
 
 ### **2.1. Versão 1**
 
