@@ -4,7 +4,7 @@
 
 <p style='text-align: justify;'>Domínio é o tipo de dados que descreve os tipos de valores que podem aparecer em cada coluna do SGBD, especificando os valores que um atributo pode possuir, a definição adequada do domínio é essencial para evitar inconsistência nos dados armazenados.</p>
 
-## **2. Artefato**
+## **2. Resultados**
 
 ### **2.1. Corpo Astronômico** 
 | Atributo | Descrição | Tipo de dado e formato |

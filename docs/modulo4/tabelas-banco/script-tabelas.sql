@@ -29,11 +29,11 @@ CREATE TABLE IF NOT EXISTS regiao(
 -- HABILIDADE
 CREATE TABLE IF NOT EXISTS habilidade(
  id SERIAL PRIMARY KEY,
- nome VARCHAR(100) NOT NULL,
- descricao VARCHAR(100) NOT NULL,
+ nome VARCHAR(1000) NOT NULL,
+ descricao VARCHAR(1000) NOT NULL,
  nivel SMALLINT NOT NULL,
  impacto INTEGER NOT NULL,
- preRequisito VARCHAR(100) NOT NULL,
+ preRequisito VARCHAR(1000) NOT NULL,
 
  CONSTRAINT habilidade_nome_un UNIQUE(nome),
  CONSTRAINT habilidade_nivel_ck CHECK( (nivel >= 1) AND (nivel <= 100)),
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS npc(
 
 -- NAVE
 CREATE TABLE IF NOT EXISTS nave(
- nro_serie SERIAL PRIMARY KEY,
+ nro_serie VARCHAR(50) PRIMARY KEY,
  nome VARCHAR(100) NOT NULL UNIQUE,
  descricao VARCHAR(140) NOT NULL,
  velocidade_maxima INTEGER NOT NULL,
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS nave(
 
 CREATE TABLE IF NOT EXISTS instancia_de_nave(
   id SERIAL PRIMARY KEY,
-  nro_serie SERIAL,
+  nro_serie VARCHAR,
   jogador SERIAL,
 
   CONSTRAINT instNave_nave_fk FOREIGN KEY (nro_serie) REFERENCES nave (nro_serie) ON DELETE SET NULL,
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS combate(
 
 -- DROID
 CREATE TABLE IF NOT EXISTS droid(
-  nro_serie SERIAL PRIMARY KEY,
+  nro_serie VARCHAR(10) PRIMARY KEY,
   habilidade SERIAL,
   nome VARCHAR(100) NOT NULL,
   modelo VARCHAR(30) NOT NULL,
@@ -212,7 +212,7 @@ CREATE TABLE IF NOT EXISTS droid(
 
 CREATE TABLE IF NOT EXISTS instancia_de_droid(
   id SERIAL PRIMARY KEY,
-  nro_serie SERIAL,
+  nro_serie VARCHAR,
   jogador SERIAL,
 
   CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE SET NULL,

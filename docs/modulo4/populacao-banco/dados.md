@@ -42,6 +42,8 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 | 4 | Levitar objetos | Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno. | 15 | 0 | Ter a ordem Jedi, Gray Jedi ou Sith |
 | 5 | Velocidade da força | Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno. | 25 | 10 | Ter a ordem Jedi, Gray Jedi ou Sith |
 | 6 | Abrir portas com droid | Utiliza-se de um droid para abrir uma porta. | 5 | 0 | Possuir um droid com o modelos astromech |
+| 7 | Tradução universal | Utiliza-se de um droid para se comunicar em outras linguas. | 5 | 0 | Possuir um droid com o modelos Protocolo |
+
 
 #### 2.3.1. Habilidade com arma
 
@@ -63,4 +65,74 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 
 | ID | Habilidade |  Aspecto |
 | :-: | :-: | :-: | 
-| 1 | 6 | Mobilidade | 
+| 1 | 6 | Mobilidade |
+| 2 | 7 | Comunicação | 
+
+### 2.5. Itens utilizaveis
+
+| ID | Habilidade | Item | nivel |
+| :-: | :-: | :-: | :-: | 
+| 1 | 1 | 1 | 5 |
+
+### 2.6. Itens consumiveis
+
+| ID | Item |  Carga |
+| :-: | :-: | :-: | 
+| 4 | 10 | Mobilidade | 
+
+### 2.8. Jogador
+
+| ID | Nome | Raça | Vida | Midichlorians | Probabilidade | Inteligencia | Forca_fisica | agilidade | resistencia | espectro_forca |
+| :-: | :-: | :-: | :-:  | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Grogo | senciente | 1000 | 100 | 10 | 10 | 100 | Padawan | 5 | 5 | 5 | 5 | 15 | 
+
+### 2.9. Oponente
+
+| Nome | Raça | Vida | Midichlorians | Probabilidade | Inteligencia | Forca_fisica | Agilidade | Resistencia | Aspectro_forca |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Nômade Tusken | tusken | 20 | 0 | 0.25 | 02 | 10 | 5 | 0 | 0 | 
+
+### 2.10. Naves
+
+| Nro_Serie | Nome | Descrição | Velocidade máxima | Tipo de arma |
+| :-: | :-: | :-: | :-: | :-: |
+| YT-1300 | Millennium Falcon | Cargueiro | 1.050 | Duas turreas quad laser |
+| MC85 | Raddus | Nave de batalha | 400 | Canhão laser antipessoal |
+| AC-3640 | A Arca | Cargueiro | 150 | Não possui |
+| CR-400 | Cruzador leve Hutt | Cruzador leve | 560 | Lançadores de mísseis de concussão |
+
+### 2.11. Roteiro
+
+| Título | História | Abertura | 
+| :-: | :-: | :-: |
+| Episódio I - Parte I - Surgimento dos clones | Um jovem padawan inicia sua trajetória treinando para se tornar Jedi e ajudar o seu povo na guerra. Sua trajetória terá muitos desafios que colocará em dúvida a sua integridade moral. Qual caminho ele seguirá? | Uma inquietação toma conta do Senado Galáctico. Milhares de sistemas solares declararam suas intenções em deixar a República. Esse movimento separatista, sob a liderança do misterioso Conde Dookan, tem criado dificuldades para o limitado número de Cavaleiros Jedi manter a paz e a ordem na galáxia. Senadora Amidala, a antiga rainha de Naboo, está retornando ao Senado Galáctico para a votação da proposta crítica de criação de um Exército da República, para auxiliar os sobrecarregados Jedi... | 
+
+### 2.12. Droid
+
+| NroSerie | Habilidade | Nome | Modelo |
+| :-: | :-: | :-: | :-: | 
+| D1 | 1 | R2D2 | Astromach |
+| D2 | 2 | C3PO | Protocolo |
+
+### 2.13. NPC
+
+| Id | Instancia_item  | Nome | Raça |  Descrição | Dialogo |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| 1 | NULL | Qui-Gon Jinn | Humano | Mestre Jedi do templo | Que a força esteja com você |
+
+
+### 2.14. Objetivo
+
+| Id | Roteiro  | Ordem | Midichlorians |  PontosForca | Classificacao |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| 1 | 1 | Jedi | 200 | 10 | Primario |
+
+### 2.15. Localização
+
+| Id | latitude | longitude | regiao |  instancia_item | instancia_oponente | instancia_de_nave |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 1 | 0 | 0 | 1 | NULL | NULL | NULL |
+
+
+
+
