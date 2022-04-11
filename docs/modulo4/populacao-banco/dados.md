@@ -82,9 +82,10 @@ Este documento destina-se a apresentar resumidamente de maneira visual os dados 
 
 ### 2.8. Jogador
 
-| ID | Nome | Raça | Vida | Midichlorians | Probabilidade | Inteligencia | Forca_fisica | agilidade | resistencia | espectro_forca |
-| :-: | :-: | :-: | :-:  | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Grogo | senciente | 1000 | 100 | 10 | 10 | 100 | Padawan | 5 | 5 | 5 | 5 | 15 | 
+| ID | Nome | Raça | Vida | Nivel | Ordem | Rank | Midichlorians | Inteligencia | Forca_fisica | agilidade | resistencia | espectro_forca |
+| :-: | :-: | :-: | :-:  | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 1 | Grogo | senciente | 1000 | 1 | Jedi | Padawan | 0 | 0 | 0 | 0 |0 | 0 |
+
 
 ### 2.9. Oponente
 
