@@ -22,4 +22,4 @@ while(aux != 1):
 option = input(f'Deseja inicar o jogo com o {player}? (y/n) ')
 
 if(option == 'y'):
-    print('leva para o menu do player')
+    exec(open("listepisodes.py").read())
