@@ -1,3 +1,6 @@
+from listplayers import seleciona
+
+
 print('Bem vindo ao MuD - Star Wars. Que a Força esteja com você!')
 
 option = 1
@@ -13,7 +16,7 @@ while (option != '0'):
     if (option == '1'):
         exec(open("newplayer.py").read())
     if (option == '2'):
-        exec(open("listplayers.py").read())
+        seleciona()
 
 
 print('Você saiu do jogo. E lembre-se: "A habilidade de falar não o torna inteligente"')
