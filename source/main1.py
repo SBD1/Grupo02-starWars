@@ -13,7 +13,7 @@ while (option != '0'):
     if (option == '1'):
         exec(open("newplayer.py").read())
     if (option == '2'):
-        print('Levar para arquivo de continuar jogo')
+        exec(open("listplayers.py").read())
 
 
 print('Você saiu do jogo. E lembre-se: "A habilidade de falar não o torna inteligente"')
