@@ -1,4 +1,5 @@
 from db.database import connect, query, close
+from menuOpcoes import menu
 
 
 def episodios(jog):
@@ -24,6 +25,7 @@ def episodios(jog):
 
                 print(titulo[1])
                 print(f'entrando no jogo.... Olá {jog}!')
+                menu(jog)
                 saida = '0'
             except Exception as err:
                 print(err)
