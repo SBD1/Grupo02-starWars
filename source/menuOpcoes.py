@@ -100,11 +100,12 @@ def consultaOrdem(jogador):
     [cursor, connection] = connect()
 
     caracteristicas = query(
-        cursor, f'select ordem, rank, midichlorians, espectro_forca from jogador where nome = \'{jogador}\';')
+        cursor, f'select ordem, rank, midichlorians, espectro_forca, nivel from jogador where nome = \'{jogador}\';')
     caracteristicas = caracteristicas[0]
     close(connection, cursor)
     print(f'''
         {jogador} é da ordem {caracteristicas[0]} e tem rank {caracteristicas[1]}.
+        Nível: {caracteristicas[4]}
         Midichlorians(xp): {caracteristicas[2]}
         Espectro da força: {caracteristicas[3]}
     ''')
