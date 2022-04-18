@@ -45,8 +45,7 @@ def menu(player, titulo, id_campoastronomico):
         if (option == 'C' or option == 'c'):
             consultaCaracteristica(player)
         if (option == 'O' or option == 'o'):
-            print(
-                'Ordem e rank --> Faz uma consulta no banco e mostra o rank e a porcentagem da força')
+            consultaOrdem(player)
         if (option == 'L') or option == 'l':
             print('Listar objetos que você pode interagir --> Faz consulta no banco com os NPCs, Opnentes ou itens que estão no mapa')
 
@@ -95,3 +94,18 @@ def consultaCaracteristica(jogador):
     input(f'\n\nAperte qualquer tecla para sair: ')
 
     return 0
+
+
+def consultaOrdem(jogador):
+    [cursor, connection] = connect()
+
+    caracteristicas = query(
+        cursor, f'select ordem, rank, midichlorians, espectro_forca from jogador where nome = \'{jogador}\';')
+    caracteristicas = caracteristicas[0]
+    close(connection, cursor)
+    print(f'''
+        {jogador} é da ordem {caracteristicas[0]} e tem rank {caracteristicas[1]}.
+        Midichlorians(xp): {caracteristicas[2]}
+        Espectro da força: {caracteristicas[3]}
+    ''')
+    input(f'\n\nAperte qualquer tecla para sair: ')
