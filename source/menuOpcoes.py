@@ -25,30 +25,29 @@ def menu(player, titulo, id_campoastronomico):
           [Q] Sair do jogo
           ''')
         option = str(input('Escolha uma opção: '))
-        if (option == 'A'):
+        if (option == 'A' or option == 'a'):
             print('Você andou para a esquerda!\n')
             latitude = latitude - 1
-        if (option == 'S'):
+        if (option == 'S' or option == 's'):
             print('Você andou para baixo!\n')
             longitude = longitude + 1
-        if (option == 'D'):
+        if (option == 'D' or option == 'd'):
             print('Você andou para a direita!\n')
             latitude = latitude + 1
-        if (option == 'W'):
+        if (option == 'W' or option == 'w'):
             print('Você andou para cima!\n')
             longitude = longitude - 1
-        if (option == 'M'):
+        if (option == 'M' or option == 'm'):
             print('Ver mapa --> Faz consulta no banco e mostra a imagem do mapa')
-        if (option == 'I'):
+        if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
-        if (option == 'C'):
-            print('''Mostra as características --> Faz consulta no banco das características do personagem: 
-            Inteligencia, força e etc. Deve-se ter opção para ele aumentar essas características a cada nível que ele passa''')
-        if (option == 'O'):
+        if (option == 'C' or option == 'c'):
+            consultaCaracteristica(player)
+        if (option == 'O' or option == 'o'):
             print(
                 'Ordem e rank --> Faz uma consulta no banco e mostra o rank e a porcentagem da força')
-        if (option == 'L'):
+        if (option == 'L') or option == 'l':
             print('Listar objetos que você pode interagir --> Faz consulta no banco com os NPCs, Opnentes ou itens que estão no mapa')
 
 
@@ -75,3 +74,24 @@ def consultaAtmosfera(id):
 
     close(connection, cursor)
     return atmosfera[0]
+
+
+def consultaCaracteristica(jogador):
+    [cursor, connection] = connect()
+
+    caracteristicas = query(
+        cursor, f'select inteligencia, forca_fisica, agilidade, resistencia, raca, vida from jogador where nome = \'{jogador}\';')
+
+    caracteristicas = caracteristicas[0]
+    close(connection, cursor)
+    print(f'''
+        {jogador} é da raça {caracteristicas[4]}.
+        Vida: {caracteristicas[5]}
+        Inteligência: {caracteristicas[0]}
+        Força Física: {caracteristicas[1]}
+        Agilidade: {caracteristicas[2]}
+        Resistência: {caracteristicas[3]}
+    ''')
+    input(f'\n\nAperte qualquer tecla para sair: ')
+
+    return 0

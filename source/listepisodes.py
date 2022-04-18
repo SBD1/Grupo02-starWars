@@ -26,7 +26,7 @@ def episodios(jog):
                 print(titulo[2])
                 option = input(f'entrando no jogo.... Olá {jog}! (y/n) ')
 
-                if(option == 'y'):
+                if(option == 'y' or option == 'Y'):
                     menu(jog, titulo[0], titulo[1])
                 saida = '0'
             except Exception as err:

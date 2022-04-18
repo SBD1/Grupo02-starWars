@@ -27,5 +27,5 @@ def seleciona():
 def inicia(player):
     option = input(f'Deseja inicar o jogo com o {player}? (y/n) ')
 
-    if(option == 'y'):
+    if(option == 'y' or option == 'Y'):
         episodios(player)
