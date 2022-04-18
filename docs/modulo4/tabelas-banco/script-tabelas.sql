@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS oponente (
    espectro_forca  INTEGER NOT NULL
 );
 
-CREATE TABLE instancia_oponente(
+CREATE TABLE IF NOT EXISTS instancia_oponente(
   id SERIAL PRIMARY KEY,
   instancia_item SERIAL,
   oponente SERIAL,
@@ -223,8 +223,11 @@ CREATE TABLE IF NOT EXISTS instancia_de_droid(
 -- FASES
 CREATE TABLE roteiro (
    titulo		    VARCHAR(60) PRIMARY KEY,
+   campo SERIAL,
    historia 	    VARCHAR(500) NOT NULL,
-   abertura		    VARCHAR(500) NOT NULL
+   abertura		    VARCHAR(500) NOT NULL,
+
+   CONSTRAINT campo_roteiro_fk FOREIGN KEY (campo) REFERENCES campo_astronomico (id) ON DELETE SET NULL
 );
 
 

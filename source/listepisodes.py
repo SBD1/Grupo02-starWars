@@ -19,13 +19,15 @@ def episodios(jog):
         if(aux != 0):
             try:
                 titulo = episodios[aux-1]
-                print(titulo[2])
+                print(titulo[3])
                 for i in range(0, 5):
                     print(" ")
 
-                print(titulo[1])
-                print(f'entrando no jogo.... Olá {jog}!')
-                menu(jog)
+                print(titulo[2])
+                option = input(f'entrando no jogo.... Olá {jog}! (y/n) ')
+
+                if(option == 'y'):
+                    menu(jog, titulo[0], titulo[1])
                 saida = '0'
             except Exception as err:
                 print(err)
