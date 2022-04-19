@@ -8,8 +8,9 @@ def episodios(jog):
     close(connection, cursor)
 
     print('Lista de episódios: ')
-    i = 1
+    i = 0
     for titulo in episodios:
+        i = i+1
         print(f'[{i}] - {titulo[0]}')
 
     saida = '1'

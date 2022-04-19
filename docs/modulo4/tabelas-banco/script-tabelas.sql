@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS localizacao(
   CONSTRAINT regiao_localizacao_fk FOREIGN KEY (regiao) REFERENCES regiao (id) ON DELETE SET NULL,
   CONSTRAINT instItem_localizacao_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL,
   CONSTRAINT instOponente_localizacao_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL,
-  CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL
+  CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL,
   CONSTRAINT npc_fk FOREIGN KEY (npc) REFERENCES npc (id) ON DELETE SET NULL
 
 );

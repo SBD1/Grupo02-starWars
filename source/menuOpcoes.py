@@ -1,5 +1,7 @@
 from db.database import connect, query, close
 from npc import npc_dialogo
+from objetivo import consultaTodosObjetivo
+
 
 def menu(player, titulo, id_campoastronomico):
     option = '0'
@@ -51,7 +53,7 @@ def menu(player, titulo, id_campoastronomico):
             print('Listar objetos que você pode interagir --> Faz consulta no banco com os NPCs, Opnentes ou itens que estão no mapa')
             consultaLocalização(latitude, longitude)
         if (option == 'O' or option == 'o'):
-            print('mostra lista de objetivos')
+            consultaTodosObjetivo(titulo)
 
 
 def consultaCampo(id):
@@ -121,48 +123,49 @@ def consultaLocalização(latitude, longitude):
 
     conteudo = query(
         cursor, f"SELECT instancia_item,instancia_oponente,instancia_de_nave, npc FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
-
+    conteudo = conteudo[0]
     npc = query(
         cursor, f"SELECT nome FROM npc WHERE id={conteudo[3]};")
-    
+    npc = npc[0]
     instanciaitem = query(
         cursor, f"SELECT item FROM instancia_item WHERE id={conteudo[0]};")
-    item= query(
+    instanciaitem = instanciaitem[0]
+    item = query(
         cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
-    
+    item = item[0]
     instanciaoponente = query(
         cursor, f"SELECT oponente FROM instancia_oponente WHERE id={conteudo[1]};")
-    
-    oponente= query(
+    instanciaoponente = instanciaoponente[0]
+    oponente = query(
         cursor, f"SELECT nome FROM oponente WHERE id={instanciaoponente[0]};")
-    
+    oponente = oponente[0]
     instancianave = query(
-        cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE id={conteudo[2]};")
-    
-    nave= query(
-        cursor, f"SELECT nome FROM nave WHERE nro_serie={instancianave[0]};")
-
+        cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE id=\'{conteudo[2]}\';")
+    instancianave = instancianave[0]
+    nave = query(
+        cursor, f"SELECT nome FROM nave WHERE nro_serie=\'{instancianave[0]}\';")
+    nave = nave[0]
     print(f'''
           [E] Enfrentar {oponente[0]}
           [I] Pegar {item[0]}
           [C] Conversar com {npc[0]}
           [P] Pilotar {nave[0]} 
           ''')
-    
+
     option = str(input('Escolha uma opção: '))
-    
-    if(option=='E'or option=='e'):
+
+    if(option == 'E' or option == 'e'):
         print(f"Lutando com {oponente[0]}")
-        
-    if(option=='i'or option=='I'):
+
+    if(option == 'i' or option == 'I'):
         print(f"Pegando {item[0]}")
-        
-    if(option=='P'or option=='p'):
+
+    if(option == 'P' or option == 'p'):
         print(f"Pilotando {nave[0]}")
-        
-    if(option=='C'or option=='x'):
+
+    if(option == 'C' or option == 'x'):
         npc_dialogo(conteudo[3])
-    
+
     input(f'\n\nAperte qualquer tecla para sair: ')
 
     return

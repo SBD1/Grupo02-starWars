@@ -101,7 +101,7 @@ INSERT INTO npc (instancia_item, nome, raca, descricao, dialogo) VALUES (1, 'Qui
 
 -- Localização
 
-INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_oponente, instancia_de_nave) VALUES (0,0,1,1,1,1);
+INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_oponente, instancia_de_nave, npc) VALUES (0,0,1,1,1,1,1);
 
 -- Objetivo
 
