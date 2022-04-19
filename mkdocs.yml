@@ -21,6 +21,8 @@ nav:
       - Diagrama Entidade-Relacionamento: modulo1/der.md
       - Modelo relacional: modulo4/modelo-relacional/modelo-relacional-atualizado.md
       - Dados jogo:  modulo4/populacao-banco/dados.md
+  - Módulo 5:
+    - Álgebra Relacional: modulo5/algebra-relacional.md
 
 extra_css:
   - stylesheets/extra.css
