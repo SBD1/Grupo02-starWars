@@ -105,4 +105,5 @@ INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_o
 
 -- Objetivo
 
-INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 10, True);
+INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 1, True, 'Fale com o NPC e siga suas orientações');
+INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 250, 10, True, 'Treine na sala de treinamento jedi');

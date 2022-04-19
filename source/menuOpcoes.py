@@ -20,7 +20,8 @@ def menu(player, titulo, id_campoastronomico):
           [M] Ver mapa
           [I] Inventário
           [C] Características
-          [O] Ordem e Rank
+          [R] Ordem e Rank
+          [O] Objetivos
           [L] Listar objetos que você pode interagir
           [Q] Sair do jogo
           ''')
@@ -44,10 +45,12 @@ def menu(player, titulo, id_campoastronomico):
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
         if (option == 'C' or option == 'c'):
             consultaCaracteristica(player)
-        if (option == 'O' or option == 'o'):
+        if (option == 'R' or option == 'r'):
             consultaOrdem(player)
         if (option == 'L') or option == 'l':
             print('Listar objetos que você pode interagir --> Faz consulta no banco com os NPCs, Opnentes ou itens que estão no mapa')
+        if (option == 'O' or option == 'o'):
+            print('mostra lista de objetivos')
 
 
 def consultaCampo(id):

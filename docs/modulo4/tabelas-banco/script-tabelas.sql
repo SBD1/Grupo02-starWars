@@ -231,13 +231,14 @@ CREATE TABLE roteiro (
 );
 
 
-CREATE TABLE objetivo (
-   id             SERIAL PRIMARY KEY,
-   roteiro        VARCHAR NOT NULL,
-   ordem 	      VARCHAR(60) NOT NULL,
-   midichlorians VARCHAR(1000) NOT NULL,
-   pontos_forca   SMALLINT NOT NULL,
-   classificacao  BOOLEAN NOT NULL,
+CREATE TABLE IF NOT EXISTS objetivo (
+   id SERIAL PRIMARY KEY,
+   roteiro VARCHAR NOT NULL,
+   ordem VARCHAR(60) NOT NULL,
+   midichlorians SMALLINT NOT NULL, 
+   pontos_forca SMALLINT NOT NULL,
+   classificacao BOOLEAN NOT NULL,
+   descricao VARCHAR(1000) NOT NULL,
 
    CONSTRAINT roteiro_fk FOREIGN KEY (roteiro) REFERENCES roteiro (titulo) ON DELETE SET NULL
 );
