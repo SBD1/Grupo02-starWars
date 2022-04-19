@@ -10,7 +10,7 @@ def consultaTodosObjetivo(roteiro):
     i = 0
     for row in objetivos:
         i = i+1
-        if(row[5] == TRUE):
+        if(row[5] == True):
             classificacao = 'primário'
         else:
             classificacao = 'secundário'
