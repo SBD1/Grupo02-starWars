@@ -10,7 +10,7 @@ def npc_dialogo(npc_id):
 
     print(f'''
           
-    {npc.nome}:
+    {npc.nome} diz:
     
           {npc.dialogo}
           
