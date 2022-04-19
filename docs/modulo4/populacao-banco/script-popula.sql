@@ -82,7 +82,7 @@ INSERT INTO nave(nro_serie, nome, descricao, velocidade_maxima, arma) VALUES ('C
 
 -- Roteiro
 
-INSERT INTO roteiro(titulo, historia, abertura) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Um jovem padawan inicia sua trajetória treinando para se tornar Jedi e ajudar o seu povo na guerra. Sua trajetória terá muitos desafios que colocará em dúvida a sua integridade moral. Qual caminho ele seguirá?', 'Uma inquietação toma conta do Senado Galáctico. Milhares de sistemas solares declararam suas intenções em deixar a República. Esse movimento separatista, sob a liderança do misterioso Conde Dookan, tem criado dificuldades para o limitado número de Cavaleiros Jedi manter a paz e a ordem na galáxia. Senadora Amidala, a antiga rainha de Naboo, está retornando ao Senado Galáctico para a votação da proposta crítica de criação de um Exército da República, para auxiliar os sobrecarregados Jedi...');
+INSERT INTO roteiro(titulo, campo, historia, abertura) VALUES ('Episódio I - Parte I - Surgimento dos clones', 2 , 'Um jovem padawan inicia sua trajetória treinando para se tornar Jedi e ajudar o seu povo na guerra. Sua trajetória terá muitos desafios que colocará em dúvida a sua integridade moral. Qual caminho ele seguirá?', 'Uma inquietação toma conta do Senado Galáctico. Milhares de sistemas solares declararam suas intenções em deixar a República. Esse movimento separatista, sob a liderança do misterioso Conde Dookan, tem criado dificuldades para o limitado número de Cavaleiros Jedi manter a paz e a ordem na galáxia. Senadora Amidala, a antiga rainha de Naboo, está retornando ao Senado Galáctico para a votação da proposta crítica de criação de um Exército da República, para auxiliar os sobrecarregados Jedi...');
 
 -- Droid
 
@@ -91,7 +91,7 @@ INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D2', 2, 'C3PO',
 
 -- Instâncias
 
-INSERT INTO instancia_item(item) VALUES (1);
+INSERT INTO instancia_item(item, jogador) VALUES (1,1);
 INSERT INTO instancia_oponente(instancia_item, oponente) VALUES (1,1);
 INSERT INTO instancia_de_nave(nro_serie, jogador) VALUES ('YT-1300', 1);
 
@@ -101,8 +101,9 @@ INSERT INTO npc (instancia_item, nome, raca, descricao, dialogo) VALUES (1, 'Qui
 
 -- Localização
 
-INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_oponente, instancia_de_nave) VALUES (0,0,1,1,1,1);
+INSERT INTO localizacao(latitude, longitude, regiao, instancia_item, instancia_oponente, instancia_de_nave, npc) VALUES (0,0,1,1,1,1,1);
 
 -- Objetivo
 
-INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 10, True);
+INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 1, True, 'Fale com o NPC e siga suas orientações');
+INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 250, 10, True, 'Treine na sala de treinamento jedi');
