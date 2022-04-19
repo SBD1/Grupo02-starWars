@@ -93,12 +93,6 @@ CREATE TABLE IF NOT EXISTS item_consumivel (
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
 );
 
-CREATE TABLE IF NOT EXISTS instancia_item (
-   id SERIAL PRIMARY KEY,
-   item SERIAL NOT NULL,
-   
-   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
-);
 
 -- PERSONAGEM
 CREATE TABLE IF NOT EXISTS jogador (
@@ -115,6 +109,15 @@ CREATE TABLE IF NOT EXISTS jogador (
    agilidade INTEGER NOT NULL,
    resistencia INTEGER NOT NULL,
    espectro_forca INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_item (
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
+   jogador SERIAL,
+   
+   CONSTRAINT instanciaItem_jogador_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
+   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS oponente (
