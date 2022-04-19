@@ -91,7 +91,7 @@ INSERT INTO droid (nro_serie, habilidade, nome, modelo) VALUES ('D2', 2, 'C3PO',
 
 -- Instâncias
 
-INSERT INTO instancia_item(item) VALUES (1);
+INSERT INTO instancia_item(item, jogador) VALUES (1,1);
 INSERT INTO instancia_oponente(instancia_item, oponente) VALUES (1,1);
 INSERT INTO instancia_de_nave(nro_serie, jogador) VALUES ('YT-1300', 1);
 
