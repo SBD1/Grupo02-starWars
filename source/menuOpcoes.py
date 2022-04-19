@@ -30,13 +30,13 @@ def menu(player, titulo, id_campoastronomico):
             latitude = latitude - 1
         if (option == 'S' or option == 's'):
             print('Você andou para baixo!\n')
-            longitude = longitude + 1
+            longitude = longitude - 1
         if (option == 'D' or option == 'd'):
             print('Você andou para a direita!\n')
             latitude = latitude + 1
         if (option == 'W' or option == 'w'):
             print('Você andou para cima!\n')
-            longitude = longitude - 1
+            longitude = longitude + 1
         if (option == 'M' or option == 'm'):
             print('Ver mapa --> Faz consulta no banco e mostra a imagem do mapa')
         if (option == 'I' or option == 'i'):
