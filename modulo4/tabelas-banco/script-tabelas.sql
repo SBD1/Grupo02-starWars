@@ -93,12 +93,6 @@ CREATE TABLE IF NOT EXISTS item_consumivel (
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
 );
 
-CREATE TABLE IF NOT EXISTS instancia_item (
-   id SERIAL PRIMARY KEY,
-   item SERIAL NOT NULL,
-   
-   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
-);
 
 -- PERSONAGEM
 CREATE TABLE IF NOT EXISTS jogador (
@@ -117,6 +111,15 @@ CREATE TABLE IF NOT EXISTS jogador (
    espectro_forca INTEGER NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS instancia_item (
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
+   jogador SERIAL,
+   
+   CONSTRAINT instanciaItem_jogador_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
+   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
+);
+
 CREATE TABLE IF NOT EXISTS oponente (
    id		          SERIAL PRIMARY KEY,
    nome		       VARCHAR(30) NOT NULL UNIQUE,
@@ -131,7 +134,7 @@ CREATE TABLE IF NOT EXISTS oponente (
    espectro_forca  INTEGER NOT NULL
 );
 
-CREATE TABLE instancia_oponente(
+CREATE TABLE IF NOT EXISTS instancia_oponente(
   id SERIAL PRIMARY KEY,
   instancia_item SERIAL,
   oponente SERIAL,
@@ -223,18 +226,22 @@ CREATE TABLE IF NOT EXISTS instancia_de_droid(
 -- FASES
 CREATE TABLE roteiro (
    titulo		    VARCHAR(60) PRIMARY KEY,
+   campo SERIAL,
    historia 	    VARCHAR(500) NOT NULL,
-   abertura		    VARCHAR(500) NOT NULL
+   abertura		    VARCHAR(500) NOT NULL,
+
+   CONSTRAINT campo_roteiro_fk FOREIGN KEY (campo) REFERENCES campo_astronomico (id) ON DELETE SET NULL
 );
 
 
-CREATE TABLE objetivo (
-   id             SERIAL PRIMARY KEY,
-   roteiro        VARCHAR NOT NULL,
-   ordem 	      VARCHAR(60) NOT NULL,
-   midichlorians VARCHAR(1000) NOT NULL,
-   pontos_forca   SMALLINT NOT NULL,
-   classificacao  BOOLEAN NOT NULL,
+CREATE TABLE IF NOT EXISTS objetivo (
+   id SERIAL PRIMARY KEY,
+   roteiro VARCHAR NOT NULL,
+   ordem VARCHAR(60) NOT NULL,
+   midichlorians SMALLINT NOT NULL, 
+   pontos_forca SMALLINT NOT NULL,
+   classificacao BOOLEAN NOT NULL,
+   descricao VARCHAR(1000) NOT NULL,
 
    CONSTRAINT roteiro_fk FOREIGN KEY (roteiro) REFERENCES roteiro (titulo) ON DELETE SET NULL
 );
@@ -260,9 +267,12 @@ CREATE TABLE IF NOT EXISTS localizacao(
   instancia_item SERIAL,
   instancia_oponente SERIAL,
   instancia_de_nave SERIAL,
+  npc SERIAL,
 
   CONSTRAINT regiao_localizacao_fk FOREIGN KEY (regiao) REFERENCES regiao (id) ON DELETE SET NULL,
   CONSTRAINT instItem_localizacao_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL,
   CONSTRAINT instOponente_localizacao_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL,
-  CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL
+  CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL,
+  CONSTRAINT npc_fk FOREIGN KEY (npc) REFERENCES npc (id) ON DELETE SET NULL
+
 );
