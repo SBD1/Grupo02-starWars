@@ -1,12 +1,14 @@
+# **Star Wars: The Shattering of the Force**
+
 <p align="center">
 	<img src="./assets/logo.png" alt="Alt Text" style="zoom:25%;"/>
 </p>
 
-## 1. Introdução
+## 1. **Introdução**
 
 <p align="justify">Este repositório destina-se ao armazenamento do projeto realizado na disciplina de Sistema de Bancos de Dados 1 da Universidade de Brasília, ministrada pelo professor Mauricio Serrano no semestre de 2021/2. O projeto consiste na criação de um Banco de Dados de um jogo MUD(Multi-user dungeon), o tema definido pela equipe para a criação do mesmo foi o universo canônico do tema Star Wars.</p>
 
-## 2. Membros da Equipe 
+## 2. **Membros da Equipe**
 
 <table>
     <tr>
