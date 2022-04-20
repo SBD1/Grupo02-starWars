@@ -1,14 +1,16 @@
 # **1. Modelo Relacional Atualizado**
 
+## **1. Intrdução**
+
 <p style='text-align: justify;'>&emsp;&emsp;Dada a complexidade do projeto, optamos por mudar a representação do modelo relacional. Então a partir do módulo 4, o nosso modelo será representado da forma como pode ser visualizado na versão 1.1.</p>
 
-## **1.2. Versão 1.1**
+### **1.1. Versão 1.1**
 
 ![Modelo Relacional v1.1](modelo-relacional-v1.1.svg)
 
   <a href="https://sbd1.github.io/Grupo02-starWars/modulo4/modelo-relacional/modelo-relacional-v1.1.svg" target="_blank">Clique aqui</a> para ver o modelo com mais detalhes.
 
-## **1.3. Outras Versões**
+### **1.2. Outras Versões**
 
 <details>
   <summary>Versão 0.1</summary>

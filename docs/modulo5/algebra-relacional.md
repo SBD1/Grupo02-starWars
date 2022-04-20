@@ -1,6 +1,8 @@
-## **1. Algebra Relacional**
+# **Algebra Relacional**
 
-<p style='text-align: justify;'></p>
+## **1. Introdução**
+
+<p style='text-align:justify;'> O presente documento visa apresentar os resultados do módulo 5 da disciplina de Bancos de Dados referentes a aplicação de álgebra relacional SQL.</p>
 
 ## **2. Resultados**
 
