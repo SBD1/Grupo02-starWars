@@ -4,6 +4,7 @@ sudo -u postgres psql
 pg_lsclusters
 sudo service postgresql start
 createdb starWars
+CREATE DATABASE starWars;
 
 -- Outros comandos:
 
