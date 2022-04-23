@@ -592,6 +592,7 @@ INSERT INTO instancia_item(item, jogador, localizacao)  VALUES (13,NULL,NULL);
 INSERT INTO instancia_item(item, jogador, localizacao)  VALUES (13,NULL,NULL);
 INSERT INTO instancia_item(item, jogador, localizacao)  VALUES (13,NULL,NULL);
 
+-- Oponente
 INSERT INTO instancia_oponente(instancia_item, oponente, localizacao) VALUES (81,7,39);
 INSERT INTO instancia_oponente(instancia_item, oponente, localizacao) VALUES (82,7,42);
 INSERT INTO instancia_oponente(instancia_item, oponente, localizacao) VALUES (83,7,19);
