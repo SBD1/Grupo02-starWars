@@ -28,6 +28,7 @@ def menu(player, titulo, id_campoastronomico):
           [0] Sair do jogo
           ''')
         option = str(input('Escolha uma opção: '))
+        
         if (option == 'A' or option == 'a'):
             longitude = longitude - 1
             idLocalizacao = consultaIDlocalizacao(latitude, longitude)
@@ -70,12 +71,16 @@ def menu(player, titulo, id_campoastronomico):
         if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
+
         if (option == 'C' or option == 'c'):
             consultaCaracteristica(player)
+
         if (option == 'R' or option == 'r'):
             consultaOrdem(player)
+
         if (option == 'L') or option == 'l':
             consultaLocalização(latitude, longitude)
+
         if (option == 'O' or option == 'o'):
             consultaTodosObjetivo(titulo)
 
