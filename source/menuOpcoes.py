@@ -5,8 +5,8 @@ from objetivo import consultaTodosObjetivo
 
 def menu(player, titulo, id_campoastronomico):
     option = '0'
-    latitude = 0
-    longitude = 0
+    latitude = 7
+    longitude = -8
     nome_campo = consultaCampo(id_campoastronomico)
     atmosfera_campo = consultaAtmosfera(id_campoastronomico)
 
@@ -120,37 +120,60 @@ def consultaOrdem(jogador):
 
 def consultaLocalização(latitude, longitude):
     [cursor, connection] = connect()
-
-    conteudo = query(
-        cursor, f"SELECT instancia_item,instancia_oponente,instancia_de_nave, npc FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
-    conteudo = conteudo[0]
+    idLocalizacao = query(cursor,
+                          f"SELECT id FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
+    idLocalizacao = idLocalizacao[0]
+    idLocalizacao = idLocalizacao[0]
+    # NPC
     npc = query(
-        cursor, f"SELECT nome FROM npc WHERE id={conteudo[3]};")
-    npc = npc[0]
+        cursor, f"SELECT nome FROM npc WHERE localizacao={idLocalizacao};")
+    if not npc:
+        npc = 0
+    else:
+        npc = npc[0]
+        idNPC = query(cursor, f"SELECT id FROM npc WHERE nome=\'{npc[0]}\';")
+        idNPC = idNPC[0]
+    # Instancia de item
     instanciaitem = query(
-        cursor, f"SELECT item FROM instancia_item_localização WHERE id={conteudo[0]};")
-    instanciaitem = instanciaitem[0]
-    item = query(
-        cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
-    item = item[0]
+        cursor, f"SELECT item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
+    if not instanciaitem:
+        instanciaitem = 0
+    else:
+        instanciaitem = instanciaitem[0]
+        item = query(
+            cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
+        item = item[0]
+    # Instancia oponente
     instanciaoponente = query(
-        cursor, f"SELECT oponente FROM instancia_oponente WHERE id={conteudo[1]};")
-    instanciaoponente = instanciaoponente[0]
-    oponente = query(
-        cursor, f"SELECT nome FROM oponente WHERE id={instanciaoponente[0]};")
-    oponente = oponente[0]
+        cursor, f"SELECT oponente FROM instancia_oponente WHERE localizacao={idLocalizacao};")
+    if not instanciaoponente:
+        instanciaoponente = 0
+    else:
+        instanciaoponente = instanciaoponente[0]
+        oponente = query(
+            cursor, f"SELECT nome FROM oponente WHERE id={instanciaoponente[0]};")
+        oponente = oponente[0]
+    # Nave
     instancianave = query(
-        cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE id=\'{conteudo[2]}\';")
-    instancianave = instancianave[0]
-    nave = query(
-        cursor, f"SELECT nome FROM nave WHERE nro_serie=\'{instancianave[0]}\';")
-    nave = nave[0]
-    print(f'''
-          [E] Enfrentar {oponente[0]}
-          [I] Pegar {item[0]}
-          [C] Conversar com {npc[0]}
-          [P] Pilotar {nave[0]} 
-          ''')
+        cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE localizacao={idLocalizacao};")
+    if not instancianave:
+        instancianave = 0
+    else:
+        instancianave = instancianave[0]
+        nave = query(
+            cursor, f"SELECT nome FROM nave WHERE nro_serie=\'{instancianave[0]}\';")
+        nave = nave[0]
+    close(connection, cursor)
+
+    if (instanciaoponente != 0):
+        print(f'[E] Enfrentar {oponente[0]}')
+    if (instanciaitem != 0):
+        print(f'[I] Pegar {item[0]}')
+    if (npc != 0):
+        print(f'[C] Conversar com {npc[0]}')
+    if (instancianave != 0):
+        print(f'[P] Pilotar {nave[0]} ')
+    print('[0] Sair')
 
     option = str(input('Escolha uma opção: '))
 
@@ -164,7 +187,7 @@ def consultaLocalização(latitude, longitude):
         print(f"Pilotando {nave[0]}")
 
     if(option == 'C' or option == 'x'):
-        npc_dialogo(conteudo[3])
+        npc_dialogo(idNPC[0])
 
     input(f'\n\nAperte qualquer tecla para sair: ')
 
