@@ -8,6 +8,7 @@ def consultaLocalização(idJogador, latitude, longitude):
                           f"SELECT id FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
     idLocalizacao = idLocalizacao[0]
     idLocalizacao = idLocalizacao[0]
+
     # NPC
     npc = query(
         cursor, f"SELECT nome FROM npc WHERE localizacao={idLocalizacao};")
@@ -17,6 +18,7 @@ def consultaLocalização(idJogador, latitude, longitude):
         npc = npc[0]
         idNPC = query(cursor, f"SELECT id FROM npc WHERE nome=\'{npc[0]}\';")
         idNPC = idNPC[0]
+
     # Instancia de item
     instanciaitem = query(
         cursor, f"SELECT item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
@@ -27,6 +29,7 @@ def consultaLocalização(idJogador, latitude, longitude):
         item = query(
             cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
         item = item[0]
+
     # Instancia oponente
     instanciaoponente = query(
         cursor, f"SELECT oponente FROM instancia_oponente WHERE localizacao={idLocalizacao};")
@@ -37,6 +40,7 @@ def consultaLocalização(idJogador, latitude, longitude):
         oponente = query(
             cursor, f"SELECT nome FROM oponente WHERE id={instanciaoponente[0]};")
         oponente = oponente[0]
+
     # Nave
     instancianave = query(
         cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE localizacao={idLocalizacao};")
@@ -49,6 +53,7 @@ def consultaLocalização(idJogador, latitude, longitude):
         nave = nave[0]
     close(connection, cursor)
 
+    # IMPRIME MENSAGEM DE INTERAÇÃO NA TELA
     if (instanciaoponente != 0):
         print(f'[E] Enfrentar {oponente[0]}')
     if (instanciaitem != 0):

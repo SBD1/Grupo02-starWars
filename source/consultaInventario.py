@@ -1,5 +1,6 @@
 from db.database import connect, query, close
 
+
 def consultaInventario(jogador):
 
     [cursor, connection] = connect()
@@ -7,6 +8,7 @@ def consultaInventario(jogador):
         cursor, f'select id from jogador where nome = \'{jogador}\';')
     idjogador = idjogador[0]
 
+    # VERIFICA SE A TABELA instancia_item_jogador ESTÁ VAZIA PARA O JOGADOR SELECIONADO
     inventario = query(
         cursor, f'select item from instancia_item_jogador where jogador = {idjogador[0]};')
     if not inventario:
@@ -22,4 +24,4 @@ def consultaInventario(jogador):
             print(f'{i} - {item[0]}')
         print('\n')
     close(connection, cursor)
-    input(f'\n\nAperte qualquer tecla para sair: ')
+    input(f'\nAperte qualquer tecla para sair: ')

@@ -9,6 +9,7 @@ def npc_dialogo(npc_id, player):
         cursor, f"SELECT nome,dialogo,item FROM npc WHERE id='{npc_id}';")
     npc = npc[0]
 
+    # IMPRIME DIALOGO DO NPC
     print(f'''
           
     {npc[0]} diz:
