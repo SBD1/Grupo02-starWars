@@ -13,7 +13,7 @@ INSERT INTO campo_astronomico (nome, setor, regiaoAstronomica, atmosfera) VALUES
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Naboo','Neutro', 'Padmé Amidala', 'Republica',1);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Floresta Coruscant','Neutro', 'Padmé Amidala', 'Republica',2);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Lianorm swamp','Chuvoso', 'Padmé Amidala', 'Republica',5);
-INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Planice Naboo','Neutro', 'Padmé Amidala', 'Republica',3);
+INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Planicie Naboo','Neutro', 'Padmé Amidala', 'Republica',3);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Lake Paonga','Chuvoso', 'Rugor Nass', 'Republica',8);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Paonga island','Neutro', 'Padmé Amidala', 'Republica',3);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Colinas verdejantes','Montanhoso', 'Padmé Amidala', 'Republica',5);
@@ -26,7 +26,7 @@ INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) 
 -- Habilidade
 
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Tiro simples com blaster', 'Tiro simples com uma pistola blaster causando impacto a distância no adversários. Utilizado uma vez por turno.', 5, 10, 'Possuir uma pistola blaster', 'Inteligencia');
-INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Golpe de sabre de luz', 'Aplica um golpe corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 2, 20, 'Possuir um sabre de luz', 'Forca Fisica');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Golpe de sabre de luz', 'Aplica um golpe corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 1, 10, 'Possuir um sabre de luz', 'Forca Fisica');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Sequência de golpes de sabre de luz', 'Aplica uma sequência de golpes corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 15, 40, 'Possuir um sabre de luz', 'Agilidadea');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Levitar objetos', 'Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno.', 15, 0, 'Ter a ordem Jedi, Gray Jedi ou Sith', 'Inteligencia');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Velocidade da força', 'Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno.', 25, 10, 'Ter a ordem Jedi, Gray Jedi ou Sith', 'Agilidade');
@@ -35,6 +35,7 @@ INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteri
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Corte simples', 'Utiliza-se de objeto afiado para cortar o adversario', 1, 5, 'Possuir objeto afiado', 'Forca Fisica');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Tiros multiplos', 'Tiro multiplo com uma rifle causando impacto a distância no adversários. Utilizado uma vez por turno', 10, 30, 'Possuir blaster de repetição', 'Inteligencia');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Choque Booma', 'Choque causado por uma granada Booma', 3, 10, 'Possuir granada Booma', 'Inteligencia');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Soco', 'Combate corpo a corpo', 3, 2, 'Sem pre-requisito', 'Forca Fisica');
 
 
 -- Habilidade com arma

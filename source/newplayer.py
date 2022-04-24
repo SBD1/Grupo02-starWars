@@ -11,6 +11,23 @@ def newplayer():
     cursor.execute(insert_script, insert_values)
 
     connection.commit()
-    #print(query(cursor, insert_script))
 
+    #print(query(cursor, insert_script))
+    close(connection, cursor)
+    habilidadeIniciante(player)
+
+
+def habilidadeIniciante(jogador):
+    [cursor, connection] = connect()
+
+    idjogador = query(
+        cursor, f'select id from jogador where nome = \'{jogador}\';')
+    idjogador = idjogador[0]
+
+    insert_script = str(
+        'INSERT INTO possui(jogador, habilidade) VALUES (%s, %s);')
+    insert_values = (idjogador, 11)
+    cursor.execute(insert_script, insert_values)
+
+    connection.commit()
     close(connection, cursor)
