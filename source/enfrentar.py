@@ -70,6 +70,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente):
         print(
             f'''************************************ RODADA {rodada} ***********************************
 
+
             É a sua vez, {nomeJogador}! Selecione uma habilidade para causar dano em {nomeOponente}:\n''')
 
         # lista as habilidades que o jogador pode usar
@@ -104,7 +105,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente):
             # Aplica dano no oponente
             vidaOponente = vidaOponente - (dano - resisOponente)
             print(
-                f'Você usou {nome}! A vida do seu oponente após o seu ataque é: {vidaOponente}.\n')
+                f'\nVocê usou {nome}! A vida do seu oponente após o seu ataque é: {vidaOponente}.\n')
 
             # Vez do oponente atacar
             print(f'Agora é a vez de {nomeOponente} jogar: \n\n')
@@ -117,15 +118,18 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente):
                 dano = impactoOponente * agiOponente
 
             # Aplica dano no jogador
-            vidaJogador = vidaJogador - (dano - resisJogador)
+            if(dano < resisJogador):
+                vidaJogador = vidaJogador
+            else:
+                vidaJogador = vidaJogador - (dano - resisJogador)
             print(
                 f'{nomeOponente} usou {ataqueOponente}! A sua vida após o seu ataque é: {vidaJogador}.\n')
 
     # Em caso de vitória
     if(vidaJogador > vidaOponente):
-        print(f'''Você ganhou esta batalha! 
-            Por sua vitória você recebeu {midichloriansOponente} midichlorians!
-            Você recebeu {espectroForcaOponente} de Espectro da Força graças a sua vitória!
+        print(f'''\nVocê ganhou esta batalha!\n 
+            Por sua vitória você recebeu {midichloriansOponente} midichlorians!\n
+            Você recebeu {espectroForcaOponente} de Espectro da Força graças a sua vitória!\n
         ''')
         midichloriansJogador = midichloriansJogador + midichloriansOponente
         espectroForcaJogador = espectroForcaJogador + espectroForcaOponente
@@ -195,5 +199,5 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente):
 
     # Em caso de derrota
     else:
-        print('Você perdeu esta batalha! Treine mais um pouco para conseguir sair vitorioso na próxima aventura!')
+        print('\nVocê perdeu esta batalha! Treine mais um pouco para conseguir sair vitorioso na próxima aventura!')
         vidaJogador = 100

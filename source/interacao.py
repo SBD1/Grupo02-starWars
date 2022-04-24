@@ -21,14 +21,14 @@ def consultaLocalização(idJogador, latitude, longitude):
         idNPC = idNPC[0]
 
     # Instancia de item
-    instanciaitem = query(
+    idItem = query(
         cursor, f"SELECT item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
-    if not instanciaitem:
-        instanciaitem = 0
+    if not idItem:
+        idItem = 0
     else:
-        instanciaitem = instanciaitem[0]
+        idItem = idItem[0]
         item = query(
-            cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
+            cursor, f"SELECT nome FROM item WHERE id={idItem[0]};")
         item = item[0]
 
     # id oponente
@@ -60,7 +60,7 @@ def consultaLocalização(idJogador, latitude, longitude):
     # IMPRIME MENSAGEM DE INTERAÇÃO NA TELA
     if (idOponente != 0):
         print(f'[E] Enfrentar {oponente[0]}')
-    if (instanciaitem != 0):
+    if (idItem != 0):
         print(f'[I] Pegar {item[0]}')
     if (npc != 0):
         print(f'[C] Conversar com {npc[0]}')
@@ -70,17 +70,17 @@ def consultaLocalização(idJogador, latitude, longitude):
 
     option = str(input('Escolha uma opção: '))
 
-    if(option == 'E' or option == 'e'):
+    if((option == 'E' or option == 'e') and idOponente != 0):
         print(f"Lutando com {oponente[0]}")
         enfrentar(idJogador, idinstanciaOponente, idOponente)
 
-    if(option == 'i' or option == 'I'):
+    if((option == 'i' or option == 'I') and idOponente != 0):
         print(f"Pegando {item[0]}")
 
-    if(option == 'P' or option == 'p'):
+    if((option == 'P' or option == 'p') and idOponente != 0):
         print(f"Pilotando {nave[0]}")
 
-    if(option == 'C' or option == 'x'):
+    if((option == 'C' or option == 'c') and idOponente != 0):
         npc_dialogo(idNPC[0], idJogador)
 
     input(f'\n\nAperte qualquer tecla para sair: ')
