@@ -20,4 +20,4 @@ while (option != '0'):
         seleciona()
 
 
-print('Você saiu do jogo. E lembre-se: "A habilidade de falar não o torna inteligente"')
+print('Você saiu do jogo. E, lembre-se: "A habilidade de falar não o torna inteligente"')
