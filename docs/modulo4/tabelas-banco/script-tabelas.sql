@@ -121,13 +121,15 @@ CREATE TABLE IF NOT EXISTS oponente (
    nome		       VARCHAR(30) NOT NULL UNIQUE,
    raca 	          VARCHAR(60) NOT NULL,
    vida		       INTEGER NOT NULL,
-   midichlorians   SMALLINT NOT NULL, 
+   midichlorians   INTEGER NOT NULL, 
    probabilidade   REAL NOT NULL,
    inteligencia	 INTEGER NOT NULL,
    forca_fisica	 INTEGER NOT NULL,
    agilidade	    INTEGER NOT NULL,
    resistencia	    INTEGER NOT NULL,
-   espectro_forca  INTEGER NOT NULL
+   espectro_forca  INTEGER NOT NULL,
+   ataque VARCHAR(60),
+   impacto INTEGER NOT NULL
 );
 
 -- NAVE

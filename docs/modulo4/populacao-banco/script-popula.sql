@@ -101,17 +101,17 @@ INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, intelig
 
 
 -- Oponente
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Ewok','Ewok', 30, 100, 0.20, 3, 2, 3, 2, -20);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Veermok','Veermok', 50, 100, 0.30, 3, 4, 5, 3, 10);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Shaak','Shaak', 20, 100, 0.10, 1, 2, 2, 1, 0);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Tusk cat','Tusk cat', 500, 100, 0.30, 4, 5, 7, 4, 10);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Droid de batalha B1','Droid separatista', 50, 100, 0.20, 2, 3, 3, 4, 20);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Super Droid','Droid separatista', 100, 100, 0.40, 5, 5, 4, 6, 20);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Colo Claw Fish','Cordaxian Sea', 2500, 100, 0.50, 7, 10, 10, 8, 10);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Gungan','Gungan', 50, 100, 0.20, 2, 4, 3, 3, -20);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Dianoga','Dianoga', 5000, 100, 0.90, 9, 10, 10, 9, 10);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Wampa','Wampa', 1000, 100, 0.40, 6, 7, 5, 6, 10);
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES ('Putch Ingball','Espatanlho de treinamento', 0, 100, 0, 0, 0, 0, 0, 0);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Ewok','Ewok', 30, 100, 0.20, 3, 2, 3, 2, -20, 'Ataque com lança', 3);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Veermok','Veermok', 50, 100, 0.30, 3, 4, 5, 3, 10, 'Mordida agressiva', 5);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Shaak','Shaak', 20, 100, 0.10, 1, 2, 4, 1, 0, 'Contra-Ataque ágil', 2);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Tusk cat','Tusk cat', 500, 100, 0.30, 4, 5, 7, 4, 10, 'Ataque Forte da Garra', 5);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Droid de batalha B1','Droid separatista', 50, 100, 0.20, 2, 3, 3, 4, 20, 'Tiro com Rifle de blaster', 3);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Super Droid','Droid separatista', 100, 100, 0.40, 5, 5, 4, 6, 20, 'Tiro com lançador de pulso duplo', 5);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Colo Claw Fish','Cordaxian Sea', 2500, 100, 0.50, 7, 10, 10, 8, 10, 'Presa venenosa', 8);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Gungan','Gungan', 50, 100, 0.20, 2, 4, 3, 3, -20, 'Bastão atordoante', 2);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Dianoga','Dianoga', 5000, 100, 0.90, 9, 10, 10, 9, 10, 'Tentáculos pegajosos', 7);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Wampa','Wampa', 1000, 100, 0.40, 6, 7, 5, 6, 10, 'Esmagamento com a garra', 3);
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto) VALUES ('Putch Ingball','Espatanlho de treinamento', 0, 100, 0, 0, 0, 0, 0, 0, 'Permance parado', 1);
 
 -- Nave
 
