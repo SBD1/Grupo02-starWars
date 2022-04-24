@@ -13,7 +13,7 @@ INSERT INTO campo_astronomico (nome, setor, regiaoAstronomica, atmosfera) VALUES
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Naboo','Neutro', 'Padmé Amidala', 'Republica',1);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Floresta Coruscant','Neutro', 'Padmé Amidala', 'Republica',2);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Lianorm swamp','Chuvoso', 'Padmé Amidala', 'Republica',5);
-INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Planice Naboo','Neutro', 'Padmé Amidala', 'Republica',3);
+INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Planicie Naboo','Neutro', 'Padmé Amidala', 'Republica',3);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Lake Paonga','Chuvoso', 'Rugor Nass', 'Republica',8);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Paonga island','Neutro', 'Padmé Amidala', 'Republica',3);
 INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) VALUES (2,'Colinas verdejantes','Montanhoso', 'Padmé Amidala', 'Republica',5);

@@ -66,7 +66,7 @@ def menu(player, titulo, id_campoastronomico):
 
         if (option == 'M' or option == 'm'):
             consultaRegiao(latitude, longitude)
-            
+
         if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
@@ -158,9 +158,10 @@ def consultaIDlocalizacao(latitude, longitude):
 def consultaRegiao(latitude, longitude):
     [cursor, connection] = connect()
     idRegiao = query(cursor,
-                            f"SELECT regiao FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
+                     f"SELECT regiao FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
+    idRegiao = idRegiao[0]
     regiao = query(
-        cursor, f'select nome, clima, governante, dominio, nivel from regiao where id = {id_regiao};')
+        cursor, f'select nome, clima, governante, dominio, nivel from regiao where id = {idRegiao[0]};')
 
     regiao = regiao[0]
     close(connection, cursor)
