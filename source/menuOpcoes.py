@@ -79,6 +79,12 @@ def menu(player, titulo, id_campoastronomico):
         if (option == 'O' or option == 'o'):
             consultaTodosObjetivo(titulo)
 
+        if (option == 'C' or option == 'c'):
+            consultaCaracteristica(player)
+
+        if (option == 'R' or option == 'r'):
+            consultaOrdem(player)
+
 
 def consultaCampo(id):
 

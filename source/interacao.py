@@ -1,4 +1,5 @@
 from db.database import connect, query, close
+from enfrentar import enfrentar
 from npc import npc_dialogo
 
 
@@ -30,37 +31,40 @@ def consultaLocalização(idJogador, latitude, longitude):
             cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
         item = item[0]
 
-    # Instancia oponente
-    instanciaoponente = query(
-        cursor, f"SELECT oponente FROM instancia_oponente WHERE localizacao={idLocalizacao};")
-    if not instanciaoponente:
-        instanciaoponente = 0
+    # id oponente
+    idOponente = query(
+        cursor, f"SELECT oponente, id FROM instancia_oponente WHERE localizacao={idLocalizacao};")
+    if not idOponente:
+        idOponente = 0
     else:
-        instanciaoponente = instanciaoponente[0]
+        idOponente = idOponente[0]
+        idinstanciaOponente = idOponente[1]
+        idOponente = idOponente[0]
         oponente = query(
-            cursor, f"SELECT nome FROM oponente WHERE id={instanciaoponente[0]};")
+            cursor, f"SELECT nome FROM oponente WHERE id={idOponente};")
         oponente = oponente[0]
 
     # Nave
-    instancianave = query(
+    nroSerieNave = query(
         cursor, f"SELECT nro_serie FROM instancia_de_nave WHERE localizacao={idLocalizacao};")
-    if not instancianave:
-        instancianave = 0
+    if not nroSerieNave:
+        nroSerieNave = 0
     else:
-        instancianave = instancianave[0]
+        nroSerieNave = nroSerieNave[0]
+        nroSerieNave = nroSerieNave[0]
         nave = query(
-            cursor, f"SELECT nome FROM nave WHERE nro_serie=\'{instancianave[0]}\';")
+            cursor, f"SELECT nome FROM nave WHERE nro_serie=\'{nroSerieNave}\';")
         nave = nave[0]
     close(connection, cursor)
 
     # IMPRIME MENSAGEM DE INTERAÇÃO NA TELA
-    if (instanciaoponente != 0):
+    if (idOponente != 0):
         print(f'[E] Enfrentar {oponente[0]}')
     if (instanciaitem != 0):
         print(f'[I] Pegar {item[0]}')
     if (npc != 0):
         print(f'[C] Conversar com {npc[0]}')
-    if (instancianave != 0):
+    if (nroSerieNave != 0):
         print(f'[P] Pilotar {nave[0]} ')
     print('[0] Sair')
 
@@ -68,6 +72,7 @@ def consultaLocalização(idJogador, latitude, longitude):
 
     if(option == 'E' or option == 'e'):
         print(f"Lutando com {oponente[0]}")
+        enfrentar(idJogador, idinstanciaOponente, idOponente)
 
     if(option == 'i' or option == 'I'):
         print(f"Pegando {item[0]}")

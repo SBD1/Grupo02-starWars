@@ -129,7 +129,8 @@ CREATE TABLE IF NOT EXISTS oponente (
    resistencia	    INTEGER NOT NULL,
    espectro_forca  INTEGER NOT NULL,
    ataque VARCHAR(60),
-   impacto INTEGER NOT NULL
+   impacto INTEGER NOT NULL,
+   caracteristica VARCHAR(30) NOT NULL
 );
 
 -- NAVE
@@ -282,10 +283,10 @@ CREATE TABLE IF NOT EXISTS interage(
 CREATE TABLE IF NOT EXISTS combate(
   id SERIAL PRIMARY KEY,
   jogador SERIAL,
-  instancia_oponente SERIAL,
+  oponente SERIAL,
 
   CONSTRAINT jogador_combate_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
-  CONSTRAINT instOponente_combate_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL
+  CONSTRAINT Oponente_combate_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE SET NULL
 );
 
 COMMIT;

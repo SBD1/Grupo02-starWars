@@ -65,6 +65,7 @@ def darItem(item, jogador):
         insert_script = str(
             'INSERT INTO possui(jogador, habilidade) VALUES (%s, %s);')
         insert_values = (jogador, habilidadeDoItemUtilizavel[0])
+        cursor.execute(insert_script, insert_values)
         connection.commit()
 
         # CONSULTA NOME DA HABILIDADE
