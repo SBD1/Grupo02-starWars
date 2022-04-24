@@ -19,7 +19,7 @@ def menu(player, titulo, id_campoastronomico):
           [S] Ande para o mapa de baixo
           [D] Ande para o mapa da direita
           [W] Ande para o mapa de cima
-          [M] Ver mapa
+          [M] Informações do mapa
           [I] Inventário
           [C] Características
           [R] Ordem e Rank
@@ -65,7 +65,8 @@ def menu(player, titulo, id_campoastronomico):
                 print('Você andou para cima!\n')
 
         if (option == 'M' or option == 'm'):
-            consultaRegiao(id_campoastronomico)
+            consultaRegiao(latitude, longitude)
+            
         if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
@@ -153,11 +154,13 @@ def consultaIDlocalizacao(latitude, longitude):
     close(connection, cursor)
     return idLocalizacao
 
-def consultaRegiao(id_campoastronomico):
-    [cursor, connection] = connect()
 
+def consultaRegiao(latitude, longitude):
+    [cursor, connection] = connect()
+    idRegiao = query(cursor,
+                            f"SELECT regiao FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
     regiao = query(
-        cursor, f'select nome, clima, governante, dominio, nivel from regiao where campo_astronomico = {id_campoastronomico};')
+        cursor, f'select nome, clima, governante, dominio, nivel from regiao where id = {id_regiao};')
 
     regiao = regiao[0]
     close(connection, cursor)
