@@ -76,12 +76,23 @@ INSERT INTO item(nome, descricao, tipo, nivel) VALUES ('Pele de Wampa', 'Pele pa
 
 -- Itens utilizaveis
 
-INSERT INTO item_utilizavel(habilidade, item) VALUES (1, 1);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (8, 1);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (1, 7);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (9, 8);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (10, 10);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (3, 12);
 
 
 -- Itens consumiveis
 
-INSERT INTO item_consumivel(item, carga) VALUES (4, 10);
+INSERT INTO item_consumivel(item, carga) VALUES (2, 1);
+INSERT INTO item_consumivel(item, carga) VALUES (3, 4);
+INSERT INTO item_consumivel(item, carga) VALUES (4, 1);
+INSERT INTO item_consumivel(item, carga) VALUES (5, 2);
+INSERT INTO item_consumivel(item, carga) VALUES (6, 1);
+INSERT INTO item_consumivel(item, carga) VALUES (9, 1);
+INSERT INTO item_consumivel(item, carga) VALUES (11, 2);
+INSERT INTO item_consumivel(item, carga) VALUES (13, 1);
 
 
 -- Jogador
