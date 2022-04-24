@@ -65,8 +65,7 @@ def menu(player, titulo, id_campoastronomico):
                 print('Você andou para cima!\n')
 
         if (option == 'M' or option == 'm'):
-            print(
-                'Ver mapa --> Faz consulta no banco e mostra a imagem do mapa ou traz informações da regiao')
+            consultaRegiao(id_campoastronomico)
         if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
@@ -75,7 +74,6 @@ def menu(player, titulo, id_campoastronomico):
         if (option == 'R' or option == 'r'):
             consultaOrdem(player)
         if (option == 'L') or option == 'l':
-            print('Listar objetos que você pode interagir --> Faz consulta no banco com os NPCs, Opnentes ou itens que estão no mapa')
             consultaLocalização(latitude, longitude)
         if (option == 'O' or option == 'o'):
             consultaTodosObjetivo(titulo)
@@ -154,3 +152,22 @@ def consultaIDlocalizacao(latitude, longitude):
         idLocalizacao = idLocalizacao[0]
     close(connection, cursor)
     return idLocalizacao
+
+def consultaRegiao(id_campoastronomico):
+    [cursor, connection] = connect()
+
+    regiao = query(
+        cursor, f'select nome, clima, governante, dominio, nivel from regiao where campo_astronomico = {id_campoastronomico};')
+
+    regiao = regiao[0]
+    close(connection, cursor)
+    print(f'''
+        Você está está em {regiao[0]} governada por {regiao[3]}.
+    
+        Clima: {regiao[1]}
+        Nível da região: {regiao[4]}
+        Dominio: {regiao[3]}
+    ''')
+    input(f'\n\nAperte qualquer tecla para sair: ')
+
+    return 0
