@@ -13,7 +13,7 @@ def menu(player, titulo, id_campoastronomico):
     while (option != '0'):
         print('********************* Menu de ações *********************')
         print(f'''
-          Você está em ({latitude},{longitude}) no campo astronômico {nome_campo}. A atmosfera é {atmosfera_campo}!
+          Você está em ({longitude},{latitude}) no campo astronômico {nome_campo}. A atmosfera é {atmosfera_campo}!
 
           [A] Ande para o mapa da esquerda
           [S] Ande para o mapa de baixo
@@ -29,19 +29,44 @@ def menu(player, titulo, id_campoastronomico):
           ''')
         option = str(input('Escolha uma opção: '))
         if (option == 'A' or option == 'a'):
-            print('Você andou para a esquerda!\n')
-            latitude = latitude - 1
-        if (option == 'S' or option == 's'):
-            print('Você andou para baixo!\n')
             longitude = longitude - 1
+            idLocalizacao = consultaIDlocalizacao(latitude, longitude)
+            if(idLocalizacao == 0):
+                print('Você atingiu a fronteira do mapa')
+                longitude = longitude + 1
+            else:
+                print('Você andou para a esquerda!\n')
+
+        if (option == 'S' or option == 's'):
+            latitude = latitude - 1
+            idLocalizacao = consultaIDlocalizacao(latitude, longitude)
+            if(idLocalizacao == 0):
+                print('Você atingiu a fronteira do mapa')
+                latitude = latitude + 1
+            else:
+                print('Você andou para baixo!\n')
+
         if (option == 'D' or option == 'd'):
-            print('Você andou para a direita!\n')
-            latitude = latitude + 1
-        if (option == 'W' or option == 'w'):
-            print('Você andou para cima!\n')
             longitude = longitude + 1
+            idLocalizacao = consultaIDlocalizacao(latitude, longitude)
+            if(idLocalizacao == 0):
+                print('Você atingiu a fronteira do mapa')
+                longitude = longitude - 1
+            else:
+                print('Você andou para a direita!\n')
+
+        if (option == 'W' or option == 'w'):
+            latitude = latitude + 1
+            idLocalizacao = consultaIDlocalizacao(latitude, longitude)
+            if(idLocalizacao == 0):
+                print('Você atingiu a fronteira do mapa')
+                latitude = latitude - 1
+            else:
+                print('Você andou para cima!\n')
+
         if (option == 'M' or option == 'm'):
-            print('Ver mapa --> Faz consulta no banco e mostra a imagem do mapa')
+            print(
+                'Ver mapa --> Faz consulta no banco e mostra a imagem do mapa ou traz informações da regiao')
         if (option == 'I' or option == 'i'):
             print(
                 'Acessa inventário --> Faz consulta no banco dos itens que o jogador possui')
@@ -116,3 +141,16 @@ def consultaOrdem(jogador):
         Espectro da força: {caracteristicas[3]}
     ''')
     input(f'\n\nAperte qualquer tecla para sair: ')
+
+
+def consultaIDlocalizacao(latitude, longitude):
+    [cursor, connection] = connect()
+    idLocalizacao = query(cursor,
+                          f"SELECT id FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
+    if not idLocalizacao:
+        idLocalizacao = 0
+    else:
+        idLocalizacao = idLocalizacao[0]
+        idLocalizacao = idLocalizacao[0]
+    close(connection, cursor)
+    return idLocalizacao

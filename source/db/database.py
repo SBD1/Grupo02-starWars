@@ -12,7 +12,7 @@ def connect():
                                   password=os.getenv("DB_PASS"),
                                   port=os.getenv("DB_PORT"))
     cursor = connection.cursor()
-    print('Conectado')
+    # print('Conectado')
 
     return cursor, connection
 
@@ -30,4 +30,4 @@ def query(cursor, query):
 def close(connection, cursor):
     cursor.close()
     connection.close()
-    print('Desconectado')
+    # print('Desconectado')
