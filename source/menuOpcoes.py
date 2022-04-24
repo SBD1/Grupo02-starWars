@@ -128,7 +128,7 @@ def consultaLocalização(latitude, longitude):
         cursor, f"SELECT nome FROM npc WHERE id={conteudo[3]};")
     npc = npc[0]
     instanciaitem = query(
-        cursor, f"SELECT item FROM instancia_item WHERE id={conteudo[0]};")
+        cursor, f"SELECT item FROM instancia_item_localização WHERE id={conteudo[0]};")
     instanciaitem = instanciaitem[0]
     item = query(
         cursor, f"SELECT nome FROM item WHERE id={instanciaitem[0]};")
