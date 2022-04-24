@@ -10,6 +10,7 @@ def menu(player, titulo, id_campoastronomico):
     longitude = -8
     nome_campo = consultaCampo(id_campoastronomico)
     atmosfera_campo = consultaAtmosfera(id_campoastronomico)
+    id_jogador = idJogador(player)
 
     while (option != '0'):
         print('********************* Menu de ações *********************')
@@ -29,7 +30,7 @@ def menu(player, titulo, id_campoastronomico):
           [0] Sair do jogo
           ''')
         option = str(input('Escolha uma opção: '))
-        
+
         if (option == 'A' or option == 'a'):
             longitude = longitude - 1
             idLocalizacao = consultaIDlocalizacao(latitude, longitude)
@@ -70,10 +71,10 @@ def menu(player, titulo, id_campoastronomico):
             consultaRegiao(latitude, longitude)
 
         if (option == 'I' or option == 'i'):
-            consultaOrdem(player)
+            consultaInventario(player)
 
         if (option == 'L') or option == 'l':
-            consultaLocalização(latitude, longitude)
+            consultaLocalização(id_jogador, latitude, longitude)
 
         if (option == 'O' or option == 'o'):
             consultaTodosObjetivo(titulo)
@@ -174,3 +175,12 @@ def consultaRegiao(latitude, longitude):
     input(f'\n\nAperte qualquer tecla para sair: ')
 
     return 0
+
+
+def idJogador(player):
+    [cursor, connection] = connect()
+    idjogador = query(
+        cursor, f'select id from jogador where nome = \'{player}\';')
+    idjogador = idjogador[0]
+    close(connection, cursor)
+    return idjogador

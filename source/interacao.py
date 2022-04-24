@@ -2,7 +2,7 @@ from db.database import connect, query, close
 from npc import npc_dialogo
 
 
-def consultaLocalização(latitude, longitude):
+def consultaLocalização(idJogador, latitude, longitude):
     [cursor, connection] = connect()
     idLocalizacao = query(cursor,
                           f"SELECT id FROM localizacao WHERE latitude={latitude} AND longitude={longitude};")
@@ -71,6 +71,6 @@ def consultaLocalização(latitude, longitude):
         print(f"Pilotando {nave[0]}")
 
     if(option == 'C' or option == 'x'):
-        npc_dialogo(idNPC[0])
+        npc_dialogo(idNPC[0], idJogador)
 
     input(f'\n\nAperte qualquer tecla para sair: ')
