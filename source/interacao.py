@@ -1,6 +1,7 @@
 from db.database import connect, query, close
 from enfrentar import enfrentar
 from npc import npc_dialogo
+from item import pegar_item
 
 
 def consultaLocalização(idJogador, latitude, longitude):
@@ -21,15 +22,15 @@ def consultaLocalização(idJogador, latitude, longitude):
         idNPC = idNPC[0]
 
     # Instancia de item
-    idItem = query(
-        cursor, f"SELECT item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
-    if not idItem:
-        idItem = 0
+    itens = query(
+        cursor, f"SELECT id, item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
+    if not itens:
+        itens = 0
     else:
-        idItem = idItem[0]
-        item = query(
-            cursor, f"SELECT nome FROM item WHERE id={idItem[0]};")
-        item = item[0]
+        item = itens[0]
+        nomeItem = query(
+            cursor, f"SELECT nome FROM item WHERE id={item[1]};")
+        nomeItem = (nomeItem[0])[0]
 
     # id oponente
     idOponente = query(
@@ -60,8 +61,8 @@ def consultaLocalização(idJogador, latitude, longitude):
     # IMPRIME MENSAGEM DE INTERAÇÃO NA TELA
     if (idOponente != 0):
         print(f'[E] Enfrentar {oponente[0]}')
-    if (idItem != 0):
-        print(f'[I] Pegar {item[0]}')
+    if (itens != 0):
+        print(f'[I] Pegar {nomeItem}')
     if (npc != 0):
         print(f'[C] Conversar com {npc[0]}')
     if (nroSerieNave != 0):
@@ -75,8 +76,8 @@ def consultaLocalização(idJogador, latitude, longitude):
         enfrentar(idJogador, idinstanciaOponente,
                   idOponente, idLocalizacao)
 
-    if((option == 'i' or option == 'I') and idOponente != 0):
-        print(f"Pegando {item[0]}")
+    if((option == 'i' or option == 'I')):
+        pegar_item(idJogador[0], item)
 
     if((option == 'P' or option == 'p') and idOponente != 0):
         print(f"Pilotando {nave[0]}")
