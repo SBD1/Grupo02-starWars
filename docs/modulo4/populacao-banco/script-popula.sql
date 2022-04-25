@@ -27,7 +27,7 @@ INSERT INTO regiao (campo_astronomico, nome, clima, governante, dominio, nivel) 
 
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Tiro simples com blaster', 'Tiro simples com uma pistola blaster causando impacto a distância no adversários. Utilizado uma vez por turno.', 5, 10, 'Possuir uma pistola blaster', 'Inteligencia');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Golpe de sabre de luz', 'Aplica um golpe corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 1, 10, 'Possuir um sabre de luz', 'Forca Fisica');
-INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Sequência de golpes de sabre de luz', 'Aplica uma sequência de golpes corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 15, 40, 'Possuir um sabre de luz', 'Agilidade');
+INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Sequência de golpes de sabre de luz', 'Aplica uma sequência de golpes corpo a corpo no adversário com o sabre de luz. Utilizado uma vez por turno.', 15, 20, 'Possuir um sabre de luz', 'Agilidade');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Levitar objetos', 'Desloca qualquer objeto no mapa. Pode ser utilizado durante uma batalha para esquivar de golpes à distância. Utilizado uma vez por turno.', 15, 0, 'Ter a ordem Jedi, Gray Jedi ou Sith', 'Inteligencia');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Velocidade da força', 'Utiliza-se da força para se deslocar rapidamento. Pode ser utilizado em batalha para se esquivar de golpes ou aplicar um impacto no adversário mais facilmente. Utilizado uma vez por turno.', 25, 10, 'Ter a ordem Jedi, Gray Jedi ou Sith', 'Agilidade');
 INSERT INTO habilidade (nome, descricao, nivel, impacto, preRequisito, caracteristica) VALUES ('Abrir portas com droid', 'Utiliza-se de um droid para abrir uma porta.', 5, 0, 'Possuir um droid com o modelos astromech', 'Neutro');
@@ -80,7 +80,7 @@ INSERT INTO item_utilizavel(habilidade, item) VALUES (8, 1);
 INSERT INTO item_utilizavel(habilidade, item) VALUES (1, 7);
 INSERT INTO item_utilizavel(habilidade, item) VALUES (9, 8);
 INSERT INTO item_utilizavel(habilidade, item) VALUES (10, 10);
-INSERT INTO item_utilizavel(habilidade, item) VALUES (3, 12);
+INSERT INTO item_utilizavel(habilidade, item) VALUES (2, 12);
 
 
 -- Itens consumiveis

@@ -137,7 +137,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, latitude, longitude):
         probabilidade = random.randint(1, 100)
 
         # Probabilidade de ganhar itens
-        if(probabilidade >= (probabilidadeOponente*100)):
+        if(probabilidade >= (100 - probabilidadeOponente*100)):
             [cursor, connection] = connect()
 
             # CONSULTA O id DO ITEM
