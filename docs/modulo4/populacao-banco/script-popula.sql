@@ -94,6 +94,8 @@ INSERT INTO item_consumivel(item, carga) VALUES (9, 1);
 INSERT INTO item_consumivel(item, carga) VALUES (11, 2);
 INSERT INTO item_consumivel(item, carga) VALUES (13, 1);
 
+-- Instância de itens
+INSERT INTO instancia_item_localizacao(item, localizacao) VALUES (1, 5), (2, 91), (3, 23), (4, 202), (5, 162), (6, 254), (7, 190), (8, 126), (9, 197), (10, 286);
 
 -- Jogador
 
