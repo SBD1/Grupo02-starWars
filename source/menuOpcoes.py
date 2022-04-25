@@ -172,7 +172,7 @@ def consultaRegiao(latitude, longitude):
     regiao = regiao[0]
     close(connection, cursor)
     print(f'''
-        Você está está em {regiao[0]} governada por {regiao[3]}.
+        Você está na região {regiao[0]} governada por {regiao[3]}.
     
         Clima: {regiao[1]}
         Nível da região: {regiao[4]}

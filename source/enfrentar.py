@@ -2,7 +2,7 @@ import random
 from db.database import connect, query, close
 
 
-def enfrentar(idjogador, idOponenteInstancia, idOponente):
+def enfrentar(idjogador, idOponenteInstancia, idOponente, latitude, longitude):
     idjogador = idjogador[0]
     [cursor, connection] = connect()
     # INSERE NA TABELA COMBATE JOGADOR E INSTANCIA
@@ -182,11 +182,12 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente):
         # Após if
         [cursor, connection] = connect()
         # REMOVE A INSTANCIA DO OPONENTE de instancia oponente
-        string = str(
-            f"DELETE from instancia_oponente where id = {idOponenteInstancia};")
+        if(latitude != 7 and longitude != -8):
+            string = str(
+                f"DELETE from instancia_oponente where id = {idOponenteInstancia};")
 
-        cursor.execute(string)
-        connection.commit()
+            cursor.execute(string)
+            connection.commit()
 
         # ATUALIZA A EXPERIÊNCIA GANHA APÓS COMBATE
         string = str(

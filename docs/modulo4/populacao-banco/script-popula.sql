@@ -111,7 +111,7 @@ INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligenci
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Gungan','Gungan', 50, 100, 0.20, 2, 4, 3, 3, -20, 'Bastão atordoante', 2, 'Inteligencia');
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Dianoga','Dianoga', 5000, 100, 0.90, 9, 10, 10, 9, 10, 'Tentáculos pegajosos', 7, 'Inteligencia');
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Wampa','Wampa', 1000, 100, 0.40, 6, 7, 5, 6, 10, 'Esmagamento com a garra', 3, 'Forca Fisica');
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Putch Ingball','Espantalho de treinamento', 0, 100, 0, 1, 1, 1, 1, 1, 'Permanece parado', 0, 'Inteligencia');
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Putch Ingball','Espantalho de treinamento', 0, 100, 0, 1, 1, 1, 1, 0, 'Permanece parado', 0, 'Inteligencia');
 
 -- Nave
 
@@ -611,7 +611,7 @@ INSERT INTO instancia_de_nave(nro_serie, jogador, localizacao) VALUES ('AT-AT', 
 INSERT INTO instancia_de_nave(nro_serie, jogador, localizacao) VALUES ('AT-AT', 1, 180);
 
 -- NPC
-INSERT INTO npc (item, nome, raca, descricao, dialogo, localizacao) VALUES (12, 'Obi-Wan Kenobi', 'Humano', 'Conhecido também como Ben Kenobi durante seu exílio, foi um Humano Mestre Jedi que serviu à República Galáctica.', 'Bem-vindo à Coruscant! Aqui você iniciará sua jornada no universo star wars e com o tempo aprenderás a confiar em teus instintos, então serás invencível! Como todo aprendiz, você conhecerá a força com o tempo e você faz aquilo que você acha que tem fazer. Diante das suas atitudes, você saberá qual lado está! Aqui está um Sabre de Luz, para que você consiga se aventurar por esse mundo e atacar ou se defender de inimigos. Que a força esteja com você!', 353);
+INSERT INTO npc (item, nome, raca, descricao, dialogo, localizacao) VALUES (12, 'Obi-Wan Kenobi', 'Humano', 'Conhecido também como Ben Kenobi durante seu exílio, foi um Humano Mestre Jedi que serviu à República Galáctica.', 'Bem-vindo à Coruscant! Aqui você iniciará sua jornada no universo star wars e com o tempo aprenderás a confiar em teus instintos, então serás invencível! Como todo aprendiz, você conhecerá a força com o tempo. Aqui você deve fazer aquilo que você acha que tem fazer. Diante das suas atitudes, você saberá qual lado está! Aqui está um Sabre de Luz, para que você consiga se aventurar por esse mundo e atacar ou se defender de inimigos. Que a força esteja com você!', 353);
 
 
 -- Objetivo
