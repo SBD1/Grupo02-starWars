@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS instancia_item_jogador (
    CONSTRAINT instanciaItem_item_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
 );
 
-CREATE TABLE IF NOT EXISTS instancia_item_localização (
+CREATE TABLE IF NOT EXISTS instancia_item_localizacao (
    id SERIAL PRIMARY KEY,
    item SERIAL NOT NULL,
    localizacao SERIAL,
