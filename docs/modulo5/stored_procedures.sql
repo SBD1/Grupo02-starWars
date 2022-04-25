@@ -1,10 +1,11 @@
 -- Retorna a quantidade de itens de um jogador
-CREATE OR REPLACE FUNCTION count_items(jogador INTEGER)
-  RETURNS INTEGER AS $items$
+CREATE OR REPLACE FUNCTION contar_items(idJogador INTEGER)
+RETURNS INTEGER AS $qtd_itens$
 BEGIN
-  RETURN (SELECT count(*) FROM instancia_item WHERE jogador=jogador);
+  RETURN (SELECT count(*) AS qtd_itens FROM instancia_item_jogador WHERE jogador = idJogador);
 END;
-$items$ LANGUAGE plpgsql;
+$qtd_itens$ 
+LANGUAGE plpgsql;
 
 -- Retorna o droid do jogador
 CREATE OR REPLACE FUNCTION get_droid(jogador INTEGER)
@@ -28,4 +29,19 @@ BEGIN
     END IF;
 END;
 $insert_jogador$ LANGUAGE plpgsql;
+
+-- Verifica se o inventário está cheio
+CREATE OR REPLACE FUNCTION verificar_inventario()
+RETURNS trigger AS $$
+DECLARE
+	qtd_itens INTEGER :=  contar_items(new.jogador);
+BEGIN                                                     
+        IF qtd_itens  >= 10 
+        THEN RAISE EXCEPTION 'O inventário está cheio';
+        END IF;
+END;
+$$ 
+LANGUAGE plpgsql;
+
+
 
