@@ -139,7 +139,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, idLocalizacao):
         # Probabilidade de ganhar itens
         print(
             f'Sua chance de ganhar expólio foi de {probabilidade} em {probabilidadeOponente*100}')
-        if(probabilidade >= (100 - probabilidadeOponente*100)):
+        if(probabilidade >= (probabilidadeOponente*100)):
             [cursor, connection] = connect()
 
             # CONSULTA O id DO ITEM
