@@ -18,10 +18,13 @@ def consultaInventario(jogador):
         i = 0
         for row in inventario:
             item = query(
-                cursor, f'select nome from item where id = {row[0]};')
+                cursor, f'select nome, descricao, tipo, nivel from item where id = {row[0]};')
             item = item[0]
             i = i+1
-            print(f'{i} - {item[0]}')
+            print(f'[{i}] - {item[0]}')
+            print(f'Descrição: {item[1]}')
+            print(f'Tipo: {item[2]}')
+            print(f'Nível: {item[3]}\n')
         print('\n')
     close(connection, cursor)
     input(f'\nAperte qualquer tecla para sair: ')
