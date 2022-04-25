@@ -144,7 +144,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, idLocalizacao):
 
             # CONSULTA O id DO ITEM
             idItem = query(
-                cursor, f"SELECT item FROM instancia_oponente WHERE id={idOponente}")
+                cursor, f"SELECT item FROM instancia_oponente WHERE oponente={idOponente}")
             idItem = idItem[0]
             idItem = idItem[0]
 
@@ -155,6 +155,8 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, idLocalizacao):
             cursor.execute(insert_script, insert_values)
             connection.commit()
 
+            print(idOponente)
+            print(idItem)
             nomeItem = query(
                 cursor, f"SELECT nome FROM item WHERE id ={idItem}")
             nomeItem = nomeItem[0]
@@ -163,6 +165,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, idLocalizacao):
             # VERIFICA SE O ITEM É UTILIZAVEL, SE FOR UTILIZAVEL, ADICIONA NOVA HABILIDADE
             habilidadeDoItemUtilizavel = query(
                 cursor, f"SELECT habilidade FROM item_utilizavel WHERE item ={idItem}")
+
             if not habilidadeDoItemUtilizavel:
                 habilidadeDoItemUtilizavel = 0
             else:
