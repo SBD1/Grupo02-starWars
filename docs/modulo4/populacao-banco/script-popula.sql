@@ -111,7 +111,7 @@ INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligenci
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Gungan','Gungan', 50, 100, 0.20, 2, 4, 3, 3, -20, 'Bastão atordoante', 2, 'Inteligencia');
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Dianoga','Dianoga', 5000, 100, 0.90, 9, 10, 10, 9, 10, 'Tentáculos pegajosos', 7, 'Inteligencia');
 INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Wampa','Wampa', 1000, 100, 0.40, 6, 7, 5, 6, 10, 'Esmagamento com a garra', 3, 'Forca Fisica');
-INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Putch Ingball','Espantalho de treinamento', 0, 100, 0, 1, 1, 1, 1, 0, 'Permanece parado', 0, 'Inteligencia');
+INSERT INTO oponente(nome, raca, midichlorians, vida, probabilidade, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca, ataque, impacto, caracteristica) VALUES ('Putch Ingball','Espantalho de treinamento', 0, 100, 0, 1, 1, 1, 0, 0, 'Permanece parado', 0, 'Inteligencia');
 
 -- Nave
 

@@ -73,7 +73,7 @@ def consultaLocalização(idJogador, latitude, longitude):
     if((option == 'E' or option == 'e') and idOponente != 0):
         print(f"Lutando com {oponente[0]}")
         enfrentar(idJogador, idinstanciaOponente,
-                  idOponente, latitude, longitude)
+                  idOponente, idLocalizacao)
 
     if((option == 'i' or option == 'I') and idOponente != 0):
         print(f"Pegando {item[0]}")

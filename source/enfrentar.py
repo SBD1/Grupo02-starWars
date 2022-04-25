@@ -2,7 +2,7 @@ import random
 from db.database import connect, query, close
 
 
-def enfrentar(idjogador, idOponenteInstancia, idOponente, latitude, longitude):
+def enfrentar(idjogador, idOponenteInstancia, idOponente, idLocalizacao):
     idjogador = idjogador[0]
     [cursor, connection] = connect()
     # INSERE NA TABELA COMBATE JOGADOR E INSTANCIA
@@ -137,6 +137,8 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, latitude, longitude):
         probabilidade = random.randint(1, 100)
 
         # Probabilidade de ganhar itens
+        print(
+            f'Sua chance de ganhar expólio foi de {probabilidade} em {probabilidadeOponente*100}')
         if(probabilidade >= (100 - probabilidadeOponente*100)):
             [cursor, connection] = connect()
 
@@ -182,7 +184,7 @@ def enfrentar(idjogador, idOponenteInstancia, idOponente, latitude, longitude):
         # Após if
         [cursor, connection] = connect()
         # REMOVE A INSTANCIA DO OPONENTE de instancia oponente
-        if(latitude != 7 and longitude != -8):
+        if(idLocalizacao != 353):
             string = str(
                 f"DELETE from instancia_oponente where id = {idOponenteInstancia};")
 
