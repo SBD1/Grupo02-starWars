@@ -25,9 +25,9 @@
 
 ![Planeta Naboo](./assets/naboo.jpg)
 
-<p style='text-align: justify;'>Você iniciará sua estrada no planeta Naboo, um grande plaeta na orla media que possui belas cidades que coexistiam em harmonia com as planícies gramadas e as colinas que as cercavam. O clima era temperado, e os predadores mais perigosos eram relegados, principalmente, ao peculiar núcleo aquático de Naboo. Ao contrário da maioria dos planetas que possuíam núcleos de lava, Naboo era vazado e preenchido com oceanos que correm em seu centro. </p>
+<p style='text-align: justify;'>Você iniciará sua estrada no planeta Naboo, um grande planeta na orla media que possui belas cidades que coexistiam em harmonia com as planícies gramadas e as colinas que as cercavam. O clima era temperado, e os predadores mais perigosos eram relegados, principalmente, ao peculiar núcleo aquático de Naboo. Ao contrário da maioria dos planetas que possuíam núcleos de lava, Naboo era vazado e preenchido com oceanos que correm em seu centro. </p>
 
-<p style='text-align: justify;'> Naboo é a terra natal dos humanos mas além dos humanos ha outra espécie nativa civilizada: os Gungans. Ao contrário dos pacifistas Naboo, os Gungans mantinham um exército permanente, e sabia-se que já houve conflitos entre tribos. Na maior parte do tempo, os Chefes Gungan mantinham a paz e havia tempo para se concentrar em coisas mais refinadas, como a contínua evolução da tecnologia das bolhas hidrostáticas que sustentavam suas cidades subaquáticas. Embora os Naboo e Gungans não estejam em conflito ativo, ha uma inegável tensão entre eles, sendo que raramente se misturam. </p>
+<p style='text-align: justify;'> Naboo é a terra natal dos humanos, mas além dos humanos ha outra espécie nativa civilizada: os Gungans. Ao contrário dos pacifistas Naboo, os Gungans mantinham um exército permanente, e sabia-se que havia conflitos entre tribos. Na maior parte do tempo, os Chefes Gungan mantinham a paz e havia tempo para se concentrar em coisas mais refinadas, como a contínua evolução da tecnologia das bolhas hidrostáticas que sustentavam suas cidades subaquáticas. Embora os Naboo e Gungans não estejam em conflito ativo, ha uma inegável tensão entre eles, sendo que raramente se misturam. </p>
 
 ![Mapa - Naboo](./assets/mapaCoruscant.png)
 
@@ -40,4 +40,7 @@
 - Paonga island 
 - Lake Paonga
 
-<p style='text-align: justify;'> </p>
+<p style='text-align: justify;'>Cada região tem suas caracteristicas especificas para se explorar mas tome bastante cuidado, apesar de Naboo ser um lugar paradisíaco também está cheio de espécies peculiares e predadores ferozes, aqui você poderá encontrar:</p>
+
+
+
