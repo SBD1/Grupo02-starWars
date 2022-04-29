@@ -61,7 +61,7 @@
 
 **Veermok**
 
-![Ewok](./assets/C2.png){width=50px}
+![Veermok](./assets/C2.png){width=50px}
 
 | Atributo | Valor |
 | ---- | ----- |
@@ -74,16 +74,29 @@
 
 <center> 
 
-**Shaak**
+**Tusk**
 
-![Ewok](./assets/C3.png){width=50px}
+![Tusk](./assets/C4.png){width=50px}
 
 | Atributo | Valor |
 | ---- | ----- |
-| Inteligencia | 1 |
-| Força fisica | 2 |
-| Agilidade | 4 |
-| Resistência | 1 |
+| Inteligencia | 4 |
+| Força fisica | 5 |
+| Agilidade | 7 |
+| Resistência | 4 |
+
+</center> 
+
+**Droid de batalha B1**
+
+![Droid de batalha B1](./assets/C5.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 2 |
+| Força fisica | 3 |
+| Agilidade | 3 |
+| Resistência | 4 |
 
 </center> 
 
