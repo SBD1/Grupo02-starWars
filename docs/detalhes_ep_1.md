@@ -42,5 +42,32 @@
 
 <p style='text-align: justify;'>Cada região tem suas caracteristicas especificas para se explorar mas tome bastante cuidado, apesar de Naboo ser um lugar paradisíaco também está cheio de espécies peculiares e predadores ferozes, aqui você poderá encontrar:</p>
 
+<center> 
+Ewok
+
+![Ewok](./assets/C1.png){width=50px}
+
+</center> 
+
+- Inteligencia: 3
+- Força fisica: 2
+- Agilidade: 3
+- Resistencia 2
+
+<center> 
+Veermok
+
+![Ewok](./assets/C2.png){width=50px}
+
+</center> 
+
+- Inteligencia: 3
+- Força fisica: 4
+- Agilidade: 5
+- Resistencia 3
+
+<center> 
+Shaak
+
 
 
