@@ -8,13 +8,14 @@ def seleciona():
     rows = query(cursor, "SELECT * FROM jogador;")
 
     close(connection, cursor)
-    print('Lista de jogadores cadastrados: ')
+    print('Lista de jogadores cadastrados: \n')
+
     for row in rows:
-        print(row[1])
+        print(f'{row[1]}')
 
     aux = 0
     while(aux != 1):
-        player = str(input('Selecione o jogador: '))
+        player = str(input('\nSelecione o jogador: '))
         for row in rows:
             if(player == row[1]):
                 aux = 1
