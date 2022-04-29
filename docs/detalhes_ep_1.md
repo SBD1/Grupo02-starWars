@@ -43,31 +43,47 @@
 <p style='text-align: justify;'>Cada região tem suas caracteristicas especificas para se explorar mas tome bastante cuidado, apesar de Naboo ser um lugar paradisíaco também está cheio de espécies peculiares e predadores ferozes, aqui você poderá encontrar:</p>
 
 <center> 
-Ewok
+
+**Ewok**
 
 ![Ewok](./assets/C1.png){width=50px}
 
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 3 |
+| Força fisica | 2 |
+| Agilidade | 3 |
+| Resistência | 2 |
+
 </center> 
 
-- Inteligencia: 3
-- Força fisica: 2
-- Agilidade: 3
-- Resistencia 2
+<center>
 
-<center> 
-Veermok
+**Veermok**
 
 ![Ewok](./assets/C2.png){width=50px}
 
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 3 |
+| Força fisica | 4 |
+| Agilidade | 5 |
+| Resistência | 3 |
+
 </center> 
 
-- Inteligencia: 3
-- Força fisica: 4
-- Agilidade: 5
-- Resistencia 3
-
 <center> 
-Shaak
 
+**Shaak**
 
+![Ewok](./assets/C3.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 1 |
+| Força fisica | 2 |
+| Agilidade | 4 |
+| Resistência | 1 |
+
+</center> 
 
