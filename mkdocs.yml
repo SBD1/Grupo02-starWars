@@ -5,7 +5,7 @@ repo_url: https://github.com/SBD1/Grupo02-starWars
 nav:
   - Página Inicial: index.md
   - Apresentação Jogo:
-    - Glosario Geral: Glossário 
+    - Glosario Geral: glossario.md 
     - Episódio I:
         - Sobre o Jogo: detalhes_ep_1.md
   - Módulo 1:
