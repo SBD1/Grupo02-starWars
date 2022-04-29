@@ -10,4 +10,12 @@
 
 ## Passo-a-passo
 
-Para rodar a aplicação deve-se navegar para o diretorio `source` e rodar o comando `pip3 install -r requirements.txt`, para instalar as bibliotecas do python necessárias.
+Para rodar a aplicação deve-se primeiro:
+
+1. navegar para o diretorio `source`
+2. rodar o comando `pip3 install -r requirements.txt`, para instalar as bibliotecas do python necessárias.
+3. Rodar "Comando que gera as tabelas aqui".
+4. Rodar "Comando que popula as tabelas aqui".
+
+Uma vez que todos os passos acima tenham sido cumpridos, basta rodar o comando abaixo para iniciar o jogo:
+`python3 main.py`.
