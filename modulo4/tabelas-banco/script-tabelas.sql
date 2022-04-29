@@ -1,5 +1,4 @@
-CREATE DATABASE starWars;
-
+BEGIN;
 
 -- MAPA
 CREATE TABLE IF NOT EXISTS campo_astronomico(
@@ -32,6 +31,7 @@ CREATE TABLE IF NOT EXISTS habilidade(
  nome VARCHAR(1000) NOT NULL,
  descricao VARCHAR(1000) NOT NULL,
  nivel SMALLINT NOT NULL,
+ caracteristica VARCHAR(30) NOT NULL,
  impacto INTEGER NOT NULL,
  preRequisito VARCHAR(1000) NOT NULL,
 
@@ -72,14 +72,15 @@ CREATE TABLE IF NOT EXISTS item (
    id	 SERIAL PRIMARY KEY,
    nome VARCHAR(30) NOT NULL UNIQUE,
    descricao VARCHAR(120) NOT NULL,
-   tipo VARCHAR(30) NOT NULL
+   tipo VARCHAR(30) NOT NULL,
+   nivel INTEGER NOT NULL
+   
 );
 
 CREATE TABLE IF NOT EXISTS item_utilizavel (
    id SERIAL PRIMARY KEY,
    habilidade SERIAL NOT NULL,
    item SERIAL NOT NULL,
-   nivel INTEGER NOT NULL,
    
    CONSTRAINT habilidade_habForca_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE SET NULL,
    CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
@@ -94,6 +95,8 @@ CREATE TABLE IF NOT EXISTS item_consumivel (
 );
 
 
+
+
 -- PERSONAGEM
 CREATE TABLE IF NOT EXISTS jogador (
    id SERIAL PRIMARY KEY,
@@ -102,7 +105,7 @@ CREATE TABLE IF NOT EXISTS jogador (
    midichlorians SMALLINT NOT NULL, 
    vida INTEGER NOT NULL,
    nivel INTEGER NOT NULL,
-   ordem INTEGER NOT NULL,
+   ordem VARCHAR(60) NOT NULL,
    rank VARCHAR(60) NOT NULL,
    inteligencia INTEGER NOT NULL,
    forca_fisica INTEGER NOT NULL,
@@ -111,78 +114,34 @@ CREATE TABLE IF NOT EXISTS jogador (
    espectro_forca INTEGER NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS instancia_item (
-   id SERIAL PRIMARY KEY,
-   item SERIAL NOT NULL,
-   jogador SERIAL,
-   
-   CONSTRAINT instanciaItem_jogador_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
-   CONSTRAINT item_itemUtilizavel_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
-);
+
 
 CREATE TABLE IF NOT EXISTS oponente (
    id		          SERIAL PRIMARY KEY,
    nome		       VARCHAR(30) NOT NULL UNIQUE,
    raca 	          VARCHAR(60) NOT NULL,
    vida		       INTEGER NOT NULL,
-   midichlorians   SMALLINT NOT NULL, 
+   midichlorians   INTEGER NOT NULL, 
    probabilidade   REAL NOT NULL,
    inteligencia	 INTEGER NOT NULL,
    forca_fisica	 INTEGER NOT NULL,
    agilidade	    INTEGER NOT NULL,
    resistencia	    INTEGER NOT NULL,
-   espectro_forca  INTEGER NOT NULL
+   espectro_forca  INTEGER NOT NULL,
+   ataque VARCHAR(60),
+   impacto INTEGER NOT NULL,
+   caracteristica VARCHAR(30) NOT NULL
 );
-
-CREATE TABLE IF NOT EXISTS instancia_oponente(
-  id SERIAL PRIMARY KEY,
-  instancia_item SERIAL,
-  oponente SERIAL,
-
-  CONSTRAINT instItem_instOpon_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL,
-  CONSTRAINT oponente_instOpon_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE SET NULL
-);
-
-
-CREATE TABLE IF NOT EXISTS npc(
-  id SERIAL PRIMARY KEY,
-  instancia_item SERIAL,
-  nome VARCHAR(30) NOT NULL,
-  raca VARCHAR(60) NOT NULL,
-  descricao VARCHAR(100) NOT NULL,
-  dialogo VARCHAR(1000) NOT NULL,
-
-  CONSTRAINT instItem_npc_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL
-  
-);
-
 
 -- NAVE
 CREATE TABLE IF NOT EXISTS nave(
  nro_serie VARCHAR(50) PRIMARY KEY,
- nome VARCHAR(100) NOT NULL UNIQUE,
- descricao VARCHAR(140) NOT NULL,
+ nome VARCHAR(500) NOT NULL UNIQUE,
+ descricao VARCHAR(500) NOT NULL,
  velocidade_maxima INTEGER NOT NULL,
- arma VARCHAR(100) NOT NULL
+ arma VARCHAR(500) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS instancia_de_nave(
-  id SERIAL PRIMARY KEY,
-  nro_serie VARCHAR,
-  jogador SERIAL,
-
-  CONSTRAINT instNave_nave_fk FOREIGN KEY (nro_serie) REFERENCES nave (nro_serie) ON DELETE SET NULL,
-  CONSTRAINT jogador_nave_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
-);
-
-CREATE TABLE IF NOT EXISTS interage(
-  id SERIAL PRIMARY KEY,
-  jogador SERIAL,
-  npc SERIAL,
-
-  CONSTRAINT jogador_interage_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
-  CONSTRAINT npc_interage_fk FOREIGN KEY (npc) REFERENCES npc (id) ON DELETE SET NULL
-);
 
 CREATE TABLE IF NOT EXISTS possui(
   id SERIAL PRIMARY KEY,
@@ -191,15 +150,6 @@ CREATE TABLE IF NOT EXISTS possui(
 
   CONSTRAINT jogador_possui_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
   CONSTRAINT habilidade_possui_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE SET NULL
-);
-
-CREATE TABLE IF NOT EXISTS combate(
-  id SERIAL PRIMARY KEY,
-  jogador SERIAL,
-  instancia_oponente SERIAL,
-
-  CONSTRAINT jogador_combate_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
-  CONSTRAINT instOponente_combate_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL
 );
 
 -- DROID
@@ -212,16 +162,6 @@ CREATE TABLE IF NOT EXISTS droid(
   CONSTRAINT habDroid_droid_fk FOREIGN KEY (habilidade) REFERENCES habilidade (id) ON DELETE SET NULL
   
 );
-
-CREATE TABLE IF NOT EXISTS instancia_de_droid(
-  id SERIAL PRIMARY KEY,
-  nro_serie VARCHAR,
-  jogador SERIAL,
-
-  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE SET NULL,
-  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
-);
-
 
 -- FASES
 CREATE TABLE roteiro (
@@ -252,7 +192,6 @@ CREATE TABLE IF NOT EXISTS cumpre(
   objetivo SERIAL,
   status_objetivo VARCHAR(3),
 
-
   CONSTRAINT objetivo_cumpre_fk FOREIGN KEY (objetivo) REFERENCES objetivo (id) ON DELETE SET NULL,
   CONSTRAINT cumpre_status_ck CHECK(status_objetivo IN ('Sim','Não')),
   CONSTRAINT jogador_cumpre_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
@@ -261,18 +200,93 @@ CREATE TABLE IF NOT EXISTS cumpre(
 
 CREATE TABLE IF NOT EXISTS localizacao(
   id SERIAL PRIMARY KEY,
-  latitude SMALLINT,
-  longitude SMALLINT,
+  latitude SMALLINT NOT NULL,
+  longitude SMALLINT NOT NULL,
   regiao SERIAL,
-  instancia_item SERIAL,
-  instancia_oponente SERIAL,
-  instancia_de_nave SERIAL,
+
+  CONSTRAINT regiao_localizacao_fk FOREIGN KEY (regiao) REFERENCES regiao (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_item_jogador (
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
+   jogador SERIAL,
+  
+   CONSTRAINT instanciaItem_jogador_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
+   CONSTRAINT instanciaItem_item_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_item_localizacao (
+   id SERIAL PRIMARY KEY,
+   item SERIAL NOT NULL,
+   localizacao SERIAL,
+
+   CONSTRAINT localizacao_item_fk FOREIGN KEY (localizacao) REFERENCES localizacao (id) ON DELETE SET NULL,
+   CONSTRAINT instanciaItem_item_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_oponente(
+  id SERIAL PRIMARY KEY,
+  item SERIAL,
+  oponente SERIAL,
+  localizacao SERIAL,
+
+  CONSTRAINT localizacao_item_fk FOREIGN KEY (localizacao) REFERENCES localizacao (id) ON DELETE SET NULL,
+  CONSTRAINT Item_instOpon_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL,
+  CONSTRAINT oponente_instOpon_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_de_nave(
+  id SERIAL PRIMARY KEY,
+  nro_serie VARCHAR,
+  jogador SERIAL,
+  localizacao SERIAL,
+
+  CONSTRAINT localizacao_item_fk FOREIGN KEY (localizacao) REFERENCES localizacao (id) ON DELETE SET NULL,
+
+  CONSTRAINT instNave_nave_fk FOREIGN KEY (nro_serie) REFERENCES nave (nro_serie) ON DELETE SET NULL,
+  CONSTRAINT jogador_nave_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS instancia_de_droid(
+  id SERIAL PRIMARY KEY,
+  nro_serie VARCHAR,
+  jogador SERIAL,
+
+  CONSTRAINT instDroid_droid_fk FOREIGN KEY (nro_serie) REFERENCES droid (nro_serie) ON DELETE SET NULL,
+  CONSTRAINT jogador_droid_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS npc(
+  id SERIAL PRIMARY KEY,
+  item SERIAL,
+  nome VARCHAR(30) NOT NULL,
+  raca VARCHAR(60) NOT NULL,
+  descricao VARCHAR(1000) NOT NULL,
+  dialogo VARCHAR(1500) NOT NULL,
+  localizacao SERIAL,
+
+  CONSTRAINT localizacao_item_fk FOREIGN KEY (localizacao) REFERENCES localizacao (id) ON DELETE SET NULL,
+  CONSTRAINT Item_npc_fk FOREIGN KEY (item) REFERENCES item (id) ON DELETE SET NULL
+  
+);
+
+CREATE TABLE IF NOT EXISTS interage(
+  id SERIAL PRIMARY KEY,
+  jogador SERIAL,
   npc SERIAL,
 
-  CONSTRAINT regiao_localizacao_fk FOREIGN KEY (regiao) REFERENCES regiao (id) ON DELETE SET NULL,
-  CONSTRAINT instItem_localizacao_fk FOREIGN KEY (instancia_item) REFERENCES instancia_item (id) ON DELETE SET NULL,
-  CONSTRAINT instOponente_localizacao_fk FOREIGN KEY (instancia_oponente) REFERENCES instancia_oponente (id) ON DELETE SET NULL,
-  CONSTRAINT instNave_localizacao_fk FOREIGN KEY (instancia_de_nave) REFERENCES instancia_de_nave (id) ON DELETE SET NULL,
-  CONSTRAINT npc_fk FOREIGN KEY (npc) REFERENCES npc (id) ON DELETE SET NULL
-
+  CONSTRAINT jogador_interage_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
+  CONSTRAINT npc_interage_fk FOREIGN KEY (npc) REFERENCES npc (id) ON DELETE SET NULL
 );
+
+CREATE TABLE IF NOT EXISTS combate(
+  id SERIAL PRIMARY KEY,
+  jogador SERIAL,
+  oponente SERIAL,
+
+  CONSTRAINT jogador_combate_fk FOREIGN KEY (jogador) REFERENCES jogador (id) ON DELETE SET NULL,
+  CONSTRAINT Oponente_combate_fk FOREIGN KEY (oponente) REFERENCES oponente (id) ON DELETE SET NULL
+);
+
+COMMIT;
