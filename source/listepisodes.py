@@ -31,7 +31,7 @@ def episodios(jog):
                     menu(jog, titulo[0], titulo[1])
                 saida = '0'
             except Exception as err:
-                print(err)
+                print('Episódio ainda não existe!\n')
         if(aux == 0):
             saida = '0'
     return 0

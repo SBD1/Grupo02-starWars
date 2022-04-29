@@ -23,7 +23,7 @@ def consultaLocalização(idJogador, latitude, longitude):
 
     # Instancia de item
     itens = query(
-        cursor, f"SELECT id, item FROM instancia_item_localização WHERE localizacao={idLocalizacao};")
+        cursor, f"SELECT id, item FROM instancia_item_localizacao WHERE localizacao={idLocalizacao};")
     if not itens:
         itens = 0
     else:
