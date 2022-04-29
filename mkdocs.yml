@@ -4,7 +4,10 @@ repo_url: https://github.com/SBD1/Grupo02-starWars
 
 nav:
   - Página Inicial: index.md
-  - Sobre o Jogo: modulo1/detalhes_jogo.md
+  - Apresentação Jogo:
+    - Glosario Geral: Glossário 
+    - Episódio I:
+        - Sobre o Jogo: detalhes_ep_1.md
   - Módulo 1:
     - Modelo Entidade-Relacionamento: modulo1/mer.md
     - Diagrama Entidade-Relacionamento: modulo1/der.md
