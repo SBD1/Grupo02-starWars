@@ -8,7 +8,7 @@ initDB()
 option = '1'
 
 while (option != '0'):
-    # clear()
+    clear()
 
     contador = 1
 
