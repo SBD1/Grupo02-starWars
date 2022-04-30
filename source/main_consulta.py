@@ -2,10 +2,10 @@ from db.database import connect, query, close
 
 [cursor, connection] = connect()
 
-string = str(f"DELETE from possui where id = 2;")
+text = query(
+    cursor, f"SELECT id, item FROM instancia_item_localizacao WHERE localizacao=5;")
 
-cursor.execute(string)
-connection.commit()
+print(text)
 
 
 # print(idLocalizacao)
