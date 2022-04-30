@@ -1,5 +1,6 @@
 from db.database import connect, query, close
 from menuOpcoes import menu
+from util import clear
 
 
 def episodios(jog):
@@ -7,7 +8,7 @@ def episodios(jog):
     episodios = query(cursor, "SELECT * from ROTEIRO;")
     close(connection, cursor)
 
-    print('Lista de episódios: ')
+    print('\nLista de episódios:\n')
     i = 0
     for titulo in episodios:
         i = i+1
@@ -16,16 +17,19 @@ def episodios(jog):
     saida = '1'
     while (saida != '0'):
 
-        aux = int(input('Selecione o episódio ou digite 0 para sair: '))
+        aux = int(input('\nSelecione o episódio ou digite 0 para sair: '))
         if(aux != 0):
+            clear()
             try:
                 titulo = episodios[aux-1]
                 print(titulo[3])
-                for i in range(0, 5):
+                for i in range(0, 1):
                     print(" ")
 
                 print(titulo[2])
-                option = input(f'entrando no jogo.... Olá {jog}! (y/n) ')
+                option = input(f'\nEntrando no jogo.... Olá, {jog}! Continuar? (y/n) ')
+
+                print('')
 
                 if(option == 'y' or option == 'Y'):
                     menu(jog, titulo[0], titulo[1])

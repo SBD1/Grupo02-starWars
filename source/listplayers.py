@@ -8,9 +8,21 @@ def seleciona():
     rows = query(cursor, "SELECT * FROM jogador;")
 
     close(connection, cursor)
-    print('Lista de jogadores cadastrados: ')
+
+    print('\n***********************************')
+    print('***********  Jogadores  ***********')
+    print('***********************************')
+
     for row in rows:
-        print(row[1])
+        print('*    - ' + row[1], end="")
+
+        contador = 7 + len(row[1])
+
+        while (contador < 34):
+            print(' ', end="")
+            contador += 1
+        print('*')
+    print('***********************************\n')
 
     aux = 0
     while(aux != 1):
@@ -21,11 +33,11 @@ def seleciona():
                 inicia(player)
 
         if(aux != 1):
-            print('Jogador inválido!')
+            print('\nJogador inválido! =(\n')
 
 
 def inicia(player):
-    option = input(f'Deseja inicar o jogo com o {player}? (y/n) ')
+    option = input(f'\nDeseja inicar o jogo com o {player}? (y/n) ')
 
     if(option == 'y' or option == 'Y'):
         episodios(player)
