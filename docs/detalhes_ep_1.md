@@ -191,3 +191,6 @@
 | Resistência | 10 |
 
 </center>
+
+<p style='text-align: justify;'>Batalhar com monstros pode ser uma otima maneira de treinar suas habilidades e se tornar mais habilidoso e poderoso, mas tome cuidado, um Jedi tem que julgar quais batalhas deve travar, batalhar seres pacificos pode te levar ao lado negro, as vezes o melhor é evitar o conflito.</p>
+<br>
