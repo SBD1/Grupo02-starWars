@@ -5,6 +5,8 @@
 **Professor**: Maurício Serrano<br>
 **Número do Grupo**: 02<br>
 
+## Apresentação
+
 ![Alt Text](https://media3.giphy.com/media/Ken6Yg5n7bYStW4JYB/giphy.gif?cid=ecf05e4764ji2v8fejdniipmu1v9t92z35tcr55cjjw9ks93&rid=giphy.gif&ct=g)
 
 ## Alunos
