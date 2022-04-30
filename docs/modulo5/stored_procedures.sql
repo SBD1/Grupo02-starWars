@@ -2,7 +2,7 @@
 CREATE OR REPLACE FUNCTION contar_items(idJogador INTEGER)
 RETURNS INTEGER AS $qtd_itens$
 BEGIN
-  RETURN (SELECT count(*) AS qtd_itens FROM instancia_item_jogador WHERE jogador = idJogador);
+  RETURN (SELECT count(*) AS qtd_itens FROM instancia_item_jogador WHERE jogador = new.jogador);
 END;
 $qtd_itens$ 
 LANGUAGE plpgsql;
@@ -31,16 +31,17 @@ END;
 $insert_jogador$ LANGUAGE plpgsql;
 
 -- Verifica se o inventário está cheio
-CREATE OR REPLACE FUNCTION verificar_inventario()
-RETURNS trigger AS $$
+CREATE OR REPLACE FUNCTION inventario()
+RETURNS trigger AS $verificar_inventario$
 DECLARE
-	qtd_itens INTEGER :=  contar_items(new.jogador);
+	qtd_itens INTEGER :=  (SELECT count(jogador) AS qtd_itens FROM instancia_item_jogador WHERE jogador = new.jogador);
 BEGIN                                                     
         IF qtd_itens  >= 10 
-        THEN RAISE EXCEPTION 'O inventário está cheio';
-        END IF;
+        THEN RAISE EXCEPTION 'Inventário está cheio';
+        END IF;  
+        RETURN NEW;     
 END;
-$$ 
+$verificar_inventario$ 
 LANGUAGE plpgsql;
 
 
