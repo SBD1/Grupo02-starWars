@@ -94,8 +94,6 @@ INSERT INTO item_consumivel(item, carga) VALUES (9, 1);
 INSERT INTO item_consumivel(item, carga) VALUES (11, 2);
 INSERT INTO item_consumivel(item, carga) VALUES (13, 1);
 
--- Instância de itens
-INSERT INTO instancia_item_localizacao(item, localizacao) VALUES (1, 5), (2, 91), (3, 23), (4, 202), (5, 162), (6, 254), (7, 190), (8, 126), (9, 197), (10, 286);
 
 -- Jogador
 
@@ -620,5 +618,9 @@ INSERT INTO npc (item, nome, raca, descricao, dialogo, localizacao) VALUES (12, 
 
 INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 200, 1, True, 'Fale com o NPC e siga suas orientações');
 INSERT INTO objetivo(roteiro, ordem, midichlorians, pontos_forca, classificacao, descricao) VALUES ('Episódio I - Parte I - Surgimento dos clones', 'Jedi', 250, 10, True, 'Treine na sala de treinamento jedi');
+
+-- Instância de itens
+INSERT INTO instancia_item_localizacao(item, localizacao) VALUES (1, 5), (2, 91), (3, 23), (4, 202), (5, 162), (6, 254), (7, 190), (8, 126), (9, 197), (10, 286);
+
 
 COMMIT;
