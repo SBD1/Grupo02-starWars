@@ -2,7 +2,7 @@ from db.database import connect, query, close
 
 
 def newplayer():
-    player = str(input('Insira o nome do jogador: '))
+    player = str(input('\nInsira o nome do jogador: '))
     [cursor, connection] = connect()
     insert_script = str('INSERT INTO jogador(nome, raca, midichlorians, vida, nivel, ordem, rank, inteligencia, forca_fisica, agilidade, resistencia, espectro_forca) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);')
     insert_values = (player, 'humano', 0, 100,
