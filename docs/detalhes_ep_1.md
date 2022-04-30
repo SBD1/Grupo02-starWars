@@ -4,7 +4,7 @@
 
 ### **Sobre o Universo**
 
-<p style='text-align: justify;'>Há muito tempo, em uma galáxia muito, uma enquetação ameaça por fim aos tempos de paz, os cavaleiros Jedi, guardiões da paz e da justiça na galáxia, são os unicos capazes de resolver esse conflito. Os Jedi são uma ordem de indivíduos sensíveis à Força(A Força é o que dá poder ao Jedi. É um campo de energia criado por todos os seres vivos, ela nos envolve e penetra. É o que mantém a galáxia unida), que estudava, servia-a, e usava as energias místicas da Força. A ferramenta de um Jedi é o sabre de luz, uma lâmina de energia pura.</p>
+<p style='text-align: justify;'>Há muito tempo, em uma galáxia muito, uma enquietação ameaça por fim aos tempos de paz, os cavaleiros Jedi, guardiões da paz e da justiça na galáxia, são os unicos capazes de resolver esse conflito. Os Jedi são uma ordem de indivíduos sensíveis à Força (A Força é o que dá poder ao Jedi. É um campo de energia criado por todos os seres vivos, ela nos envolve e penetra. É o que mantém a galáxia unida), que estudava, servia-a, e usava as energias místicas da Força. A ferramenta de um Jedi é o sabre de luz, uma lâmina de energia pura.</p>
 
 <p style='text-align: justify;'>O grande Templo Jedi, sede da Ordem Jedi desde a conclusão da Grande Guerra Sith sendo o lar de seu principal treinamento, facilidades burocráticas e dormitórios, estando situado no planeta de Naboo, na Orla Média, Naboo tinha é um planeta de renome em toda a galáxia, reconhecido como um centro de paz e aprendizado. </p>
 
