@@ -1,11 +1,14 @@
 from listplayers import seleciona
 from newplayer import newplayer
 from util import clear
+from dbinit import initDB
+
+initDB()
 
 option = '1'
 
 while (option != '0'):
-    clear()
+    # clear()
 
     contador = 1
 

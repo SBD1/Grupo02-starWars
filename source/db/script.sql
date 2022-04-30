@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXTSTS startwars;
-
-\c startwars;
-
 -- TRANSACTION TABLES 
 BEGIN;
 CREATE TABLE IF NOT EXISTS instancia_oponente(
