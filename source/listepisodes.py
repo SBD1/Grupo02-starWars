@@ -22,6 +22,7 @@ def episodios(jog):
             clear()
             try:
                 titulo = episodios[aux-1]
+                
                 print(titulo[3])
                 for i in range(0, 1):
                     print(" ")

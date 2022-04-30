@@ -41,7 +41,7 @@
 - Lake Paonga
 
 <p style='text-align: justify;'>Cada região tem suas caracteristicas especificas para se explorar mas tome bastante cuidado, apesar de Naboo ser um lugar paradisíaco também está cheio de espécies peculiares e predadores ferozes, aqui você poderá encontrar:</p>
-
+<br>
 <center> 
 
 **Ewok**
@@ -56,7 +56,7 @@
 | Resistência | 2 |
 
 </center> 
-
+<br>
 <center>
 
 **Veermok**
@@ -71,12 +71,27 @@
 | Resistência | 3 |
 
 </center> 
-
+<br>
 <center> 
 
-**Tusk**
+**Shaak**
 
-![Tusk](./assets/C4.png){width=50px}
+![Shaak](./assets/C3.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 1 |
+| Força fisica | 2 |
+| Agilidade | 4 |
+| Resistência | 1 |
+
+</center>
+<br>
+<center> 
+
+**Tusk Cat**
+
+![Tusk Cat](./assets/C4.png){width=50px}
 
 | Atributo | Valor |
 | ---- | ----- |
@@ -86,6 +101,8 @@
 | Resistência | 4 |
 
 </center> 
+<br>
+<center> 
 
 **Droid de batalha B1**
 
@@ -99,4 +116,81 @@
 | Resistência | 4 |
 
 </center> 
+<br>
+<center> 
 
+**Super Droid**
+
+![Super Droid](./assets/C6.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 5 |
+| Força fisica | 5 |
+| Agilidade | 4 |
+| Resistência | 6 |
+
+</center>
+<br>
+<center> 
+
+**Colo Claw Fish**
+
+![Colo Claw Fish](./assets/C7.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 7 |
+| Força fisica | 10 |
+| Agilidade | 10 |
+| Resistência | 8 |
+
+</center>
+<br>
+<center> 
+
+**Gungan**
+
+![Gungan](./assets/C8.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 2 |
+| Força fisica | 4 |
+| Agilidade | 3 |
+| Resistência | 3 |
+
+</center>
+<br>
+<center> 
+
+**Dianoga**
+
+![Dianoga](./assets/C9.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 9 |
+| Força fisica | 10 |
+| Agilidade | 10 |
+| Resistência | 9 |
+
+</center>
+<br>
+<center> 
+
+**Wampa**
+
+![Wampa](./assets/C10.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 7 |
+| Força fisica | 5 |
+| Agilidade | 6 |
+| Resistência | 10 |
+
+</center>
+
+<p style='text-align: justify;'>Batalhar com monstros pode ser uma otima maneira de treinar suas habilidades e se tornar mais habilidoso e poderoso, mas tome cuidado, um Jedi tem que julgar quais batalhas deve travar, batalhar seres pacificos pode te levar ao lado negro, as vezes o melhor é evitar o conflito.</p>
+<br>

@@ -8,7 +8,7 @@ def pegar_item(idJogador, item):
 
     try:
         insert_script = str(
-            'INSERT INTO instancia_item_jogador(item, jogador) VALUES (%s, %s);')
+            f'INSERT INTO instancia_item_jogador(item, jogador) VALUES (%s, %s);')
         insert_values = (idItem, idJogador)
         cursor.execute(insert_script, insert_values)
         connection.commit()

@@ -62,12 +62,14 @@ def consultaLocalização(idJogador, latitude, longitude):
     if (idOponente != 0):
         print(f'[E] Enfrentar {oponente[0]}')
     if (itens != 0):
-        print(f'[I] Pegar {nomeItem}')
+        print(f'[G] Pegar {nomeItem}')
     if (npc != 0):
         print(f'[C] Conversar com {npc[0]}')
     if (nroSerieNave != 0):
         print(f'[P] Pilotar {nave[0]} ')
     print('[0] Sair')
+
+    print()
 
     option = str(input('Escolha uma opção: '))
 
@@ -76,7 +78,7 @@ def consultaLocalização(idJogador, latitude, longitude):
         enfrentar(idJogador, idinstanciaOponente,
                   idOponente, idLocalizacao)
 
-    if((option == 'i' or option == 'I')):
+    if((option == 'g' or option == 'G')):
         pegar_item(idJogador[0], item)
 
     if((option == 'P' or option == 'p') and idOponente != 0):

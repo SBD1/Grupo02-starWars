@@ -9,16 +9,14 @@ def seleciona():
 
     close(connection, cursor)
 
-    print('\n***********************************')
-    print('***********  Jogadores  ***********')
-    print('***********************************')
+    print('\n***********  Jogadores  ***********')
 
     for row in rows:
-        print('*    - ' + row[1], end="")
+        print('*   - ' + row[1], end="")
 
         contador = 7 + len(row[1])
 
-        while (contador < 34):
+        while (contador < 35):
             print(' ', end="")
             contador += 1
         print('*')
@@ -26,7 +24,7 @@ def seleciona():
 
     aux = 0
     while(aux != 1):
-        player = str(input('Selecione o jogador: '))
+        player = str(input('\nSelecione o jogador: '))
         for row in rows:
             if(player == row[1]):
                 aux = 1

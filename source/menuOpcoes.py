@@ -13,7 +13,7 @@ def menu(player, titulo, id_campoastronomico):
     id_jogador = idJogador(player)
 
     while (option != '0'):
-        print('********************* Menu de ações *********************')
+        print('\n\n* * * * * * * * * * * * * * * * * * * * * Menu de ações * * * * * * * * * * * * * * * * * * * * *')
         print(f'''
           Você está em ({longitude},{latitude}) no campo astronômico {nome_campo}. A atmosfera é {atmosfera_campo}!
 
@@ -30,6 +30,8 @@ def menu(player, titulo, id_campoastronomico):
           [0] Sair do jogo
           ''')
         option = str(input('Escolha uma opção: '))
+
+        print()
 
         if (option == 'A' or option == 'a'):
             longitude = longitude - 1
