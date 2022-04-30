@@ -13,10 +13,16 @@ def pegar_item(idJogador, item):
         cursor.execute(insert_script, insert_values)
         connection.commit()
 
+
         delete_script = str(
             f"DELETE FROM instancia_item_localizacao WHERE id = {idInstancia};")
         cursor.execute(delete_script)
         connection.commit()
+
+        nomeItem = query(
+            cursor, f"SELECT nome FROM item WHERE id={idItem};")
+
+        print(f'Você pegou o item: {(nomeItem[0])[0]}!')
 
         close(connection, cursor)
     except:
