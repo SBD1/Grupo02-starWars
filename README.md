@@ -22,3 +22,7 @@
 ## Sobre
 
 O projeto é um jogo [MUD](https://pt.wikipedia.org/wiki/Multi-user_dungeon) com o tema Star Wars que será desenvolvido na disciplina Sistema de Banco de Dados 1.
+
+## Apresentação Final
+
+[Clique para aceesar a apresentação final do projeto](https://youtu.be/grDxhaw6c8s)
