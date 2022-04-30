@@ -74,6 +74,21 @@
 <br>
 <center> 
 
+**Shaak**
+
+![Shaak](./assets/C3.png){width=50px}
+
+| Atributo | Valor |
+| ---- | ----- |
+| Inteligencia | 1 |
+| Força fisica | 2 |
+| Agilidade | 4 |
+| Resistência | 1 |
+
+</center>
+<br>
+<center> 
+
 **Tusk Cat**
 
 ![Tusk Cat](./assets/C4.png){width=50px}
