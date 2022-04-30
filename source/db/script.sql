@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 CREATE DATABASE starwars;
 
 \c starwars;
 
->>>>>>> f339e59ad227cace1b8c75043b8cbdfbcba7c497
 -- TRANSACTION TABLES 
 BEGIN;
 
