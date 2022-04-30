@@ -14,7 +14,6 @@ Para rodar a aplicação deve-se primeiro:
 
 1. navegar para o diretorio `source`
 2. rodar o comando `pip3 install -r requirements.txt`, para instalar as bibliotecas do python necessárias.
-3. Rodar \ir "caminho do arquivo script.sql"
 
 Uma vez que todos os passos acima tenham sido cumpridos, basta rodar o comando abaixo para iniciar o jogo:
 `python3 main.py`.
