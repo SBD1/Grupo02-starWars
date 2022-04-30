@@ -27,6 +27,7 @@ BEGIN
     IF FOUND 
     THEN RAISE EXCEPTION 'Esse nome já foi escolhido por outro jogador';
     END IF;
+    RETURN NEW;
 END;
 $insert_jogador$ LANGUAGE plpgsql;
 
