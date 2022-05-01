@@ -26,3 +26,5 @@ O projeto é um jogo [MUD](https://pt.wikipedia.org/wiki/Multi-user_dungeon) com
 ## Apresentação Final
 
 [Clique para aceesar a apresentação final do projeto](https://youtu.be/grDxhaw6c8s)
+
+[Clique para baixar a apresentação final do projeto](https://drive.google.com/file/d/1p01kCmCf3QVhakeUgGwIHdQZZAWdmudh/view?usp=sharing)
